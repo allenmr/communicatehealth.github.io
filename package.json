@@ -1,0 +1,26 @@
+{
+  "name": "ch-dev-blog",
+  "version": "0.1.0",
+  "description": "CommunicateHealth Dev Blog",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/communicatehealth/communicatehealth.github.io.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-accessibility": "^4.1.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-dev-update": "^2.0.0",
+    "grunt-html": "^7.0.0",
+    "grunt-shell": "^1.3.0",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CommunicateHealth"
+}
