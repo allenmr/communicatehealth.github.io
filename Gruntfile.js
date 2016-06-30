@@ -68,7 +68,19 @@ module.exports = function(grunt) {
 
     // HTML lint - run html validation on compiled site
     htmllint: {
-      all: ["_site/**/*.html"]
+      all: {
+        options: {
+          ignore: [
+            'Element “main” does not need a “role” attribute.',
+            'Element “nav” does not need a “role” attribute.',
+            'The “banner” role is unnecessary for element “header”.',
+            'The “complementary” role is unnecessary for element “aside”.',
+            'The “contentinfo” role is unnecessary for element “footer”.',
+            'The “frameborder” attribute on the “iframe” element is obsolete. Use CSS instead.'
+          ]
+        },
+        src: ["_site/**/*.html", ]
+      }
     },
 
     // Accessibility - run accessibility scan on compiled site
@@ -80,7 +92,7 @@ module.exports = function(grunt) {
           warning: true,
           error: true
         },
-        ignore : [
+        ignore: [
           'WCAG2A.Principle1.Guideline1_1.1_1_1.H67.2', // empty alt tag warning
           'WCAG2A.Principle1.Guideline1_3.1_3_1.H48', // navigation false positive warning
           'WCAG2A.Principle1.Guideline1_3.1_3_1.H42', // suspected heading
@@ -89,8 +101,27 @@ module.exports = function(grunt) {
           ]
       },
       test : {
-        // exclude pattern library due to intentionally invalid code
-        src: ['_site/**/*.html', '!_site/patterns/index.html']
+        src: ['_site/**/*.html']
+      }
+    },
+
+    // Parker - CSS stats
+    parker: {
+      options: {},
+      src: [
+        '_site/css/*.css'
+      ],
+    },
+
+    // SCSS linter
+    scsslint: {
+      allFiles: [
+        '_scss/**/*.scss',
+      ],
+      options: {
+        bundleExec: true,
+        config: '.scss-lint.yml',
+        colorizeOutput: true
       }
     },
 
@@ -115,28 +146,22 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
-  // grunt - runs js, then serve tasks (see below)
   grunt.registerTask('default', ['js', 'serve']);
 
-  // grunt serve - Serve and watch Jekyll site + SCSS compilation
   grunt.registerTask('serve', ['shell:jekyllServe']);
-
-  // grunt build - Run js, imagemin tasks, then build Jekyll site + SCSS compilation
   grunt.registerTask('build', ['js', 'images', 'shell:jekyllBuild']);
 
-  // grunt js - Error checks, concatenation, minify JS
   grunt.registerTask('js', ['jshint', 'uglify']);
-
-  // grunt images - Run image optimization
   grunt.registerTask('images', ['imagemin']);
 
-  // grunt validate-html - Validate compiled site's HTML
-  grunt.registerTask('validate-html', ['htmllint']);
+  grunt.registerTask('lint', ['lint-js', 'lint-html', 'lint-a11y', 'lint-scss']);
+  grunt.registerTask('lint-js', ['jshint']);
+  grunt.registerTask('lint-html', ['htmllint']);
+  grunt.registerTask('lint-a11y', ['accessibility']);
+  grunt.registerTask('lint-scss', ['scsslint']);
 
-  // grunt a11y - Validate compiled site's accessibility
-  grunt.registerTask('a11y', ['accessibility']);
+  grunt.registerTask('report-css', ['parker']);
 
-  // grunt update - Find new versions of Grunt libraries
   grunt.registerTask('update', ['devUpdate']);
 
 };
