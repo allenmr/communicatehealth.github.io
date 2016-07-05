@@ -1,0 +1,36 @@
+.tab-controls {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  a {
+    background-color: #eee;
+    display: block;
+    margin-left: .5em;
+    padding: .5em 1em;
+
+    &:hover,
+    &:focus {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.tab-content {
+  background-color: #eee;
+  margin: 0;
+  padding: 1em;
+
+  &[aria-hidden=true] {
+    display: none;
+  }
+
+  &[aria-hidden=false] {
+    display: block;
+  }
+}

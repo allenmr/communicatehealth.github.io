@@ -1,0 +1,26 @@
+---
+layout: default
+title: Tabs
+permalink: /examples/tabs/
+---
+
+<h1>Tab Panel</h1>
+
+<div class="tab" id="tab-panel-1">
+  <ul class="tab-controls" role="tablist">
+    <li role="presentation">
+      <a href="#tab-content-1" id="tab-content-1-control" class="tab-control" role="tab" aria-controls="tab-content-1" aria-selected="true">Myth</a>
+    </li>
+    <li role="presentation">
+      <a href="#tab-content-2" id="tab-content-2-control" class="tab-control" role="tab" aria-controls="tab-content-2" aria-selected="true">Reality</a>
+    </li>
+  </ul>
+  <div class="tab-content" role="tabpanel" aria-hidden="false" aria-labelledby="tab-content-1-control" id="tab-content-1">
+    <h2>Myth:</h2>
+    <p>Children don't experience mental health problems.</p>
+  </div>
+  <div class="tab-content" role="tabpanel" aria-hidden="true" aria-labelledby="tab-content-2-control" id="tab-content-2">
+    <h2>Reality:</h2>
+    <p>Even very young children may show early warning signs of mental health concerns. These mental health problems are often clinically diagnosable, and can be a product of the interaction of biological, psychological, and social factors.</p>
+  </div>
+</div>
