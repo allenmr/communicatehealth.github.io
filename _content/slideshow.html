@@ -1,0 +1,31 @@
+---
+layout: default
+title: Slideshow
+permalink: /examples/slideshow/
+---
+
+<h1>Slideshow</h1>
+
+<div class="content-slider-block">
+  <div class="content-slides">
+    <div class="content-slide on" id="content-slide-1" aria-hidden="false">
+      <p><img src="{{ "/img/ch-1.jpg" | prepend: site.baseurl }}" alt=""></p>
+      <p class="content-slider-caption">CommunicateHealth homepage</p>
+    </div>
+    <div class="content-slide" id="content-slide-2" aria-hidden="true">
+      <p><img src="{{ "/img/ch-2.jpg" | prepend: site.baseurl }}" alt=""></p>
+      <p class="content-slider-caption">About Us</p>
+    </div>
+    <div class="content-slide" id="content-slide-3" aria-hidden="true">
+      <p><img src="{{ "/img/ch-3.jpg" | prepend: site.baseurl }}" alt=""></p>
+      <p class="content-slider-caption">Portfolio</p>
+    </div>
+  </div>
+  <div class="content-slider-control">
+    <p class="t-center">
+      <a href="#content-slide-prev" class="btn content-slide-prev limit" id="content-slide-prev"><span aria-hidden="true">&larr; </span>Previous page</a>
+      <a href="#content-slide-next" class="btn content-slide-next" id="content-slide-next">Next page<span aria-hidden="true"> &rarr;</span></a>
+      <a href="#content-slide-restart" class="btn content-slide-restart limit" id="content-slide-restart">Start over</a>
+    </p>
+  </div>
+</div>
