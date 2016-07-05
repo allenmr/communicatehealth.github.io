@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['Gruntfile.js']
+          src: ['Gruntfile.js', 'js/lib/accordion.js']
         }
       }
     },
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
           mangle : true,
           compress : true
         },
-        src: ['js/lib/jumplink.js','js/lib/outlink.js'],
+        src: ['js/lib/jumplink.js','js/lib/outlink.js', 'js/lib/accordion.js'],
         dest: 'js/base.js'
       },
       jquery: {
