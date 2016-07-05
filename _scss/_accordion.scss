@@ -1,8 +1,19 @@
 .accordion-toggle {
   display: block;
+  margin: 0;
+  padding: 1em;
+
+
+  &:hover {
+    background-color: #fff;
+  }
 }
 
 .accordion-content {
+  background-color: #eee;
+  margin: 0;
+  padding: 1em;
+
   &[aria-hidden=true] {
     display: none;
   }
@@ -10,4 +21,8 @@
   &[aria-hidden=false] {
     display: block;
   }
+}
+
+.accordion {
+  background-color: #f9f9f9;
 }
