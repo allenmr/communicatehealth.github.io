@@ -33,3 +33,23 @@ img {
 }
 
 .t-center { text-align: center; }
+
+.closed {
+  display: none;
+  opacity: 0;
+}
+
+.closing {
+  opacity: 1;
+  transition: .2s all;
+}
+
+.opening {
+  opacity: 0;
+  transition: .2s all;
+}
+
+.open {
+  opacity: 1;
+  transition: .2s all;
+}
