@@ -11,14 +11,12 @@ $(".accordion-toggle").click(function (event) {
   // If accordion content is already visible, hide
   if ($(this).attr('aria-expanded') === 'true') {
     $(this).attr("aria-expanded", "false");
-    $next.attr("aria-hidden", "true");
     $.hideAnimate($next);
   }
 
   // Show accordion content
   else {
     $(this).attr("aria-expanded", "true");
-    $next.attr("aria-hidden", "false");
     $.showAnimate($next);
   }
 });

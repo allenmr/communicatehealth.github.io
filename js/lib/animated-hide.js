@@ -1,21 +1,21 @@
 $.hideAnimate = function($element) {
   $element.addClass("closing");
-  $element.removeClass("open");
+  $element.removeClass("open opening close");
   setTimeout($.hideComplete, 100, $element);
 };
 
 $.hideComplete = function($element) {
-  $element.addClass("closed");
+  $element.addClass("closed").attr("aria-hidden", "true");
   $element.removeClass("closing");
 };
 
 $.showAnimate = function($element) {
   $element.addClass("opening");
-  $element.removeClass("closed");
+  $element.removeClass("open closing closed");
   setTimeout($.showComplete, 100, $element);
 };
 
 $.showComplete = function($element) {
-  $element.addClass("open");
+  $element.addClass("open").attr("aria-hidden", "false");
   $element.removeClass("opening");
 };
