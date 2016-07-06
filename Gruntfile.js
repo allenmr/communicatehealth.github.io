@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/animated-hide.js']
+          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/animated-hide.js', 'js/lib/off-canvas.js']
         }
       }
     },
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
           mangle : true,
           compress : true
         },
-        src: ['js/lib/jumplink.js','js/lib/outlink.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/animated-hide.js'],
+        src: ['js/lib/jumplink.js','js/lib/outlink.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/off-canvas.js', 'js/lib/animated-hide.js'],
         dest: 'js/base.js'
       },
       jquery: {
