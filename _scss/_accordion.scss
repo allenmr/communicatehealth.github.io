@@ -11,15 +11,30 @@
 
 .accordion-content {
   background-color: #eee;
+  display: block;
+  height: auto;
   margin: 0;
+  opacity: 1;
   padding: 1em;
+  transition: all .3s;
 
-  &[aria-hidden=true] {
+  &.closed {
     display: none;
   }
 
-  &[aria-hidden=false] {
-    display: block;
+  &.opening,
+  &.closing {
+    height: 0;
+    opacity: 0;
+    padding: 0 1em;
+    transition: all .3s;
+  }
+
+  &.open {
+    height: auto;
+    opacity: 1;
+    padding: 1em;
+    transition: all .3s;
   }
 }
 

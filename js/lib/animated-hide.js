@@ -1,7 +1,7 @@
 $.hideAnimate = function($element) {
   $element.addClass("closing");
   $element.removeClass("open");
-  setTimeout($.hideComplete, 300, $element);
+  setTimeout($.hideComplete, 100, $element);
 };
 
 $.hideComplete = function($element) {
@@ -12,7 +12,7 @@ $.hideComplete = function($element) {
 $.showAnimate = function($element) {
   $element.addClass("opening");
   $element.removeClass("closed");
-  setTimeout($.showComplete, 300, $element);
+  setTimeout($.showComplete, 100, $element);
 };
 
 $.showComplete = function($element) {
