@@ -29,7 +29,7 @@ $(window).resize($.debounce(500, function() {
   responsiveAdjust();
 }));
 
-$.responsiveAdjust = function() {
+var responsiveAdjust = function() {
   if (window.matchMedia) {
     if (window.matchMedia("(min-width: 60em)").matches) {
       $.showAnimate($(".sidebar"));
