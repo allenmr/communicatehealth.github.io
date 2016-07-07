@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/animated-hide.js', 'js/lib/off-canvas.js']
+          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/off-canvas.js', 'js/lib/animated-hide.js']
         }
       }
     },
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           mangle : true,
           compress : true
         },
-        src: ['js/vendor/jquery.js'],
+        src: ['js/vendor/jquery.js', 'js/vendor/jquery.ba-throttle-debounce.js'],
         dest: 'js/jquery.js'
       }
     },

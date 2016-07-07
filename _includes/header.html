@@ -1,9 +1,14 @@
+<ul class="skip-links">
+  <li><a href="#top">Skip to content</a></li>
+  <li><a href="#navigation">Skip to navigation</a></li>
+</ul>
+
 <div class="mobile-menu">
   <div class="site-name"><a href="{{ "/" | prepend: site.baseurl }}">Site title</a></div>
-  <div class="site-menu"><button class="btn btn-chapter btn-touch">Menu</button></div>
+  <div class="site-menu"><button class="btn" aria-controls="sidebar-block" aria-expanded="false">Menu</button></div>
 </div>
 
-<div class="sidebar closed veryClosed">
+<div class="sidebar closed" id="sidebar-block" aria-hidden="false">
   <div class="header">
     <div class="site-name"><a href="{{ "/" | prepend: site.baseurl }}">Site title</a></div>
   </div>
