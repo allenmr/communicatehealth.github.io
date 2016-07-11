@@ -15,31 +15,46 @@
 
         <h1>Dropdown with hover, click, keyboard control</h1>
 
-        <ul id="navigation" class="dd-menu">
-          <li class="top-level"><a href="#">Home</a></li>
-          <li class="top-level has-subnav"><a href="#" class="subnav-toggle">About Us</a>
-            <ul class="subnav">
-              <li><a href="#">Our Partners</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="top-level has-subnav"><a href="#" class="subnav-toggle">Our Work</a>
-            <ul class="subnav">
-              <li><a href="#">Health Literacy</a></li>
-              <li><a href="#">Plain Language Messaging</a></li>
-              <li><a href="#">Content Strategy</a></li>
-            </ul>
-          </li>
-          <li class="top-level has-subnav"><a href="#" class="subnav-toggle">Offices</a>
-            <ul class="subnav">
-              <li><a href="#">Northampton</a></li>
-              <li><a href="#">Rockville</a></li>
-            </ul>
-          </li>
-          <li class="top-level"><a href="#">Calendar</a></li>
-        </ul>
-      </div>
-    </div>
+        <p>Adapted from <a href="https://staff.washington.edu/tft/tests/menus/simplyaccessible/index.html">University of Washington&rsquo;s Simply Accessible nav example</a>.</p>
+
+        <div role="navigation" aria-label="Main menu">
+          <ul class="nav">
+            <li>
+              <a href="#">About</a>
+              <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Governance</a></li>
+                <li><a href="#">Diversity</a></li>
+                <li><a href="#">ContactUs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Academics</a>
+              <ul>
+                <li><a href="#">Degree Programs</a></li>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Distance Learning</a></li>
+                <li><a href="#">Libraries</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Admissions</a>
+              <ul>
+                <li><a href="#">Undergraduate</a></li>
+                <li><a href="#">Tuition</a></li>
+                <li><a href="#">Financial Aid</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Visitors</a>
+              <ul>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Campus Map</a></li>
+                <li><a href="#">Parking</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
     <script src="/js/jquery.js"></script>
     <script src="/js/lib/dropdown.js"></script>
