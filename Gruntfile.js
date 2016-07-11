@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           mangle : true,
           compress : true
         },
-        src: ['js/vendor/jquery.js', 'js/vendor/jquery.ba-throttle-debounce.js'],
+        src: ['js/vendor/jquery.js'],
         dest: 'js/jquery.js'
       }
     },
