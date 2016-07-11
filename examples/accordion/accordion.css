@@ -1,0 +1,43 @@
+.accordion-toggle {
+  display: block;
+  margin: 0;
+  padding: 1em;
+}
+
+.accordion-toggle:hover,
+.accordion-toggle:focus {
+  background-color: #fff;
+}
+
+.accordion-content {
+  background-color: #eee;
+  display: block;
+  height: auto;
+  margin: 0;
+  opacity: 1;
+  padding: 1em;
+  transition: all .3s;
+}
+
+.accordion-content.closed {
+  display: none;
+}
+
+.accordion-content.opening,
+.accordion-content.closing {
+  height: 0;
+  opacity: 0;
+  padding: 0 1em;
+  transition: all .3s;
+}
+
+.accordion-content.open {
+  height: auto;
+  opacity: 1;
+  padding: 1em;
+  transition: all .3s;
+}
+
+.accordion {
+  background-color: #f9f9f9;
+}

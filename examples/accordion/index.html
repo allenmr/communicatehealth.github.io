@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/examples/accordion/accordion.css">
+  </head>
+
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+
+        <h1>Accordion</h1>
+
+        <div class="accordion">
+
+          <a href="#colors" aria-expanded="true" aria-controls="colors-content" class="accordion-toggle" id="colors">Colors</a>
+
+          <div id="colors-content" class="accordion-content" aria-hidden="false">
+            <ul>
+              <li>Red</li>
+              <li>Orange</li>
+              <li>Yellow</li>
+              <li>Green</li>
+              <li>Blue</li>
+              <li>Indigo</li>
+              <li>Violet</li>
+            </ul>
+          </div>
+
+          <a href="#seasons" aria-expanded="true" aria-controls="seasons-content" class="accordion-toggle" id="seasons">Seasons</a>
+
+          <div id="seasons-content" class="accordion-content" aria-hidden="false">
+            <ul>
+              <li>Spring</li>
+              <li>Summer</li>
+              <li>Fall</li>
+              <li>Winter</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/lib/animated-hide.js"></script>
+    <script src="/js/lib/accordion.js"></script>
+
+  </body>
+</html>
