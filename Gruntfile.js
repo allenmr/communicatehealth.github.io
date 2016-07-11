@@ -24,23 +24,63 @@ module.exports = function(grunt) {
       }
     },
 
+    // Concatenate JS files
+    concat: {
+      dist: {
+        src: ['js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/off-canvas.js', 'js/lib/dropdown.js', 'js/lib/infographic.js', 'js/lib/animated-hide.js'],
+        dest: 'public/js/base.js',
+      },
+    },
+
     // Uglify - Minify and concatenate js files
     uglify: {
-      base: {
+      dist: {
         options : {
           mangle : true,
           compress : true
         },
-        src: ['js/lib/accordion.js', 'js/lib/tabs.js', 'js/lib/slideshow.js', 'js/lib/off-canvas.js', 'js/lib/dropdown.js', 'js/lib/infographic.js', 'js/lib/animated-hide.js'],
-        dest: 'js/base.js'
+        src: ['public/js/base.js'],
+        dest: 'public/js/base.min.js'
+      }
+    },
+
+    // SCSS compiler
+    sass: {
+      options: {
+        sourceMapEmbed: true,
+        style: 'nested'
       },
-      jquery: {
-        options : {
-          mangle : true,
-          compress : true
+      dist: {
+        files: {
+          'public/css/style.css': '_scss/style.scss'
+        }
+      }
+    },
+
+    // PostCSS to run Autoprefixer
+    postcss: {
+      options: {
+        map: {
+          inline: true
         },
-        src: ['js/vendor/jquery.js'],
-        dest: 'js/jquery.js'
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        ]
+      },
+      dist: {
+        src: 'public/css/*.css'
+      }
+    },
+
+    // CSS minification
+    cssnano: {
+      options: {
+        sourcemap: true
+      },
+      dist: {
+        files: {
+          'public/css/style.min.css': 'public/css/style.css'
+        }
       }
     },
 
@@ -49,8 +89,62 @@ module.exports = function(grunt) {
       jekyllBuild: {
         command: 'bundle exec jekyll build'
       },
+      jekyllBuildDev: {
+        command: 'bundle exec jekyll build --config _local-config.yml'
+      },
       jekyllServe: {
         command: 'bundle exec jekyll serve --watch'
+      }
+    },
+
+    // Watch for changes
+    watch: {
+      options: {
+        livereload: {
+          host: '127.0.0.1',
+          port: 35729
+        }
+      },
+      css: {
+        files: ['_scss/**/*.scss', 'examples/**/*.css'],
+        tasks: ['css', 'shell:jekyllBuildDev'],
+      },
+      js: {
+        files: 'js/**/*.js',
+        tasks: ['js', 'shell:jekyllBuildDev'],
+      },
+      posts: {
+        files:[
+            '_config.yml',
+            '*.html',
+            '*.md',
+            '_content/**',
+            'examples/**',
+            '_layouts/**',
+            '_posts/**',
+            '_drafts/**',
+            '_includes/**',
+            'assets/**/*.*'
+        ],
+        tasks: ['shell:jekyllBuildDev']
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          hostname: '127.0.0.1',
+          port: 4000,
+          base: '_site'
+        },
+        livereload: {
+          options: {
+            open: {
+              target: 'http://127.0.0.1:4000/'
+            },
+            base: ['_site']
+          }
+        }
       }
     },
 
@@ -59,9 +153,9 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'img/',
+          cwd: '_img/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/'
+          dest: 'public/img/'
         }]
       }
     },
@@ -109,7 +203,7 @@ module.exports = function(grunt) {
     parker: {
       options: {},
       src: [
-        '_site/css/*.css'
+        '_site/public/css/*.css'
       ],
     },
 
@@ -146,12 +240,13 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
-  grunt.registerTask('default', ['js', 'serve']);
 
-  grunt.registerTask('serve', ['shell:jekyllServe']);
-  grunt.registerTask('build', ['js', 'images', 'shell:jekyllBuild']);
+  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('serve', ['build', 'connect', 'watch']);
+  grunt.registerTask('build', ['js', 'css', 'images', 'shell:jekyllBuildDev']);
 
-  grunt.registerTask('js', ['jshint', 'uglify']);
+  grunt.registerTask('css', ['sass', 'lint-scss', 'postcss', 'cssnano']);
+  grunt.registerTask('js', ['lint-js', 'concat', 'uglify']);
   grunt.registerTask('images', ['imagemin']);
 
   grunt.registerTask('lint', ['lint-js', 'lint-html', 'lint-a11y', 'lint-scss']);
