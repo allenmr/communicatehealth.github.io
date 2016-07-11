@@ -44,7 +44,7 @@ Looking for:
 
 ## Keys for accessibility
 
-  * Meet 508 standards: http://hhs.gov/web/508 - this is a starting point, not the final goal
+  * Meet 508 standards: [http://hhs.gov/web/508](http://hhs.gov/web/508) - this is a starting point, not the final goal
   * Meet Color Contrast minimums and avoid using color as the only means to convey meaning
   * Ensure that your webpage is completely keyboard accessible
   * Use appropriate descriptive text for images, links and other focusable elements
@@ -56,7 +56,7 @@ Looking for:
 
 ## EXAMPLES!!!
 
-https://communicatehealth.github.io/examples/
+[https://communicatehealth.github.io/examples/](https://communicatehealth.github.io/examples/)
 
 
 
@@ -68,8 +68,9 @@ Poor ARIA support
 
 ## Drupal 7 accessibility modules
 
-Block ARIA labels - https://www.drupal.org/project/block_aria_label
-Block ARIA landmark roles - https://www.drupal.org/project/block_aria_landmark_roles
+Block ARIA labels - [https://www.drupal.org/project/block_aria_label](https://www.drupal.org/project/block_aria_label)
+
+Block ARIA landmark roles - [https://www.drupal.org/project/block_aria_landmark_roles](https://www.drupal.org/project/block_aria_landmark_roles)
 
 ## Drupal 8 accessibility improvements
 
