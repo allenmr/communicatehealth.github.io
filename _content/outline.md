@@ -4,13 +4,13 @@ title: Outline
 permalink: /presentation/outline
 ---
 
-#Beyond 508: Building Accessible Interactions with ARIA
+# Beyond 508: Building Accessible Interactions with ARIA
 
 ## Quick Intro
 
   * Who I am
   * Who CH is
-  * Who our client are
+  * Who our clients are
   * Experience with 508, accessibility, ASPA
 
 ## Ask the audience:
