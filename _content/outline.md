@@ -17,6 +17,8 @@ permalink: /presentation/outline/
 
 What types of challenges do users with disabilities or impairments experience online?
 
+[https://the-pastry-box-project.net/anne-gibson/2014-July-31](https://the-pastry-box-project.net/anne-gibson/2014-July-31)
+
 ## Visual
 
 ### blind
@@ -123,26 +125,31 @@ Not really sure how to fit this in...
   * Clean, semantic markup
   * ARIA attributes
 
-## EXAMPLES!!!
+## Drupal stuff to add:
 
-[https://communicatehealth.github.io/examples/](https://communicatehealth.github.io/examples/)
-
-
-
-# Possible Drupal stuff to add:
-
-## Drupal 7 accessibility out of the box
+### Drupal 7 accessibility out of the box
 
 Poor ARIA support
 
-## Drupal 7 accessibility modules
+### Drupal 7 accessibility modules
 
 Block ARIA labels - [https://www.drupal.org/project/block_aria_label](https://www.drupal.org/project/block_aria_label)
 
 Block ARIA landmark roles - [https://www.drupal.org/project/block_aria_landmark_roles](https://www.drupal.org/project/block_aria_landmark_roles)
 
-## Drupal 8 accessibility improvements
+### Drupal 8 accessibility improvements
 
 Much better
 
+## EXAMPLES!!!
+
+[https://communicatehealth.github.io/examples/](https://communicatehealth.github.io/examples/)
+
 # Summary
+
+Mention keys for accessibility again
+Other stuff?
+
+## Follow WHHL
+
+## Ending Slide
