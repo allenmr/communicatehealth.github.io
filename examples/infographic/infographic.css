@@ -456,7 +456,8 @@
 
 @media screen and (max-width: 48.125em) {
   #slide-03 {
-  padding: .75em;
+    padding: .75em;
+  }
 }
 
 #slide-03 p {
@@ -737,6 +738,6 @@ ul.ig-checklist .check-item {
 .slide.off .btn-sharing,
 .slide.off .btn-start,
 .slide.off .hotspot,
-.backdrop-on .hotspot, {
+.backdrop-on .hotspot {
   display: none;
 }
