@@ -1,7 +1,7 @@
 $.hideAnimate = function($element) {
   $element.addClass("closing");
   $element.removeClass("open opening close");
-  setTimeout($.hideComplete, 20, $element);
+  setTimeout($.hideComplete, 300, $element); // slower, allow for animation
 };
 
 $.hideComplete = function($element) {
@@ -12,7 +12,7 @@ $.hideComplete = function($element) {
 $.showAnimate = function($element) {
   $element.addClass("opening");
   $element.removeClass("open closing closed");
-  setTimeout($.showComplete, 20, $element);
+  setTimeout($.showComplete, 20, $element); // faster, animation happens after
 };
 
 $.showComplete = function($element) {

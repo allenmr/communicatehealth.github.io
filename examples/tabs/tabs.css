@@ -16,6 +16,10 @@
   padding: .5em 1em;
 }
 
+.tab-control[aria-selected=false] {
+  background-color: #ddd;
+}
+
 .tab-controls:hover,
 .tab-controls:focus {
   background-color: #f9f9f9;

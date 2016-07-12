@@ -1,3 +1,4 @@
+// Toggle nav with Menu button
 $(".site-menu button").click(function (event) {
   if (event.preventDefault) { event.preventDefault(); }
   else { event.returnValue = false; } // IE
@@ -15,6 +16,7 @@ $(".site-menu button").click(function (event) {
   }
 });
 
+// Close navigation when overlay is clicked
 $(".overlay").click(function (event) {
   $.hideAnimate($(".sidebar"));
   $.hideAnimate($(".overlay"));
@@ -29,6 +31,7 @@ $(window).resize($.debounce(500, function() {
   responsiveAdjust();
 }));
 
+// Show/hide sidebar and header based on screen width
 var responsiveAdjust = function() {
   if (window.matchMedia) {
     if (window.matchMedia("(min-width: 60em)").matches) {

@@ -98,6 +98,76 @@ $('[role="tab"]').on('click', function(event) {
 
 });
 
+// Change focus between tabs with toggle-button
+
+$('.tab-toggle').on('keydown', function(event) {
+
+  if (event.keyCode === 13) {
+
+    if (event.preventDefault) { event.preventDefault(); }
+    else { event.returnValue = false; } // IE
+
+    // get id of parent container
+    var containerId = $(this).parent().parent().parent().parent().attr("id");
+
+    // remove focusability [sic] and aria-selected
+
+    $('#' + containerId + ' [role="tab"]').attr({
+      'aria-selected' : false
+    });
+
+    // replace above on clicked tab
+
+    $('li' + ' [aria-controls="' + $(this).attr('href').substring(1) + '"]').attr({
+      'aria-selected' : true,
+    });
+
+    // Hide panels
+
+    $('#' + containerId + ' [role="tabpanel"]').attr('aria-hidden', 'true');
+
+    // show corresponding panel
+
+    $('#' + $(this).attr('href').substring(1))
+      .attr('aria-hidden', 'false');
+
+  }
+
+});
+
+// Handle click on tab to show + focus tabpanel
+
+$('.tab-toggle').on('click', function(event) {
+
+  if (event.preventDefault) { event.preventDefault(); }
+  else { event.returnValue = false; } // IE
+
+  // get id of parent container
+  var containerId = $(this).parent().parent().parent().parent().attr("id");
+
+  // remove focusability [sic] and aria-selected
+
+  $('#' + containerId + ' [role="tab"]').attr({
+    'aria-selected' : false
+  });
+
+  // replace above on clicked tab
+
+  $('li' + ' [aria-controls="' + $(this).attr('href').substring(1) + '"]').attr({
+    'aria-selected' : true,
+  });
+
+  // Hide panels
+
+  $('#' + containerId + ' [role="tabpanel"]').attr('aria-hidden', 'true');
+
+  // show corresponding panel
+
+  $('#' + $(this).attr('href').substring(1))
+    .attr('aria-hidden', 'false');
+
+});
+
 $(".content-slide-prev").click(function (event) {
   if (event.preventDefault) { event.preventDefault(); }
   else { event.returnValue = false; } // IE
@@ -157,6 +227,7 @@ $(".content-slide-restart").click(function (event) {
   $.showAnimate($firstItem);
 });
 
+// Toggle nav with Menu button
 $(".site-menu button").click(function (event) {
   if (event.preventDefault) { event.preventDefault(); }
   else { event.returnValue = false; } // IE
@@ -174,6 +245,7 @@ $(".site-menu button").click(function (event) {
   }
 });
 
+// Close navigation when overlay is clicked
 $(".overlay").click(function (event) {
   $.hideAnimate($(".sidebar"));
   $.hideAnimate($(".overlay"));
@@ -188,6 +260,7 @@ $(window).resize($.debounce(500, function() {
   responsiveAdjust();
 }));
 
+// Show/hide sidebar and header based on screen width
 var responsiveAdjust = function() {
   if (window.matchMedia) {
     if (window.matchMedia("(min-width: 60em)").matches) {
@@ -207,11 +280,7 @@ var responsiveAdjust = function() {
 $(document).ready(function() {
   $('.nav').setup_navigation();
 });
-/*
-$(function(){
-  $('.nav').setup_navigation();
-});
-*/
+
 var keyCodeMap = {
         48:"0", 49:"1", 50:"2", 51:"3", 52:"4", 53:"5", 54:"6", 55:"7", 56:"8", 57:"9", 59:";",
         65:"a", 66:"b", 67:"c", 68:"d", 69:"e", 70:"f", 71:"g", 72:"h", 73:"i", 74:"j", 75:"k", 76:"l",
@@ -659,46 +728,10 @@ $("#lightbox-nav-next").click(function (event) {
 
 });
 
-$("#screen-view-toggle").click(function (event) {
-  if (event.preventDefault) { event.preventDefault(); }
-  else { event.returnValue = false; } // IE
-
-  if($("#screen-view").hasClass("patient")) {
-    $("#screen-view").removeClass("patient");
-    $("#screen-view").addClass("caregiver");
-    $("#screen-view-toggle").text("See patient view");
-  }
-  else {
-    $("#screen-view").removeClass("caregiver");
-    $("#screen-view").addClass("patient");
-    $("#screen-view-toggle").text("See caregiver view");
-  }
-});
-
-$(".patient-quote-toggle").click(function (event) {
-  if (event.preventDefault) { event.preventDefault(); }
-  else { event.returnValue = false; } // IE
-
-  var target = $(this).attr('href');
-  $(this).attr("aria-expanded", "true");
-  $(target).removeClass("off").addClass("on").attr("aria-hidden", "false");
-
-});
-
-$(".patient-quote-close").click(function (event) {
-  if (event.preventDefault) { event.preventDefault(); }
-  else { event.returnValue = false; } // IE
-
-  var target = $(this).attr('href') + "-patient-quote";
-  var toggle = $(this).attr('href') + "-patient-quote-toggle";
-  $(target).removeClass("on").addClass("off").attr("aria-hidden", "true");
-  $(toggle).attr("aria-expanded", "false");
-});
-
 $.hideAnimate = function($element) {
   $element.addClass("closing");
   $element.removeClass("open opening close");
-  setTimeout($.hideComplete, 20, $element);
+  setTimeout($.hideComplete, 300, $element); // slower, allow for animation
 };
 
 $.hideComplete = function($element) {
@@ -709,7 +742,7 @@ $.hideComplete = function($element) {
 $.showAnimate = function($element) {
   $element.addClass("opening");
   $element.removeClass("open closing closed");
-  setTimeout($.showComplete, 20, $element);
+  setTimeout($.showComplete, 20, $element); // faster, animation happens after
 };
 
 $.showComplete = function($element) {
