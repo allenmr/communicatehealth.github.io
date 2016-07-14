@@ -178,7 +178,7 @@ jQuery( document ).ready(function( $ ) {
 });
 jQuery( document ).ready(function( $ ) {
   "use strict";
-  
+
   $(".content-slide-prev").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
@@ -218,7 +218,7 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // hide current slide, show previous slide
-    $.hideAnimate($currentItem);
+    $.hideComplete($currentItem);
     $.showAnimate($nextItem);
   });
 
@@ -234,11 +234,12 @@ jQuery( document ).ready(function( $ ) {
     $(".content-slide-next").removeClass("limit");
 
     // hide current slide, show first slide
-    $.hideAnimate($currentItem);
+    $.hideComplete($currentItem);
     $.showAnimate($firstItem);
   });
 
 });
+
 jQuery( document ).ready(function( $ ) {
   "use strict";
 
@@ -753,13 +754,13 @@ jQuery( document ).ready(function( $ ) {
 
   $.hideAnimate = function($element) {
     $element.addClass("closing");
-    $element.removeClass("open opening close");
+    $element.removeClass("open opening closed");
     setTimeout($.hideComplete, 300, $element); // slower, allow for animation
   };
 
   $.hideComplete = function($element) {
     $element.addClass("closed").attr("aria-hidden", "true");
-    $element.removeClass("closing");
+    $element.removeClass("open opening closing");
   };
 
   $.showAnimate = function($element) {
@@ -770,7 +771,7 @@ jQuery( document ).ready(function( $ ) {
 
   $.showComplete = function($element) {
     $element.addClass("open").attr("aria-hidden", "false");
-    $element.removeClass("opening");
+    $element.removeClass("opening closing closed");
   };
 
 });

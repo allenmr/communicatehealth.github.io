@@ -1,6 +1,6 @@
 jQuery( document ).ready(function( $ ) {
   "use strict";
-  
+
   $(".content-slide-prev").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
@@ -40,7 +40,7 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // hide current slide, show previous slide
-    $.hideAnimate($currentItem);
+    $.hideComplete($currentItem);
     $.showAnimate($nextItem);
   });
 
@@ -56,7 +56,7 @@ jQuery( document ).ready(function( $ ) {
     $(".content-slide-next").removeClass("limit");
 
     // hide current slide, show first slide
-    $.hideAnimate($currentItem);
+    $.hideComplete($currentItem);
     $.showAnimate($firstItem);
   });
 

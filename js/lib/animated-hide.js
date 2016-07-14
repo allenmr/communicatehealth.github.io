@@ -3,13 +3,13 @@ jQuery( document ).ready(function( $ ) {
 
   $.hideAnimate = function($element) {
     $element.addClass("closing");
-    $element.removeClass("open opening close");
+    $element.removeClass("open opening closed");
     setTimeout($.hideComplete, 300, $element); // slower, allow for animation
   };
 
   $.hideComplete = function($element) {
     $element.addClass("closed").attr("aria-hidden", "true");
-    $element.removeClass("closing");
+    $element.removeClass("open opening closing");
   };
 
   $.showAnimate = function($element) {
@@ -20,7 +20,7 @@ jQuery( document ).ready(function( $ ) {
 
   $.showComplete = function($element) {
     $element.addClass("open").attr("aria-hidden", "false");
-    $element.removeClass("opening");
+    $element.removeClass("opening closing closed");
   };
 
 });
