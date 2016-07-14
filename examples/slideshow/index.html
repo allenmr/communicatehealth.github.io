@@ -6,43 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slideshow</title>
     <link rel="stylesheet" href="/public/css/style.min.css">
+    <link rel="stylesheet" href="/examples/off-canvas/off-canvas.css">
     <link rel="stylesheet" href="/examples/slideshow/slideshow.css">
   </head>
 
-  <body>
-    <div class="page-content">
-      <div class="wrapper">
+  <body class="off-canvas">
+    <div class="wrapper">
+      <ul class="skip-links">
+        <li><a href="#top">Skip to content</a></li>
+        <li><a href="#navigation">Skip to navigation</a></li>
+      </ul>
 
-        <h1>Slideshow</h1>
+      <div class="mobile-menu">
+        <div class="site-name"><a href="/examples/"><img src="/public/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+        <div class="site-menu"><button class="btn" aria-controls="sidebar-block" aria-expanded="false">Menu</button></div>
+      </div>
 
-        <div class="content-slider-block">
-          <div class="content-slides">
-            <div class="content-slide open" id="content-slide-1" aria-hidden="false">
-              <p><img src="/img/ch-1.jpg" alt=""></p>
-              <p class="content-slider-caption">CommunicateHealth homepage</p>
-            </div>
-            <div class="content-slide closed" id="content-slide-2" aria-hidden="true">
-              <p><img src="/img/ch-2.jpg" alt=""></p>
-              <p class="content-slider-caption">About Us</p>
-            </div>
-            <div class="content-slide closed" id="content-slide-3" aria-hidden="true">
-              <p><img src="/img/ch-3.jpg" alt=""></p>
-              <p class="content-slider-caption">Portfolio</p>
-            </div>
-          </div>
-          <div class="content-slider-control">
-            <p class="t-center">
-              <a href="#content-slide-prev" class="btn content-slide-prev limit" id="content-slide-prev"><span aria-hidden="true">&larr; </span>Previous Page</a>
-              <a href="#content-slide-next" class="btn content-slide-next" id="content-slide-next">Next Page<span aria-hidden="true"> &rarr;</span></a>
-              <a href="#content-slide-restart" class="btn content-slide-restart limit" id="content-slide-restart">Start Over</a>
-            </p>
-          </div>
+      <div class="sidebar closed" id="sidebar-block" aria-hidden="false">
+        <div class="header">
+          <div class="site-name"><a href="/examples/"><img src="/public/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+        </div>
+
+        <div class="nav" role="navigation">
+          <ul id="navigation">
+            <li><a href="/examples/accordion/">Accordion</a></li>
+            <li><a href="/examples/dropdown/">Dropdown menu with hover and keyboard control</a></li>
+            <li><a href="/examples/off-canvas/">Off-canvas navigation</a></li>
+            <li class="current"><a href="/examples/slideshow/">Slideshow</a></li>
+            <li><a href="/examples/tabs/">Tab Panel</a></li>
+            <li><a href="/examples/infographic/">Infographic</a></li>
+          </ul>
         </div>
       </div>
+
+      <main id="top" class="page">
+        <div class="overlay closed" aria-hidden="true"></div>
+
+        <div class="content">
+
+
+
+
+          <h1>Slideshow</h1>
+
+          <div class="content-slider-block">
+            <div class="content-slides">
+              <div class="content-slide open" id="content-slide-1" aria-hidden="false">
+                <p><img src="/img/ch-1.jpg" alt=""></p>
+                <p class="content-slider-caption">CommunicateHealth homepage</p>
+              </div>
+              <div class="content-slide closed" id="content-slide-2" aria-hidden="true">
+                <p><img src="/img/ch-2.jpg" alt=""></p>
+                <p class="content-slider-caption">About Us</p>
+              </div>
+              <div class="content-slide closed" id="content-slide-3" aria-hidden="true">
+                <p><img src="/img/ch-3.jpg" alt=""></p>
+                <p class="content-slider-caption">Portfolio</p>
+              </div>
+            </div>
+            <div class="content-slider-control">
+              <p class="t-center">
+                <a href="#content-slide-prev" class="btn content-slide-prev limit" id="content-slide-prev"><span aria-hidden="true">&larr; </span>Previous Page</a>
+                <a href="#content-slide-next" class="btn content-slide-next" id="content-slide-next">Next Page<span aria-hidden="true"> &rarr;</span></a>
+                <a href="#content-slide-restart" class="btn content-slide-restart limit" id="content-slide-restart">Start Over</a>
+              </p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </main>
     </div>
 
     <script src="/js/jquery.js"></script>
+    <script src="/js/vendor/throttle-debounce.js"></script>
     <script src="/js/lib/animated-hide.js"></script>
+    <script src="/js/lib/off-canvas.js"></script>
     <script src="/js/lib/slideshow.js"></script>
 
   </body>

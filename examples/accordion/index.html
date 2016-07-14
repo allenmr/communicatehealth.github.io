@@ -6,52 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Accordion</title>
     <link rel="stylesheet" href="/public/css/style.min.css">
+    <link rel="stylesheet" href="/examples/off-canvas/off-canvas.css">
     <link rel="stylesheet" href="/examples/accordion/accordion.css">
   </head>
 
-  <body>
-    <div class="page-content">
-      <div class="wrapper">
+  <body class="off-canvas">
+    <div class="wrapper">
+      <ul class="skip-links">
+        <li><a href="#top">Skip to content</a></li>
+        <li><a href="#navigation">Skip to navigation</a></li>
+      </ul>
 
-        <h1>Accordion</h1>
+      <div class="mobile-menu">
+        <div class="site-name"><a href="/examples/"><img src="/public/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+        <div class="site-menu"><button class="btn" aria-controls="sidebar-block" aria-expanded="false">Menu</button></div>
+      </div>
 
-        <div class="accordion">
+      <div class="sidebar closed" id="sidebar-block" aria-hidden="false">
+        <div class="header">
+          <div class="site-name"><a href="/examples/"><img src="/public/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+        </div>
 
-          <div class="accordion-block">
-            <a href="#colors" aria-expanded="true" aria-controls="colors-content" class="accordion-toggle" id="colors">Colors</a>
-
-            <div id="colors-content" class="accordion-content" aria-hidden="false">
-              <ul>
-                <li>Red</li>
-                <li>Orange</li>
-                <li>Yellow</li>
-                <li>Green</li>
-                <li>Blue</li>
-                <li>Indigo</li>
-                <li>Violet</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="accordion-block">
-            <a href="#seasons" aria-expanded="true" aria-controls="seasons-content" class="accordion-toggle" id="seasons">Seasons</a>
-
-            <div id="seasons-content" class="accordion-content" aria-hidden="false">
-              <ul>
-                <li>Spring</li>
-                <li>Summer</li>
-                <li>Fall</li>
-                <li>Winter</li>
-              </ul>
-            </div>
-          </div>
-
+        <div class="nav" role="navigation">
+          <ul id="navigation">
+            <li class="current"><a href="/examples/accordion/">Accordion</a></li>
+            <li><a href="/examples/dropdown/">Dropdown menu with hover and keyboard control</a></li>
+            <li><a href="/examples/off-canvas/">Off-canvas navigation</a></li>
+            <li><a href="/examples/slideshow/">Slideshow</a></li>
+            <li><a href="/examples/tabs/">Tab Panel</a></li>
+            <li><a href="/examples/infographic/">Infographic</a></li>
+          </ul>
         </div>
       </div>
+
+      <main id="top" class="page">
+        <div class="overlay closed" aria-hidden="true"></div>
+
+        <div class="content">
+
+
+
+
+          <h1>Accordion</h1>
+
+          <div class="accordion">
+
+            <div class="accordion-block">
+              <a href="#colors" aria-expanded="true" aria-controls="colors-content" class="accordion-toggle" id="colors">Colors</a>
+
+              <div id="colors-content" class="accordion-content" aria-hidden="false">
+                <ul>
+                  <li>Red</li>
+                  <li>Orange</li>
+                  <li>Yellow</li>
+                  <li>Green</li>
+                  <li>Blue</li>
+                  <li>Indigo</li>
+                  <li>Violet</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-block">
+              <a href="#seasons" aria-expanded="true" aria-controls="seasons-content" class="accordion-toggle" id="seasons">Seasons</a>
+
+              <div id="seasons-content" class="accordion-content" aria-hidden="false">
+                <ul>
+                  <li>Spring</li>
+                  <li>Summer</li>
+                  <li>Fall</li>
+                  <li>Winter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </main>
     </div>
 
     <script src="/js/jquery.js"></script>
+    <script src="/js/vendor/throttle-debounce.js"></script>
     <script src="/js/lib/animated-hide.js"></script>
+    <script src="/js/lib/off-canvas.js"></script>
     <script src="/js/lib/accordion.js"></script>
 
   </body>

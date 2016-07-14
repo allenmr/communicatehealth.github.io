@@ -105,7 +105,7 @@
 
 .header {
   position: fixed;
-  height: 4em;
+  height: 5em;
   left: 0;
   top: 3em;
   width: 17.5em;
@@ -142,7 +142,7 @@
 
 @media screen and (min-width: 60em) {
   .nav {
-    top: 4em;
+    top: 5em;
   }
 }
 
