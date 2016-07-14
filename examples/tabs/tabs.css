@@ -9,26 +9,32 @@
   list-style-type: none;
 }
 
-.tab-controls a {
-  background-color: #eee;
-  display: block;
-  margin-left: .5em;
-  padding: .5em 1em;
-}
-
-.tab-control[aria-selected=false] {
+.tab-control:link,
+.tab-control:visited {
   background-color: #ddd;
+  color: #222;
+  display: block;
+  margin-right: .5em;
+  padding: .75em 2.5em;
+  text-decoration: none;
 }
 
-.tab-controls:hover,
-.tab-controls:focus {
-  background-color: #f9f9f9;
+.tab-control[aria-selected=true],
+.tab-control:hover,
+.tab-control:focus {
+  background-color: #008198;
+  color: #fff;
 }
 
 .tab-content {
-  background-color: #eee;
+  background-color: #fff;
   margin: 0;
   padding: 1em;
+}
+
+.tab-content h2 {
+  font-size: 1.75em;
+  margin-top: .5em;
 }
 
 .tab-content[aria-hidden=true] {
@@ -36,5 +42,69 @@
 }
 
 .tab-content[aria-hidden=false] {
+  border-top: 5px solid #008198;
   display: block;
+}
+
+/* General styling */
+body {
+  background-color: #f4f4f5;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  padding-bottom: .25em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: .75em;
+  margin-top: 2em;
+}
+
+.btn {
+  background-color: #008198;
+  background-image: none;
+  border: 1px solid #008198;
+  border-radius: .25em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0;
+  padding: .4em .75em;
+  text-align: center;
+  text-decoration: none;
+  transition: all .4s;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn:visited {
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border-color: #008198;
+  color: #008198;
+  transition: all .4s;
+}
+
+.btn:active {
+  background-color: #001f3f;
+  border-color: #001f3f;
+  color: #fff;
+  transition: all .4s;
 }
