@@ -1,4 +1,5 @@
 // close all accordion items when JS loads
+$(".accordion-block").addClass("closed");
 $(".accordion-toggle").attr("aria-expanded", "false");
 $(".accordion-content").addClass("closed").attr("aria-hidden", "true");
 
@@ -11,12 +12,14 @@ $(".accordion-toggle").click(function (event) {
   // If accordion content is already visible, hide
   if ($(this).attr('aria-expanded') === 'true') {
     $(this).attr("aria-expanded", "false");
+    $(this).parent(".accordion-block").removeClass("open").addClass("closed");
     $.hideAnimate($next);
   }
 
   // Show accordion content
   else {
     $(this).attr("aria-expanded", "true");
+    $(this).parent(".accordion-block").removeClass("closed").addClass("open");
     $.showAnimate($next);
   }
 });
