@@ -4,16 +4,6 @@
   padding-top: 2em;
 }
 
-.infographic-block  h2 {
-  color: #222;
-  font-weight: 400;
-  margin-top: .5em;
-}
-
-.infographic-poster {
-  display: none;
-}
-
 .infographic-container {
   background-color: #fff;
   border: 1px solid #b2ada7;
