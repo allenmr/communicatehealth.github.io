@@ -1,21 +1,26 @@
-$.hideAnimate = function($element) {
-  $element.addClass("closing");
-  $element.removeClass("open opening close");
-  setTimeout($.hideComplete, 300, $element); // slower, allow for animation
-};
+jQuery( document ).ready(function( $ ) {
+  "use strict";
 
-$.hideComplete = function($element) {
-  $element.addClass("closed").attr("aria-hidden", "true");
-  $element.removeClass("closing");
-};
+  $.hideAnimate = function($element) {
+    $element.addClass("closing");
+    $element.removeClass("open opening close");
+    setTimeout($.hideComplete, 300, $element); // slower, allow for animation
+  };
 
-$.showAnimate = function($element) {
-  $element.addClass("opening");
-  $element.removeClass("open closing closed");
-  setTimeout($.showComplete, 20, $element); // faster, animation happens after
-};
+  $.hideComplete = function($element) {
+    $element.addClass("closed").attr("aria-hidden", "true");
+    $element.removeClass("closing");
+  };
 
-$.showComplete = function($element) {
-  $element.addClass("open").attr("aria-hidden", "false");
-  $element.removeClass("opening");
-};
+  $.showAnimate = function($element) {
+    $element.addClass("opening");
+    $element.removeClass("open closing closed");
+    setTimeout($.showComplete, 20, $element); // faster, animation happens after
+  };
+
+  $.showComplete = function($element) {
+    $element.addClass("open").attr("aria-hidden", "false");
+    $element.removeClass("opening");
+  };
+
+});
