@@ -200,6 +200,6 @@ jQuery( document ).ready(function( $ ) {
     });
   };
 
-  $('.nav').setup_navigation();
+  $('.dropdown').setup_navigation();
 
 });
