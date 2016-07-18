@@ -5,7 +5,7 @@ jQuery( document ).ready(function( $ ) {
   var responsiveAdjust = function() {
     if (window.matchMedia) {
       if (window.matchMedia("(min-width: 60em)").matches) {
-        $.showAnimate($(".sidebar"));
+        $.showComplete($(".sidebar"));
         $.hideAnimate($(".mobile-menu"));
         $.hideAnimate($(".overlay"));
       }
