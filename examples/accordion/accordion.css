@@ -24,9 +24,11 @@
 .accordion-toggle:visited {
   color: #222;
   text-decoration: none;
+  transition: all .3s;
 }
 
-.accordion-toggle:hover {
+.accordion-toggle:hover,
+.accordion-toggle:focus {
   background-color: #7ac142;
   background-image: url('/public/img/icon-plus-white.png');
   color: #fff;
