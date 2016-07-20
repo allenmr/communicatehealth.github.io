@@ -57,7 +57,8 @@ img {
       color: #222;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #7ac142;
       color: #fff;
       font-weight: bold;

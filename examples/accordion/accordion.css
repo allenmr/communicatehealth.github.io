@@ -40,7 +40,8 @@
   transition: all .3s
 }
 
-.accordion-block.open .accordion-toggle:hover {
+.accordion-block.open .accordion-toggle:hover,
+.accordion-block.open .accordion-toggle:focus {
   background-image: url('/public/img/icon-minus-white.png');
 }
 
