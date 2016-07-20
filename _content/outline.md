@@ -195,6 +195,15 @@ Block ARIA landmark roles - [https://www.drupal.org/project/block_aria_landmark_
 
 ### Off-canvas navigation
 
+  * Jump links to jump over the navigation (same as sighted users scanning straight to the content)
+  * Menu button:
+    * aria-expanded=true/false
+    * aria-controls=sidebar-block
+  * menu container:
+    * aria-hidden=true/false
+    * role="navigation"
+  * Clicking on meny link moves focus to the left navigation
+
 ### Slideshow
 
   * aria-hidden = true/false
