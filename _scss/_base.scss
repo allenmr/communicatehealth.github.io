@@ -31,38 +31,3 @@ img {
     width: auto;
   }
 }
-
-.t-center { text-align: center; }
-
-.landing-buttons {
-  list-style-type: none;
-  padding: 0;
-
-  a {
-    background-color: #fff;
-    color: #222;
-    cursor: pointer;
-    display: block;
-    font-size: 1.5em;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: .5em;
-    padding: .75em;
-    text-align: center;
-    text-decoration: none;
-    transition: all .4s;
-    vertical-align: middle;
-
-    &:visited {
-      color: #222;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: #7ac142;
-      color: #fff;
-      font-weight: bold;
-      transition: all .4s;
-    }
-  }
-}

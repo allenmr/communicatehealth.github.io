@@ -1,3 +1,56 @@
+// Example pages
+
+.t-center { text-align: center; }
+
+.landing-buttons {
+  list-style-type: none;
+  padding: 0;
+
+  a {
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: .5em;
+    padding: .75em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .4s;
+    vertical-align: middle;
+
+    &:visited {
+      color: #222;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #7ac142;
+      color: #fff;
+      font-weight: bold;
+      transition: all .4s;
+    }
+  }
+}
+
+.footer {
+  background-image: url('/public/img/footer.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  clear: both;
+  margin-top: 6em;
+  padding-top: 2em;
+
+  p {
+    margin-bottom: .5em;
+    margin-top: 0;
+  }
+}
+
+
 // Landing page
 
 .logo {
