@@ -165,15 +165,57 @@ Block ARIA landmark roles - [https://www.drupal.org/project/block_aria_landmark_
 
 ### Accordion
 
+  * Basic list structure
+  * controller link
+    * aria-expanded = true
+    * aria-controls = ID of the content panel
+    * link click leaves focus on the controller link
+  * Content container
+    * aria-hidden = false
+  * On load:
+    * add class=closed to the wrapper div
+    * change aria-expanded to false on the controller link
+    * content container - add class=closed and aria-hidden=true
+  * On selection (mouse click or keyboard enter):
+    * add class=open to the wrapper div
+    * controller link - aria-expanded=true
+    * content container - add class=open and aria-hidden=false
+  * mention closing/opening class
+
 ### Dropdown menu
+
+  * Exact same interaction on mouse hover/click as keyboard
+  * Tab to navigate through the entire menu including subnavs
+  * Left and right arrow keys to move to adjacent menubar item
+  * up and down arrow keys move through submenu items
+  * spacebar or enter selects the nav item
+  * role=menubar
+  * role=menu
+  * aria-hidden=true
 
 ### Off-canvas navigation
 
 ### Slideshow
 
+  * aria-hidden = true/false
+  * class = closed/open
+
 ### Tab Panel
 
+  * expected keyboard interaction for tablist: arrow keys
+  * tablist > presentation > tab
+  * aria-controls - id of tab content
+  * aria-selected=true/false
+  * content area - role=tabpanel
+  * aria-hidden = true/false
+  * aria-labeledby = id of link
+
 ### Infographic
+
+  * Brings all of the examples together
+  * tab panel
+  * with buttons for forward/back
+  * popups using aria-hidden
 
 # Summary
 
