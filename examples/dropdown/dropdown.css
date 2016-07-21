@@ -73,3 +73,13 @@ ul.show-menu {
   background: #008198;
   color: #fff;
 }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
