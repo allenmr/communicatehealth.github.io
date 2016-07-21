@@ -31,7 +31,16 @@ Challenge: don't use a mouse
 
 Accessible solution: keyboard friendly
 
-**TP:** clean semantic markup, ensure that the mouse isn't required to browse the site
+**Talking Points** 
+
+  * this could be any type or user:
+    * visual impairment
+    * mobility impairment
+    * short term injury
+    * busy with one hand full
+    * prefers the keyboard
+  * clean semantic markup
+  * ensure that the mouse isn't required to browse the site
 
 ---
 
@@ -39,11 +48,11 @@ Challenge: can't see images
 
 Accessible solution: alt text
 
-**TP:** Not just vision impairments
+**Talking Points** 
 
-could be on a slow connection and images don't load
-
-Might just have their browser set to block images (for data reasons or other)
+  * Not just vision impairments
+  * could be on a slow connection and images don't load
+  * Might just have their browser set to block images (for data reasons or other)
 
 ---
 
@@ -51,7 +60,7 @@ Challenge: listen with a screenreader
 
 Accessible solution: provide links to skip over nav and other repetitive content
 
-**TP:** 
+**Talking Points** 
 
 ---
 
@@ -59,7 +68,10 @@ Challenge: jump between links using the tab key
 
 Accessible solution: make sure links have useful text and make sense out of context (avoid "click here" or "read more")
 
-**TP:** 
+**Talking Points** 
+
+  * Useful for all users
+  * Seeing a page full of links with the same text is confusing
 
 ---
 
@@ -67,7 +79,9 @@ Challenge: expect links to take them somewhere
 
 Accessible solution: avoid scripts in links that don't have true destinations (e.g.href="javascript;"). Move users focus where it's expected if links stay on the page
 
-**TP:** 
+**Talking Points** 
+
+  * Also really important for a fallback in case javascript doesn't load for whateer reason (blocked by the users network or a rendering issue)
 
 ---
 
@@ -79,9 +93,11 @@ Accessible solution 1: Ensure color contrast minimums as designated by 508 (4.5:
 
 Accessible solution 2: Do not use color as the only means to convey meaning (make text a heading or use strong, clearly label icons)
 
-**TP:** Don't say things like "See the green text below" or "red items are required."
+**Talking Points** 
 
-Instead mark up the important content with strong or heading tags and use aria-labels where appropriate to expand text that requires more context for screen readers
+  * Don't say things like "See the green text below" or "red items are required."
+  * Instead mark up the important content with strong or heading tags and use aria-labels where appropriate to expand text that requires more context for screen readers
+  * Also refers to icons. tell story about DGA colored dots infographic
 
 ---
 
@@ -91,11 +107,20 @@ Challenge: Often need to increase font size above "normal" levels
 
 Accessible solution: avoid text in graphics (make everything real html text)
 
+**Talking Points**
+
+  * (not accessibility) Also helps with font rendering/anti-aliasing
+  * Easier to change later (no need to find the old PSD file and update the graphic, just go into the text and make a quick update) With Google Fonts and Typekit there are thousands of fonts to choose from
+
 ---
 
 Challenge:  Often use screen magnifiers, smaller field of vision
 
 Accessible solution: Consider proximity of related elements. Good reason to vertically align form elements and put each element on one line
+
+**Talking Points**
+
+  * Talk about aligned form elements (cancel button, etc)
 
 ## Motor
 
@@ -113,7 +138,7 @@ Accessible solution 2: error-tolerant ("Are you sure that you want to delete tha
 
 ---
 
-Thousands of assistive technologies available, one key point to keep in mind: Most assistive technologies for people with motor disabilities either work through the keyboard or emulate the functionality of the keyboard.
+**Thousands of assistive technologies available, one key point to keep in mind:** Most assistive technologies for people with motor disabilities either work through the keyboard or emulate the functionality of the keyboard.
 
 ## hearing
 
@@ -127,11 +152,7 @@ Accessible solution 2: include any important sounds in the captions
 
 Write in plain language
 
-**Update this to be simple using CH low literacy best practices**
-
-## aging
-
-**REMOVE**
+https://comhealth-odphp.github.io/healthliteracyonline/what-we-know/
 
 ## Keys for accessibility
 
@@ -158,6 +179,8 @@ Block ARIA labels - [https://www.drupal.org/project/block_aria_label](https://ww
 Block ARIA landmark roles - [https://www.drupal.org/project/block_aria_landmark_roles](https://www.drupal.org/project/block_aria_landmark_roles)
 
 ### Extending Drupal
+
+  * preprocess functions
 
 ## EXAMPLES!!!
 
