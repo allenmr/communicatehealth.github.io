@@ -245,7 +245,7 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', ['build', 'connect', 'watch']);
   grunt.registerTask('build', ['js', 'css', 'images', 'shell:jekyllBuildDev']);
 
-  grunt.registerTask('css', ['sass', 'lint-scss', 'postcss', 'cssnano']);
+  grunt.registerTask('css', ['sass', 'postcss', 'cssnano']);
   grunt.registerTask('js', ['lint-js', 'concat', 'uglify']);
   grunt.registerTask('images', ['imagemin']);
 

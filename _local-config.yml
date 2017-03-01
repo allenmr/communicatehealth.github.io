@@ -14,7 +14,7 @@ lsi: false
 markdown: kramdown
 source: .
 destination: _site
-permalink: /:categories/:title/
+permalink: :year/:month/:title/
 timezone: America/New_York
 
 feed:
