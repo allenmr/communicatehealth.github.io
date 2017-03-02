@@ -16,15 +16,15 @@ Using Wildcards
 
 To use the Advanced Find and Replace, select Advanced Find and Replace under the Edit menu:
 
-![Advanced Find and Replace menu item]({{ "/public/img/word-adv-find.jpg" | prepend: site.baseurl }})
+![Advanced Find and Replace menu item]({{ "/img/word-adv-find.jpg" | prepend: site.baseurl }})
 
 Be sure to check the box next to "Use wildcards":
 
-![Select "Use wildcards"]({{ "/public/img/word-adv-find-wildcard.jpg" | prepend: site.baseurl }})
+![Select "Use wildcards"]({{ "/img/word-adv-find-wildcard.jpg" | prepend: site.baseurl }})
 
 And if you need reminders about the syntax, click on the "Special" drop-down menu:
 
-!["Special" menu helper]({{ "/public/img/word-adv-find-special-menu.jpg" | prepend: site.baseurl }})
+!["Special" menu helper]({{ "/img/word-adv-find-special-menu.jpg" | prepend: site.baseurl }})
 
 
 More Info On Wildcards

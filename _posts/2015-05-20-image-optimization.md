@@ -13,4 +13,4 @@ categories: optimization
 
 ## Optimize PDFs by saving as Reduced Size PDF
 
-![PDF reduced size option]({{ "/public/img/Reduced-size-PDF.png" | prepend: site.baseurl }})
+![PDF reduced size option]({{ "/img/Reduced-size-PDF.png" | prepend: site.baseurl }})

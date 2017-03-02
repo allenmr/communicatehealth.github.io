@@ -18,7 +18,7 @@ Pivot tables are available in Excel _not Excel online :-(_, Goolge Sheets, Libre
 How could I use them (i.e., a simple _Hello World_ example)?
 ------------------
 
-Say you want to know how many Remote vs Rockville vs Northampton attendees there were at the 10/23/2015 Creative time. 
+Say you want to know how many Remote vs Rockville vs Northampton attendees there were at the 10/23/2015 Creative time.
 Conveniently enough, there is a spreadsheet with this information on Box: <a href="https://communicatehealth.box.com/s/uoj4cttfc7e5j5vfq7k369jd8452j1dt" target="_blank">**Creative-Time-Attendees_10.23.15.xlsx**</a> (Please don't re-save this document if you open it via "Open with Excel").
 
 At this point, there are only 28 rows -- you could count the rows under "Remote/Rockville/Northampton" manually, but that would waste valuable seconds that could be spent playing with Pivot Tables.
@@ -30,11 +30,11 @@ Along the right side, drag "Remote/Rockville/Northampton" from the top-right are
 How do I use them every day (i.e., a semi-real example)?
 --------------------
 
-The following link is to a simulated time log, with a date entry, elapsed time, and task columns. [**sampleHours.xlsx**](../../../../../resources/sampleHours.xlsx) &mdash; A useful document, but not necessarily easy to post into BillQuick.  A pivot table can make this easier.  
+The following link is to a simulated time log, with a date entry, elapsed time, and task columns. [**sampleHours.xlsx**](/resources/sampleHours.xlsx) &mdash; A useful document, but not necessarily easy to post into BillQuick.  A pivot table can make this easier.  
 
 Once again, start the process of creating a pivot table.  But before pressing "OK" on the creation dialog, I like to extend the range of the input data so I can add more rows every day.  In this case, I change the range "Sheet1!$A$1:$C$68" to "Sheet1!$A$1:$C$68**00**".
 
-After pressing "OK", an new blank spreadsheet appears.  Drag "Hours" to the "Values" box.  Notice that "Count of Hours" appears, when what is really needed is a "Sum of Hours". Click on that label to edit the "Value Field Settings" and change "Summarize value field by" to "**Sum**".  Then drag "Date" to "Columns" and "Category" to "Rows"... And a BillQuick-friendly table will appear. 
+After pressing "OK", an new blank spreadsheet appears.  Drag "Hours" to the "Values" box.  Notice that "Count of Hours" appears, when what is really needed is a "Sum of Hours". Click on that label to edit the "Value Field Settings" and change "Summarize value field by" to "**Sum**".  Then drag "Date" to "Columns" and "Category" to "Rows"... And a BillQuick-friendly table will appear.
 
 If you have a lot of date columns, it's handy to lock the first column. In my version of Excel, that can be done via View... Freeze Panes... Freeze First Column.
 
