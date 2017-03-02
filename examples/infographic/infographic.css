@@ -123,6 +123,14 @@
   color: #008198;
 }
 
+.btn-dark {
+  color: #fff;
+}
+
+.btn-dark:visited {
+  color: #fff;
+}
+
 .dot-nav {
   display: block;
   list-style-type: none;

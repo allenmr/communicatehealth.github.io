@@ -1,4 +1,18 @@
+// inspired by: https://robots.thoughtbot.com/architecting-front-end-styles
 
-@import "base";
-@import "layout";
-@import "syntax-highlighting";
+@import 'variables';
+
+// /base is the set of core elements. These are anything that is defined by HTML itself including <body> <p> <a> and <img>. Base also includes any non-rendering sass including mixins and functions.
+@import 'vendor/normalize/normalize';
+@import 'base/mixins';
+@import 'base/resets';
+@import 'base/core-elements';
+@import 'base/helper-classes';
+@import 'base/print';
+
+@import 'layout/single-column';
+@import 'layout/grid'; // 12-column large-only grid
+@import 'layout/off-canvas'; // needs cleanup, aria roles
+@import 'vendor/neat/neat';
+
+@import 'patterns/patterns'; // needs cleanup

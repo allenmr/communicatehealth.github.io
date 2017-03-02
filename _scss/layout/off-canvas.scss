@@ -1,0 +1,217 @@
+$sidebar-switch-point:  $large;
+$fixed-header-height:   3em; // 48px
+$sidebar-width:         18em; // 288px
+
+.mobile-menu {
+  background-color: $accent;
+  height: $fixed-header-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 18;
+
+  @include bp($sidebar-switch-point) {
+    display: none;
+  }
+}
+
+.site-name {
+  margin-left: .5em;
+  margin-top: 0;
+
+  img {
+    max-height: $fixed-header-height;
+  }
+
+  a {
+    display: block;
+    padding: .75em .5em;
+  }
+}
+
+.site-menu {
+  position: absolute;
+  right: .5em;
+  top: .35em;
+
+  .btn {
+    padding: .5em .75em;
+  }
+}
+
+.sidebar {
+  background-color: $accent;
+  position: fixed;
+  left: 0;
+  width: $sidebar-width;
+  transition: left .15s ease;
+  z-index: 17;
+
+  @include bp($sidebar-switch-point) {
+    height: 100%;
+  }
+
+  &.closed {
+    display: none;
+
+    @include bp($sidebar-switch-point) {
+      display: block;
+    }
+  }
+
+  &.opening,
+  &.closing {
+    height: 0;
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  &.open {
+    height: auto;
+    opacity: 1;
+    transition: all .3s;
+  }
+
+  .site-name {
+    margin-left: 0;
+    padding: .2em .5em;
+  }
+}
+
+.header {
+  position: fixed;
+  height: $fixed-header-height;
+  left: 0;
+  top: $fixed-header-height;
+  width: $sidebar-width;
+
+  @include bp($sidebar-switch-point) {
+    background-color: $accent;
+    top: 0;
+  }
+
+  .closed & {
+    left: -$sidebar-width;
+    transition: left .15s ease;
+
+    @include bp($sidebar-switch-point) {
+      left: 0;
+    }
+  }
+}
+
+.nav {
+  background-color: $accent;
+  bottom: 0;
+  left: 0;
+  margin-top: 0;
+  position: fixed;
+  overflow: auto;
+  top: $fixed-header-height;
+  width: $sidebar-width;
+
+  .closed & {
+    left: -$sidebar-width;
+    transition: left .15s ease;
+
+    @include bp($sidebar-switch-point) {
+      left: 0;
+    }
+  }
+
+  ul {
+    display: block;
+    list-style-type: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    &.closed {
+      display: none;
+    }
+  }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: $black;
+      display: block;
+      padding: .5em 1em;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+
+    &.subnav-toggle {
+      display: block;
+      height: 2.5em;
+      line-height: 2.5;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 2.5em;
+    }
+  }
+}
+
+.subnav {
+  a {
+    margin-left: 1em;
+  }
+}
+
+.overlay {
+  background-color: $white-trans;
+  bottom: 0;
+  height: 100%;
+  left: $sidebar-width;
+  position: fixed;
+  right: 0;
+  top: $fixed-header-height;
+  transition: left .15s ease;
+  width: 100%;
+  z-index: 17;
+
+  &.closed {
+    display: none;
+  }
+
+  &.opening,
+  &.closing {
+    height: 0;
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  &.open {
+    height: auto;
+    opacity: 1;
+    transition: all .3s;
+  }
+}
+
+.page {
+  position: relative;
+  margin-top: 5em;
+
+  @include bp($sidebar-switch-point) {
+    margin-left: $sidebar-width;
+    margin-top: 0;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 1em;
+}

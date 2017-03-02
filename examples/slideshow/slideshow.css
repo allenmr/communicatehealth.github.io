@@ -87,3 +87,11 @@
   color: #fff;
   transition: all .4s;
 }
+
+.btn-dark {
+  color: #fff;
+}
+
+.btn-dark:visited {
+  color: #fff;
+}

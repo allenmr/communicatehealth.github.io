@@ -1,6 +1,17 @@
-# CommunicateHealth Dev Blog
+# camp [![Build Status](https://travis-ci.org/CommunicateHealth/camp.svg?branch=gh-pages)](https://travis-ci.org/CommunicateHealth/camp)
 
-[https://communicatehealth.github.io](https://communicatehealth.github.io)
+camp is a starting point for new Jekyll projects
+
+- [References](#references)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Grunt Tasks](#grunt-tasks)
+- [Jekyll Tips](#jekyll-tips)
+- [Options](#options)
+
+## References
+
+- [`index.html` reference](https://github.com/communicatehealth/camp/blob/gh-pages/_content/index.md)
 
 ## Requirements
 
@@ -19,18 +30,45 @@ headers and v2.0.0 or above)
 
 ## Grunt Tasks
 
-- ```grunt``` - runs JS check, minification, then serves and watches Jekyll site (including SCSS compiling) at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+### Build and serve locally
+
+- ```grunt``` - runs JS lint + concatenation + minification, SCSS lint + compilation + autoprefixing + minification, image optimization, Jekyll build, then serves + watches at [http://127.0.0.1:4000](http://127.0.0.1:4000) - any changes to HTML, SCSS, JS, images files will trigger a rebuild on-the-fly
+
+
+### Build locally
+
 - ```grunt serve``` - same as running ```grunt```
-- ```grunt build``` - runs JS check, minification, image optimization, then builds Jekyll site (including SCSS compiling)
-- ```grunt js``` - runs JS check, concatenates, and minifies JS
-- ```grunt images``` - runs image optimization on images in /img folder
-- ```grunt lint-js``` - JS linter
-- ```grunt lint-html``` - runs HTML validation on all HTML files in the compiled _site directory
-- ```grunt lint-a11y``` - scans all HTML files in the compiled _site directory against WCAG2A accessibility guidelines
-- ```grunt lint-scss``` - Lint SCSS
-- ```grunt lint``` - Lint JS, HTML, Accessibility, SCSS
-- ```grunt report-css``` - Show stats on compiled site's CSS (using [Parker](https://github.com/katiefenn/parker/))
+- ```grunt build``` - runs JS lint + concatenation + minification, SCSS lint + compilation + autoprefixing + minification, image optimization, Jekyll build
+- ```grunt js``` - runs JS lint + concatenation + minification
+- ```grunt css``` - runs SCSS compilation + autoprefixing + minification
+- ```grunt images``` - runs image optimization on JPG, GIF, PNG, SVG images in _img folder
+
+### Linting and validation
+
+- ```grunt lint``` - Lint JS, HTML validation of compiled site, accessibility scan of compiled site, SCSS linting
+- ```grunt css-report``` - Show stats on compiled site's CSS (using [Parker](https://github.com/katiefenn/parker/))
+
+### Grunt dependency updating
+
 - ```grunt update``` - checks for version updates on all grunt dependencies
+
+## Jekyll Tips
+
+### Adding ```baseurl``` to all links
+
+The ```site.baseurl``` variable lets you use absolute URLs in your HTML regardless how deep in the folder structure your site will live. Check out some examples of how to prepend the baseurl to links:
+
+#### Stylesheet link
+
+```<link rel="stylesheet" href="{{ "/public/css/style.min.css" | prepend: site.baseurl }}">```
+
+#### Image link
+
+```<img src="{{ "/public/img/logo.png" | prepend: site.baseurl }}" alt="">```
+
+#### Internal page link
+
+```<a href="{{ "/about-us/" | prepend: site.baseurl }}">About Us</a>```
 
 ## Options
 
@@ -41,3 +79,4 @@ Calling the compress.html layout from the default.htm layout file will remove al
     ---
     layout: compress
     ---
+

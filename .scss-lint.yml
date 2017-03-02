@@ -1,4 +1,7 @@
 # https://github.com/18F/frontend/blob/18f-pages-staging/.scss-lint.yml
+scss_files: '_scss/**/*.scss'
+exclude: '_scss/vendor/**'
+
 linters:
   BangFormat:
     enabled: true
@@ -84,7 +87,7 @@ linters:
     enabled: false
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
+    allow_element_with_attribute: true
     allow_element_with_class: false
     allow_element_with_id: false
     severity: warning
@@ -97,7 +100,7 @@ linters:
     convention: strict_BEM
   Shorthand:
     enabled: true
-    allowed_shorthands: [1, 2]
+    allowed_shorthands: [1, 2, 3, 4]
     severity: warning
   SingleLinePerProperty:
     enabled: true

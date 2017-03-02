@@ -1,12 +1,22 @@
 {
-  "name": "ch-dev-blog",
-  "version": "0.1.0",
-  "description": "CommunicateHealth Dev Blog",
-  "main": "index.html",
+  "name": "camp",
+  "version": "0.0.0",
+  "description": "Starting point for new Jekyll projects",
   "repository": {
     "type": "git",
-    "url": "https://github.com/communicatehealth/communicatehealth.github.io.git"
+    "url": "https://github.com/communicatehealth/camp.git"
   },
+  "keywords": [
+    "jekyll",
+    "boilerplate",
+    "grunt"
+  ],
+  "bugs": "https://github.com/communicatehealth/camp/issues/",
+  "homepage": "https://communicatehealth.github.io/camp/",
+  "scripts": {
+    "test": "grunt travis"
+  },
+  "main": "index.html",
   "devDependencies": {
     "autoprefixer": "^6.6.0",
     "grunt": "^1.0.1",
@@ -30,8 +40,6 @@
     "load-grunt-tasks": "^3.5.2",
     "time-grunt": "^1.4.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "MIT",
   "author": "CommunicateHealth"
 }

@@ -1,0 +1,453 @@
+header {
+  background-color: $green;
+
+  h1 {
+    color: $white;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 1em 0 0;
+  }
+
+  svg {
+    height: 2em;
+    margin-bottom: -.4em;
+    width: 2em;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+.post-meta {
+  color: $gray;
+}
+
+.no-spinners {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.post-nav {
+  @extend %clearfix;
+
+  .next {
+    background-color: $accent;
+    border-radius: .5em;
+    float: right;
+    padding: 1em;
+  }
+
+  .prev {
+    background-color: $accent;
+    border-radius: .5em;
+    float: left;
+    padding: 1em;
+  }
+}
+
+// Example pages
+
+.t-center { text-align: center; }
+
+// scss-lint:disable PropertyCount
+.landing-buttons {
+  list-style-type: none;
+  padding: 0;
+
+  a {
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: .5em;
+    padding: .75em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .4s;
+    vertical-align: middle;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $green;
+      color: $white;
+      font-weight: bold;
+      transition: all .4s;
+    }
+  }
+}
+// scss-lint:enable PropertyCount
+
+.footer,
+.footer-block {
+  background-image: url('/public/img/footer.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  clear: both;
+  margin-top: 6em;
+  padding-top: 2em;
+
+  &.push {
+    margin-top: 14em;
+  }
+
+  p {
+    margin-bottom: .5em;
+    margin-top: 0;
+  }
+}
+
+.footer-block {
+  margin-top: 1em;
+}
+
+
+// Landing page
+
+.icon {
+  width: 2em;
+}
+
+
+// Define grid container(s)
+section,
+.container {
+  @include outer-container;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+// Bourbon Neat demo grid examples
+.quad,
+.main-block,
+.aside-block {
+  margin-bottom: .5em;
+}
+
+.quad {
+  @include span-columns(3);
+  @include omega(4n);
+
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega(2n);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.main-block {
+  @include span-columns(8);
+
+  @include media($tablet) {
+    @include span-columns(5);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.aside-block {
+  @include span-columns(4);
+  @include omega();
+
+  @include media($tablet) {
+    @include span-columns(3);
+    @include omega();
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.no-border {
+  th,
+  td {
+    border: 0;
+  }
+}
+
+.amt,
+.val {
+  text-align: center;
+}
+
+.table-condensed {
+  th,
+  td {
+    padding: .25em .35em;
+  }
+}
+
+// https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/
+.responsive {
+  @include bp-max($small-3) {
+    border: 0;
+    display: table;
+    max-width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: .75em;
+      display: block;
+      border-bottom: 1px solid $accent;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      border-bottom: 1px dotted $accent;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.full-bleed {
+  background-color: $code;
+  padding-bottom: .5em;
+  padding-top: 1em;
+}
+
+.pagination {
+  a {
+    border: 1px solid $accent;
+    display: inline-block;
+    padding: .25em .5em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
+
+    &.current {
+      background-color: $accent;
+      color: $black;
+    }
+  }
+
+  .pagination-muted {
+    color: $gray;
+  }
+}
+
+.panel {
+  background-color: $accent;
+  border: 1px solid $accent;
+  padding: .5em 1em;
+
+  p {
+    margin-bottom: .5em;
+    margin-top: .5em;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: .4em;
+  margin-top: .4em;
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  li {
+    display: inline;
+    padding-right: .25em;
+
+    &:after {
+      color: $gray;
+      content: '\0020\00BB';
+      padding-left: .25em;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+  }
+}
+
+.search-nav {
+  padding-left: .75em;
+  padding-right: .75em;
+}
+
+.search-label {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.search-button {
+  background-color: $accent;
+  border: 1px solid $gray;
+  border-radius: 0;
+  float: right;
+  padding: .15em 0;
+  width: 25%;
+}
+
+.search-block {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.search-text {
+  border: 1px solid $gray;
+  border-radius: 0;
+  border-right: 0;
+  font-size: 1em;
+  padding: .15em .25em;
+  width: 75%;
+}
+
+// scss-lint:disable PropertyCount
+.btn {
+  background-color: $accent;
+  border: 1px solid $accent;
+  border-radius: .25em;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  font: normal 1em/1.4;
+  padding: .25em .75em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:link,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $accent;
+    color: $black;
+  }
+}
+// scss-lint:enable PropertyCount
+
+.btn-large {
+  font-size: 1.25em;
+  padding: .35em 1.5em;
+}
+
+.btn-small {
+  font-size: .8em;
+  padding: .25em .75em;
+}
+
+.btn-dark {
+  background-color: $black;
+  color: $white;
+
+  &:link,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $gray;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+// match base and hover state to avoid
+// stuck hover state on touch devices
+.btn-touch {
+  background-color: $black;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  + .btn-block {
+    margin-top: .25em;
+  }
+}
+
+// Pattern library color blocks
+.colorblock {
+  border: 1px solid $black;
+  margin-bottom: 1.5em;
+  padding: .5em 1em;
+
+  @include span-columns(3);
+  @include omega(4n);
+  min-height: 12em;
+
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega(2n);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+    min-height: inherit;
+  }
+}
+
+.color {
+  height: 4em;
+  margin: -.5em -1em 0;
+}
