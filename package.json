@@ -1,18 +1,13 @@
 {
-  "name": "camp",
+  "name": "devblog",
   "version": "0.0.0",
-  "description": "Starting point for new Jekyll projects",
+  "description": "CommunicateHealth Developer Blog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/communicatehealth/camp.git"
+    "url": "https://github.com/communicatehealth/communicatehealth.github.io.git"
   },
-  "keywords": [
-    "jekyll",
-    "boilerplate",
-    "grunt"
-  ],
-  "bugs": "https://github.com/communicatehealth/camp/issues/",
-  "homepage": "https://communicatehealth.github.io/camp/",
+  "bugs": "https://github.com/CommunicateHealth/communicatehealth.github.io/issues/",
+  "homepage": "https://github.com/CommunicateHealth/communicatehealth.github.io/",
   "scripts": {
     "test": "grunt travis"
   },

@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         files: {
           // Lint our gruntfile and any project-specific JS files
           // Add new project-specific JS files to this array for linting
-          src: ['Gruntfile.js', '_js/lib/off-canvas.js', '_js/lib/animated-hide.js']
+          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/dropdown.js', 'js/lib/infographic.js', 'js/lib/slideshow.js', 'js/lib/tabs.js', 'js/lib/off-canvas.js', 'js/lib/animated-hide.js']
         }
       }
     },
@@ -71,46 +71,10 @@ module.exports = function(grunt) {
       dist: {
         // Combine all project files into one big JS file
         // Add new JS files to this array
-        // Project-specific JS files go in _js/lib
-        // Third-party JS files go in _js/vendor
-        src: ['_js/vendor/jumplink.js', '_js/vendor/outlink.js', '_js/vendor/jquery.js', '_js/vendor/throttle-debounce.js', '_js/lib/animated-hide.js', '_js/lib/off-canvas.js'],
-        dest: 'public/js/scripts.js',
-      },
-      accordion: {
-        src: ['_js/lib/accordion.js'],
-        dest: 'public/js/lib/accordion.js',
-      },
-      hide: {
-        src: ['_js/lib/animated-hide.js'],
-        dest: 'public/js/lib/animated-hide.js',
-      },
-      dropdown: {
-        src: ['_js/lib/dropdown.js'],
-        dest: 'public/js/lib/dropdown.js',
-      },
-      infographic: {
-        src: ['_js/lib/infographic.js'],
-        dest: 'public/js/lib/infographic.js',
-      },
-      slideshow: {
-        src: ['_js/lib/slideshow.js'],
-        dest: 'public/js/lib/slideshow.js',
-      },
-      tabs: {
-        src: ['_js/lib/tabs.js'],
-        dest: 'public/js/lib/tabs.js',
-      },
-      throttle: {
-        src: ['_js/vendor/throttle-debounce.js'],
-        dest: 'public/js/vendor/throttle-debounce.js',
-      },
-      offcanvas: {
-        src: ['_js/lib/off-canvas.js'],
-        dest: 'public/js/lib/off-canvas.js',
-      },
-      jquery: {
-        src: ['_js/jquery.js'],
-        dest: 'public/js/jquery.js',
+        // Project-specific JS files go in js/lib
+        // Third-party JS files go in js/vendor
+        src: ['js/vendor/jquery.js'],
+        dest: 'js/scripts.js',
       },
     },
 
@@ -124,18 +88,8 @@ module.exports = function(grunt) {
         },
         // Mangle and compress our single, concatenated JS file
         // Maintains uncompressed version for reference
-        src: ['public/js/scripts.js'],
-        dest: 'public/js/scripts.min.js'
-      },
-      modernizr: {
-        options : {
-          mangle : true, // allow names to be changed, simplified
-          compress : true // enable source compression
-        },
-        // Mangle and compress our single, concatenated JS file
-        // Maintains uncompressed version for reference
-        src: ['_js/vendor/modernizr.js'],
-        dest: 'public/js/modernizr.js'
+        src: ['js/scripts.js'],
+        dest: 'js/scripts.js'
       }
     },
 
@@ -155,7 +109,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // All SCSS is routed through _scss/style.scss
-          'public/css/style.css': '_scss/style.scss'
+          'css/style.css': '_scss/style.scss'
         }
       }
     },
@@ -176,7 +130,7 @@ module.exports = function(grunt) {
       },
       dist: {
         // Overwrite compiled, nested CSS with autoprefixed, minified version
-        src: 'public/css/*.css'
+        src: 'css/style.css'
       }
     },
 
@@ -187,15 +141,14 @@ module.exports = function(grunt) {
 
     //  3-1. Image optimization
     //  --------------------------------------
-    //  Optimizes all JPG, PNG, GIF, and SVG images from _img
-    //  Copies optimized images into public/img
+    //  Optimizes all JPG, PNG, GIF, and SVG images in img
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
-          cwd: '_img/', // source directory
+          cwd: 'img/', // source directory
           src: ['**/*.{png,jpg,gif,svg}'],
-          dest: 'public/img/' // output directory
+          dest: 'img/' // output directory
         }]
       }
     },
@@ -207,10 +160,10 @@ module.exports = function(grunt) {
 
     //  4-1. Clean out compiled directories
     //  --------------------------------------
-    //  Delete public and _site folder to ensure a clean build
+    //  Delete _site folder to ensure a clean build
     clean: {
       build: {
-        src: ['public/', '_site/']
+        src: ['_site/']
       }
     },
 
@@ -244,19 +197,19 @@ module.exports = function(grunt) {
       // Copy post-process CSS files into _site
       css: {
         files: [
-          {expand: true, src: ['public/css/*'], dest: '_site/', filter: 'isFile'}
+          {expand: true, src: ['css/*'], dest: '_site/', filter: 'isFile'}
         ]
       },
       // Copy post-process JS files into _site
       js: {
         files: [
-          {expand: true, src: ['public/js/*'], dest: '_site/', filter: 'isFile'}
+          {expand: true, src: ['js/*'], dest: '_site/', filter: 'isFile'}
         ]
       },
       // Copy optimized images files into _site
       img: {
         files: [
-          {expand: true, src: ['public/img/*'], dest: '_site/', filter: 'isFile'}
+          {expand: true, src: ['img/*'], dest: '_site/', filter: 'isFile'}
         ]
       }
     },
@@ -319,7 +272,7 @@ module.exports = function(grunt) {
       // 3. Uglify JS files
       // 4. Copy JS into compiled directory
       js: {
-        files: '_js/**/*.js',
+        files: 'js/**/*.js',
         tasks: ['js', 'copy:js']
       },
 
@@ -328,7 +281,7 @@ module.exports = function(grunt) {
       // 1. Optimize JPG, GIF, PNG, SVG files
       // 2. Copy optimized files into compiled directory
       img: {
-        files: '_img/**/*',
+        files: 'img/**/*',
         tasks: ['imagemin', 'copy:img']
       },
 
@@ -372,7 +325,7 @@ module.exports = function(grunt) {
             'The “frameborder” attribute on the “iframe” element is obsolete. Use CSS instead.'
           ]
         },
-        src: ["_site/**/*.html", ]
+        src: ["_site/**/*.html", "!_site/performance-chat/**/*.html" ]
       }
     },
 
@@ -399,7 +352,7 @@ module.exports = function(grunt) {
           ]
       },
       test : {
-        src: ['_site/**/*.html']
+        src: ['_site/**/*.html', "!_site/performance-chat/**/*.html"]
       }
     },
 
@@ -425,7 +378,7 @@ module.exports = function(grunt) {
     parker: {
       options: {},
       src: [
-        '_site/public/css/style.css'
+        '_site/css/style.css'
       ],
     },
 

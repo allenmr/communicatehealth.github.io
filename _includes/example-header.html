@@ -1,0 +1,33 @@
+  {% if page.css %}<link rel="stylesheet" href="{{ page.css }}">{% endif %}
+</head>
+<body class="off-canvas">
+  <div class="wrapper">
+    <ul class="skip-links">
+      <li><a href="#top">Skip to content</a></li>
+      <li><a href="#navigation">Skip to navigation</a></li>
+    </ul>
+
+    <div class="mobile-menu">
+      <div class="site-name"><a href="http://communicatehealth.com/"><img src="/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+      <div class="site-menu"><button class="btn" aria-controls="sidebar-block" aria-expanded="false">Menu</button></div>
+    </div>
+
+    <div class="sidebar closed" id="sidebar-block" aria-hidden="false">
+      <div class="header">
+        <div class="site-name"><a href="http://communicatehealth.com/"><img src="/img/ch-logo.png" alt="CommunicateHealth"></a></div>
+      </div>
+
+      <div class="nav" role="navigation">
+        <ul id="navigation">
+          <li{% if page.slug == "accordion" %} class="current"{% endif %}><a href="/examples/accordion/">Accordion</a></li>
+          <li{% if page.slug == "dropdown" %} class="current"{% endif %}><a href="/examples/dropdown/">Dropdown menu</a></li>
+          <li{% if page.slug == "off-canvas" %} class="current"{% endif %}><a href="/examples/off-canvas/">Off-canvas navigation</a></li>
+          <li{% if page.slug == "slideshow" %} class="current"{% endif %}><a href="/examples/slideshow/">Slideshow</a></li>
+          <li{% if page.slug == "tabs" %} class="current"{% endif %}><a href="/examples/tabs/">Tab Panel</a></li>
+          <li{% if page.slug == "infographic" %} class="current"{% endif %}><a href="/examples/infographic/">Infographic</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main id="top" class="page">
+      <div class="overlay closed" aria-hidden="true"></div>

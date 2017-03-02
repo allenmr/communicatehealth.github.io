@@ -1,17 +1,9 @@
-# camp [![Build Status](https://travis-ci.org/CommunicateHealth/camp.svg?branch=gh-pages)](https://travis-ci.org/CommunicateHealth/camp)
+# CH Developer Blog
 
-camp is a starting point for new Jekyll projects
-
-- [References](#references)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Grunt Tasks](#grunt-tasks)
 - [Jekyll Tips](#jekyll-tips)
-- [Options](#options)
-
-## References
-
-- [`index.html` reference](https://github.com/communicatehealth/camp/blob/gh-pages/_content/index.md)
 
 ## Requirements
 
@@ -69,14 +61,3 @@ The ```site.baseurl``` variable lets you use absolute URLs in your HTML regardle
 #### Internal page link
 
 ```<a href="{{ "/about-us/" | prepend: site.baseurl }}">About Us</a>```
-
-## Options
-
-### Uglify HTML output
-
-Calling the compress.html layout from the default.htm layout file will remove all whitespace from compiled HTML (via [http://jch.penibelst.de/](http://jch.penibelst.de/)). To use compress.html add the following to the top of _includes/default.html:
-
-    ---
-    layout: compress
-    ---
-
