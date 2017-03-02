@@ -34,8 +34,6 @@ Some examples
 
 Mobile version auto-detect: [http://www.cvs.com/](http://www.cvs.com/)
 
-Accelerometer preview from html5rocks: [http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html](http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html)
-
 Some of the sites we maintain:
 
 Good example: [http://healthfinder.gov/](http://healthfinder.gov/)

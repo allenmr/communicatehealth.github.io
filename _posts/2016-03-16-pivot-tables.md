@@ -19,7 +19,7 @@ How could I use them (i.e., a simple _Hello World_ example)?
 ------------------
 
 Say you want to know how many Remote vs Rockville vs Northampton attendees there were at the 10/23/2015 Creative time.
-Conveniently enough, there is a spreadsheet with this information on Box: <a href="https://communicatehealth.box.com/s/uoj4cttfc7e5j5vfq7k369jd8452j1dt" target="_blank">**Creative-Time-Attendees_10.23.15.xlsx**</a> (Please don't re-save this document if you open it via "Open with Excel").
+Conveniently enough, there is a spreadsheet with this information on Box: **Creative-Time-Attendees_10.23.15.xlsx**.
 
 At this point, there are only 28 rows -- you could count the rows under "Remote/Rockville/Northampton" manually, but that would waste valuable seconds that could be spent playing with Pivot Tables.
 
