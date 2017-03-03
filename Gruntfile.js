@@ -185,7 +185,7 @@ module.exports = function(grunt) {
       // 6-1. HTML validation
       // Needs to run as shell command, so out of order
       htmlproofer: {
-        command: 'htmlproofer ./_site --allow-hash-href --check-html --empty-alt-ignore'
+        command: 'htmlproofer ./_site --allow-hash-href --check-html --empty-alt-ignore --http-status-ignore "401" --url-ignore "/performance-chat"'
       }
     },
 
