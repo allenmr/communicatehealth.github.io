@@ -84,6 +84,7 @@
   }
 }
 
+.btn-previous:link,
 .btn-previous:visited {
   color: #008198;
 }
@@ -112,6 +113,7 @@
   }
 }
 
+.btn-next:link,
 .btn-next:visited {
   color: #fff;
 }
@@ -124,10 +126,6 @@
 }
 
 .btn-dark {
-  color: #fff;
-}
-
-.btn-dark:visited {
   color: #fff;
 }
 
@@ -264,6 +262,10 @@
   text-decoration: none;
   top: 45%;
   transition: all .3s;
+}
+
+.lightbox-nav-control:active {
+  top: 45%;
 }
 
 @media screen and (max-width: 48.125em) {
