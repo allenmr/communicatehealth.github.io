@@ -31,7 +31,7 @@ Challenge: don't use a mouse
 
 Accessible solution: keyboard friendly
 
-**Talking Points** 
+**Talking Points**
 
   * this could be any type or user:
     * visual impairment
@@ -48,7 +48,7 @@ Challenge: can't see images
 
 Accessible solution: alt text
 
-**Talking Points** 
+**Talking Points**
 
   * Not just vision impairments
   * could be on a slow connection and images don't load
@@ -60,7 +60,7 @@ Challenge: listen with a screenreader
 
 Accessible solution: provide links to skip over nav and other repetitive content
 
-**Talking Points** 
+**Talking Points**
 
 ---
 
@@ -68,7 +68,7 @@ Challenge: jump between links using the tab key
 
 Accessible solution: make sure links have useful text and make sense out of context (avoid "click here" or "read more")
 
-**Talking Points** 
+**Talking Points**
 
   * Useful for all users
   * Seeing a page full of links with the same text is confusing
@@ -79,7 +79,7 @@ Challenge: expect links to take them somewhere
 
 Accessible solution: avoid scripts in links that don't have true destinations (e.g.href="javascript;"). Move users focus where it's expected if links stay on the page
 
-**Talking Points** 
+**Talking Points**
 
   * Also really important for a fallback in case javascript doesn't load for whateer reason (blocked by the users network or a rendering issue)
 
@@ -93,7 +93,7 @@ Accessible solution 1: Ensure color contrast minimums as designated by 508 (4.5:
 
 Accessible solution 2: Do not use color as the only means to convey meaning (make text a heading or use strong, clearly label icons)
 
-**Talking Points** 
+**Talking Points**
 
   * Don't say things like "See the green text below" or "red items are required."
   * Instead mark up the important content with strong or heading tags and use aria-labels where appropriate to expand text that requires more context for screen readers

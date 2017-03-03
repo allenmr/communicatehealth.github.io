@@ -30,7 +30,7 @@ Along the right side, drag "Remote/Rockville/Northampton" from the top-right are
 How do I use them every day (i.e., a semi-real example)?
 --------------------
 
-The following link is to a simulated time log, with a date entry, elapsed time, and task columns. [**sampleHours.xlsx**](/resources/sampleHours.xlsx) &mdash; A useful document, but not necessarily easy to post into BillQuick.  A pivot table can make this easier.  
+The following link is to a simulated time log, with a date entry, elapsed time, and task columns. [**sampleHours.xlsx**](/files/sampleHours.xlsx) &mdash; A useful document, but not necessarily easy to post into BillQuick.  A pivot table can make this easier.  
 
 Once again, start the process of creating a pivot table.  But before pressing "OK" on the creation dialog, I like to extend the range of the input data so I can add more rows every day.  In this case, I change the range "Sheet1!$A$1:$C$68" to "Sheet1!$A$1:$C$68**00**".
 

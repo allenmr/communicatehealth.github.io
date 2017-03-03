@@ -7,4 +7,4 @@ categories: performance
 
 Slides from our Creative Time discussion on performance and smartphone usage:
 
-**[Performance Chat - Slides]({{ "/performance-chat" | prepend: site.baseurl }})**
+**[Performance Chat - Slides]({{ "/files/performance-chat" | prepend: site.baseurl }})**

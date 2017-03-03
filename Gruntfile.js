@@ -181,11 +181,6 @@ module.exports = function(grunt) {
       // Build Jekyll site using GitHub Pages gem, using localized config.yml
       jekyllBuildDev: {
         command: 'bundle exec jekyll build --config _local-config.yml'
-      },
-      // 6-1. HTML validation
-      // Needs to run as shell command, so out of order
-      htmlproofer: {
-        command: 'htmlproofer ./_site --allow-hash-href --check-html --empty-alt-ignore --http-status-ignore "401" --url-ignore "/performance-chat"'
       }
     },
 
@@ -325,7 +320,7 @@ module.exports = function(grunt) {
             'The “frameborder” attribute on the “iframe” element is obsolete. Use CSS instead.'
           ]
         },
-        src: ["_site/**/*.html", "!_site/performance-chat/**/*.html" ]
+        src: ["_site/**/*.html", "!_site/files/**/*.html" ]
       }
     },
 
@@ -352,7 +347,7 @@ module.exports = function(grunt) {
           ]
       },
       test : {
-        src: ['_site/**/*.html', "!_site/performance-chat/**/*.html"]
+        src: ['_site/**/*.html', "!_site/files/**/*.html"]
       }
     },
 
@@ -446,14 +441,14 @@ module.exports = function(grunt) {
   // 1. runs "grunt build" task
   // 2. runs htmlproofer scan
   // 3. runs accessibility scan
-  grunt.registerTask('travis', ['build', 'shell:htmlproofer', 'accessibility']);
+  grunt.registerTask('travis', ['build', 'accessibility']);
 
   // "grunt lint"
   // 1. Runs JS lint
   // 2. Runs HTML validation (htmlproofer + htmllint)
   // 3. Runs accessibility scan
   // 4. Runs SCSS linter
-  grunt.registerTask('lint', ['jshint', 'htmllint', 'shell:htmlproofer', 'accessibility', 'scsslint']);
+  grunt.registerTask('lint', ['jshint', 'htmllint', 'accessibility', 'scsslint']);
 
   // "grunt css-report"
   // 1. Output CSS stats to console
