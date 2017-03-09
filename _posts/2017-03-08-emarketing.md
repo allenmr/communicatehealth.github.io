@@ -31,8 +31,7 @@ These emails are automatically generated from content updates to their correspon
     * [Today's Headlines](https://comhealth-odphp.github.io/emarketing/healthfinder.gov/templates/todays_headlines-example.html)
     * [Noticias en Español](https://comhealth-odphp.github.io/emarketing/healthfinder.gov/templates/noticias_en_espanol-example.html)
   * health.gov blog
-    * [PPM](https://comhealth-odphp.github.io/emarketing/Health.gov/template/Healthgov-pagewatch.html)
-      * new [PPM Weekly Updates](https://comhealth-odphp.github.io/emarketing/Health.gov/template/Healthgov-pagewatch-demo-content.html)
+    * PPM [Weekly Updates](https://comhealth-odphp.github.io/emarketing/Health.gov/template/Healthgov-pagewatch.html)
     * [DGA](https://comhealth-odphp.github.io/emarketing/Health.gov/template/DGA-pagewatch.html)
     * [PAG](https://comhealth-odphp.github.io/emarketing/Health.gov/template/PAG-pagewatch.html)
     * [HCQ](https://comhealth-odphp.github.io/emarketing/Health.gov/template/HCQ-pagewatch.html)
