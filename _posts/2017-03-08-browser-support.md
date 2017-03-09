@@ -27,8 +27,7 @@ If we have analytics for a site, we may add or drop browsers depending on usage 
   * Windows - [Mainstream support](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet):
     * 10
     * 8
-  * OSX
-    * [Apple supports editions "n", "n-1" and "n-2](https://en.wikipedia.org/wiki/MacOS#Release_history)
+  * OSX - [Apple supports editions "n", "n-1" and "n-2](https://en.wikipedia.org/wiki/MacOS#Release_history)
     * Sierra
     * El Capitan
     * Yosemite
