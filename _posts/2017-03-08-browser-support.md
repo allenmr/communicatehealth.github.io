@@ -5,23 +5,24 @@ date:   2017-03-08 12:00:00
 categories: qc
 ---
 
-Use this post as a reference when setting up your [QC checklist](https://docs.google.com/spreadsheets/d/1QWDkz8TkE-cKyG8QQAr9SmoTaCO358fAQRlJfgaG4_o/edit#gid=0). This post was last updated on **03/08/2017**.<!--Update whenever browser list is updates --> If that was a while ago, check the [latest versions on browserlist](http://browserl.ist/?q=%3E+2%25+in+US%2C+last+2+versions).
+Use this post as a reference when setting up your [QC checklist](https://docs.google.com/spreadsheets/d/1QWDkz8TkE-cKyG8QQAr9SmoTaCO358fAQRlJfgaG4_o/edit#gid=0). This post was last updated on **03/08/2017**.<!--Update whenever browser list is updates --> If that was a while ago, check the [latest versions on browserlist](http://browserl.ist/?q=%3E+5%25+in+US%2C+last+1+version).
 
 QC the website in BrowserStack on the following operating systems and browsers (unless otherwise indicated by Dev).
 
 ## Browsers
-If we have analytics for a site, we may add or drop browsers depending on usage (default cut-off is 5%).
-  * IE9 as needed (check with Dev first before QCing)
-    * ODPHP:
-      * h.gov
-      * HF
-      * ~~HP~~
-  * IE10+
+This is the default list that we support &mdash; when you kick off a project give your client this list. You can let them know we can add older browsers, but try to discourage it unless there is a really good reason.
   * Latest official/stable release for:
     * Chrome
     * Safari
     * Firefox
     * Edge
+    * IE
+  * **Notes:**
+    * If we have analytics for a site, we may add or drop browsers depending on usage (default cut-off is 5%).
+    * We're working on updating the ODPHP contract. For now, continue to test IE9 and IE10 for:
+      * h.gov
+      * HF
+      * HP (IE10 only)
 
 ## Operating Systems
   * Windows - [Mainstream support](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet):
