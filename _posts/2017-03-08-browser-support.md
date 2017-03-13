@@ -17,6 +17,7 @@ This is the default list that we support &mdash; when you kick off a project giv
     * Firefox
     * Edge
     * IE
+
 **Notes:**
   * If we have analytics for a site, we may add or drop browsers depending on usage. The default cut-off is 5%.
   * We're working on updating the ODPHP contract. For now, continue to test IE9 and IE10 for:
