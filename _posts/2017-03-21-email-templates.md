@@ -47,6 +47,10 @@ Graphics and images that are part of the layout can find themselves in tight qua
 
 ![Header graphic handling different orientations]({{ "/img/image-example.png" | prepend: site.baseurl }})
 
+### Avoid text in images
+
+We generally avoid placing text inside of images as a rule. In many email clients, we're unable to specify a higher DPI version of an image to maintain crisp text. On high-DPI screens (Retina), this exaggerates the fuzziness of text in images and we've heard this complaint from clients several times. When it comes to email templates, avoiding text in images is always a good move.
+
 ### Start with a narrow mockup
 
 Starting a new template design on a 320px wide canvas, before moving to a wider version, can make the stress points of the layout clear from the beginning. This makes the development process smoother, too. We can add spacing and size as the screen gets wider, instead of wrestling a larger layout into smaller containers.
