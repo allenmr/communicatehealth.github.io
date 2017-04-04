@@ -20,10 +20,6 @@ This is the default list that we support &mdash; when you kick off a project giv
 
 **Notes:**
   * If we have analytics for a site, we may add or drop browsers depending on usage. The default cut-off is 5%.
-  * We're working on updating the ODPHP contract. For now, continue to test IE9 and IE10 for:
-    * h.gov
-    * HF
-    * HP (IE10 only)
 
 ## Operating Systems
   * Windows - [Mainstream support](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet):
