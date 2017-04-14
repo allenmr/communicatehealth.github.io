@@ -342,6 +342,13 @@ section,
   width: 75%;
 }
 
+.constrain {
+  display: block;
+  max-height: 20em;
+  overflow-y: scroll;
+  margin-bottom: 1.5em;
+}
+
 // scss-lint:disable PropertyCount
 .btn {
   background-color: $accent;
