@@ -13,16 +13,16 @@ slug: test-widget
   <pre>
     <code>
       &lt;iframe id=&quot;healthdisparitiesframe&quot; width=&quot;100%&quot; src=&quot;https://www.healthypeople.gov/hdwidget/embed&quot; title=&quot;Health Disparities widget&quot; scrolling=&quot;no&quot; style=&quot;border: none;&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
-      &lt;script&gt;(function(f){f=document.getElementById(&quot;healthdisparitiesframe&quot;);window.addEventListener(&#39;message&#39;,function(e){if(f.contentWindow===e.source){f.height=event.data;}});}());&lt;/script&gt;
+      &lt;script&gt;(function(f){f=document.getElementById(&quot;healthdisparitiesframe&quot;);window.addEventListener(&#39;message&#39;,function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());&lt;/script&gt;
     </code>
   </pre>
 
   <iframe id="healthdisparitiesframe" width="100%" src="https://www.healthypeople.gov/hdwidget/embed" title="Health Disparities widget" scrolling="no" style="border: none;">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe>
-  <script>(function(f){f=document.getElementById("healthdisparitiesframe");window.addEventListener('message',function(e){if(f.contentWindow===e.source){f.height=event.data;}});}());</script>
+  <script>(function(f){f=document.getElementById("healthdisparitiesframe");window.addEventListener('message',function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());</script>
 
   <div style="width: 33%; float: left; margin-right: 1%;">
     <iframe id="healthdisparitiesframe_2" width="100%" src="https://www.healthypeople.gov/hdwidget/embed" title="Health Disparities widget" scrolling="no" style="border: none;">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe>
-    <script>(function(f){f=document.getElementById("healthdisparitiesframe_2");window.addEventListener('message',function(e){if(f.contentWindow===e.source){f.height=event.data;}});}());</script>
+    <script>(function(f){f=document.getElementById("healthdisparitiesframe_2");window.addEventListener('message',function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());</script>
   </div>
 
   <div style="width: 66%; float: left;">
