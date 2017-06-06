@@ -4,7 +4,7 @@ $( document ).ready(function() {
   var resizeTimeoutId = -1;
   function handleResize() {
     resizeTimeoutId = -1;
-    parent.postMessage(($('body').outerHeight( true ) + 20 ) + 'px', '*');
+    parent.postMessage($('html').outerHeight( true ) + 'px', '*');
   }
   // Here is the window resize handler
   $(window).resize(function(){
