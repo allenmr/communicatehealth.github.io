@@ -8,37 +8,37 @@ slug: auto-height-iframe
 <div class="content">
   <h1>Auto-Height iframe</h1>
   
-  <p>All the Accessibile Interactions examples contain <a href="/js/auto-height-iframe.js">auto-height-iframe.js</a>, which sends cross-domain friendly messages about the content's height to a parent window. Code in the examples below listens for the messages and adjusts the frames' heights accordinly.</p>
+  <p>All the Accessibile Interactions examples contain <a href="/js/lib/auto-height-iframe.js">auto-height-iframe.js</a>, which sends cross-domain friendly messages about the content's height to a parent window. Code in the examples below listens for the messages and adjusts the frames' heights accordinly.</p>
 
   <pre>
     <code>
-      &lt;iframe id=&quot;accordion&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/accordion/&quot; title=&quot;Accordion&quot; scrolling=&quot;no&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
+      &lt;iframe id=&quot;accordion&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/accordion/&quot; title=&quot;Accordion&quot; scrolling=&quot;no&quot; style=&quot;border:none;outline:1px solid black&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
       &lt;script&gt;(function(f){f=document.getElementById(&quot;accordion&quot;);window.addEventListener(&#39;message&#39;,function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());&lt;/script&gt;
     </code>
   </pre>
-  <iframe id="accordion" width="100%" src="//communicatehealth.github.io/examples/accordion/" title="Accordion" scrolling="no"><p>Your browser does not support iframes.</p></iframe>
+  <iframe id="accordion" width="100%" src="//communicatehealth.github.io/examples/accordion/" title="Accordion" scrolling="no"style="border:none;outline:1px solid black"><p>Your browser does not support iframes.</p></iframe>
   <script>(function(f){f=document.getElementById("accordion");window.addEventListener("message",function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());</script>
 
   <hr />
 
   <pre>
     <code>
-      &lt;iframe id=&quot;dropdown&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/dropdown/&quot; title=&quot;Dropdown menu&quot; scrolling=&quot;no&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
+      &lt;iframe id=&quot;dropdown&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/dropdown/&quot; title=&quot;Dropdown menu&quot; scrolling=&quot;no&quot; style=&quot;border:none;outline:1px solid black&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
       &lt;script&gt;(function(f){f=document.getElementById(&quot;dropdown&quot;);window.addEventListener(&#39;message&#39;,function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());&lt;/script&gt;
     </code>
   </pre>
-  <iframe id="dropdown" width="100%" src="//communicatehealth.github.io/examples/dropdown/" title="Dropdown menu" scrolling="no"><p>Your browser does not support iframes.</p></iframe>
+  <iframe id="dropdown" width="100%" src="//communicatehealth.github.io/examples/dropdown/" title="Dropdown menu" scrolling="no" style="border:none;outline:1px solid black"><p>Your browser does not support iframes.</p></iframe>
   <script>(function(f){f=document.getElementById("dropdown");window.addEventListener("message",function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());</script>
   
   <hr />
   
   <pre>
     <code>
-      &lt;iframe id=&quot;off-canvas&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/off-canvas/&quot; title=&quot;Off-canvas navigation&quot; scrolling=&quot;no&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
+      &lt;iframe id=&quot;off-canvas&quot; width=&quot;100%&quot; src=&quot;//communicatehealth.github.io/examples/off-canvas/&quot; title=&quot;Off-canvas navigation&quot; scrolling=&quot;no&quot; style=&quot;border:none;outline:1px solid black&quot;&gt;&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;&lt;/iframe&gt;
       &lt;script&gt;(function(f){f=document.getElementById(&quot;off-canvas&quot;);window.addEventListener(&#39;message&#39;,function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());&lt;/script&gt;
     </code>
   </pre>
-  <iframe id="off-canvas" width="100%" src="//communicatehealth.github.io/examples/off-canvas/" title="Off-canvas navigation" scrolling="no"><p>Your browser does not support iframes.</p></iframe>
+  <iframe id="off-canvas" width="100%" src="//communicatehealth.github.io/examples/off-canvas/" title="Off-canvas navigation" scrolling="no" style="border:none;outline:1px solid black"><p>Your browser does not support iframes.</p></iframe>
   <script>(function(f){f=document.getElementById("off-canvas");window.addEventListener("message",function(e){if(f.contentWindow===e.source){f.height=e.data;}});}());</script>
   
   
