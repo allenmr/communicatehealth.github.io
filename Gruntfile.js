@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         files: {
           // Lint our gruntfile and any project-specific JS files
           // Add new project-specific JS files to this array for linting
-          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/dropdown.js', 'js/lib/infographic.js', 'js/lib/slideshow.js', 'js/lib/tabs.js', 'js/lib/off-canvas.js', 'js/lib/animated-hide.js']
+          src: ['Gruntfile.js', 'js/lib/accordion.js', 'js/lib/dropdown.js', 'js/lib/infographic.js', 'js/lib/slideshow.js', 'js/lib/tabs.js', 'js/lib/off-canvas.js', 'js/lib/animated-hide.js', 'js/lib/rich-select.js']
         }
       }
     },
