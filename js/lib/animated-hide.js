@@ -1,10 +1,11 @@
 jQuery( document ).ready(function( $ ) {
   "use strict";
 
-  $.hideAnimate = function($element) {
+  $.hideAnimate = function($element, $delay) {
+    $delay = $delay === undefined ? 300 : $delay;
     $element.addClass("closing");
     $element.removeClass("open opening closed");
-    setTimeout($.hideComplete, 300, $element); // slower, allow for animation
+    setTimeout($.hideComplete, $delay, $element); // slower, allow for animation
   };
 
   $.hideComplete = function($element) {
@@ -12,10 +13,11 @@ jQuery( document ).ready(function( $ ) {
     $element.removeClass("open opening closing");
   };
 
-  $.showAnimate = function($element) {
+  $.showAnimate = function($element, $delay) {
+    $delay = $delay === undefined ? 20 : $delay;
     $element.addClass("opening");
     $element.removeClass("open closing closed");
-    setTimeout($.showComplete, 20, $element); // faster, animation happens after
+    setTimeout($.showComplete, $delay, $element); // faster, animation happens after
   };
 
   $.showComplete = function($element) {
