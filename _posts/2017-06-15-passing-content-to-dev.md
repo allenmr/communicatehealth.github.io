@@ -14,10 +14,12 @@ You've just written the most beautiful content and it's ready to go to the devel
 * Most comments (use the developer's name to call out a particular comment - highlight it as well, if you really want to be sure)
 
 ### Stuff we don't see
-* Small changes - a letter, punctuation, sometimes whole words - **if it doesn't change the length of the line, odds are good we are going to miss it**
+* Small changes - a letter, punctuation, sometimes whole words.
+
+**If it doesn't change the length of the line, odds are good we are going to miss it**
 
 ## Why good formatting matters
-We often use Wordup to convert Word Docs to HTML, but sometimes it strips things out. The best way to ensure this doesn't happen is to make sure your document is well formatted from the start:
+We often use [Wordup](https://communicatehealth.github.io/wordup/) to convert Word Docs to HTML, but sometimes it strips things out. The best way to ensure this doesn't happen is to make sure your document is well formatted from the start:
 * Use headers in the correct order (H1 > H2 > H3, etc)
 * Paragraphs use style spacing (not empty paragraphs between content)
 * Accept all changes and turn of tracking unless these changes are specifically for the developer (see below for more details)
