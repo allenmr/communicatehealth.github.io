@@ -11,10 +11,10 @@ You've just written the most beautiful content and it's ready to go to the devel
 <img class="f-right" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="colored blocks denoting headers, paragraphs, lists - no actual text">
 ### Stuff we ignore
 * Page headers and footers
-* Most comments (use the developer's name to call out a particular comment - highlight it as well, if you really want to be sure)
+* Most comments (use the developer's name to call out a particular comment &mdash; <mark>highlight it</mark>, if you really want to be sure)
 
 ### Stuff we don't see
-* Small changes - a letter, punctuation, sometimes whole words.
+* Small changes &mdash; a letter, punctuation, sometimes whole words.
 
 **If it doesn't change the length of the line, odds are good we are going to miss it**
 
@@ -27,4 +27,4 @@ We often use [Wordup](https://communicatehealth.github.io/wordup/) to convert Wo
 
 ## When to use track changes
 * Changes to content the developer has already coded (already on the website/prototype)
-* Final changes - all comments or suggestions are resolved
+* Final changes &mdash; all comments or suggestions are resolved
