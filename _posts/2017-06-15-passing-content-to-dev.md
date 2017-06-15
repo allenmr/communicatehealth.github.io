@@ -16,15 +16,14 @@ You've just written the most beautiful content and it's ready to go to the devel
 ### Stuff we don't see
 * Small changes &mdash; a letter, punctuation, sometimes whole words.
 
-**If it doesn't change the length of the line, odds are good we are going to miss it**
+**If an edit doesn't change the length of the line, odds are good we are going to miss it**
 
 ## Why good formatting matters
 We often use [Wordup](https://communicatehealth.github.io/wordup/) to convert Word Docs to HTML, but sometimes it strips things out. The best way to ensure this doesn't happen is to make sure your document is well formatted from the start:
 * Use headers in the correct order (H1 > H2 > H3, etc)
-* Paragraphs use style spacing (not empty paragraphs between content)
+* Format paragraph spacing (don't use empty paragraphs between content)
 * Accept all changes and turn of tracking unless these changes are specifically for the developer (see below for more details)
 * Delete comments that are not specifically for the developer
 
 ## When to use track changes
-* Changes to content the developer has already coded (already on the website/prototype)
-* Final changes &mdash; all comments or suggestions are resolved
+* Changes are to content that the developer has already coded (content is already on the website/prototype). These are final changes &mdash; all comments or suggestions are resolved.
