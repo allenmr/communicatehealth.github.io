@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Making Videos Accessible"
+date:   2017-06-16 12:00:00
+categories: howto
+---
+
+Video files that we create for our clients need to be accessible and meet the 508 compliance requirements. The specific requirements are linked at the bottom of this post, but the basic items that we need to do are listed below.
+
+## Planning your video
+
+1. Avoid using flashing/flickering text and/or animated text
+2. Ensure that all URLs contain the correct hyperlink and display the fully qualified URL (i.e., http://www.samhsa.gov and not www.samhsa.gov)
+3. Ensure that any on screen text has proper color contrast against the background
+4. Ensure that all important visual cues are properly represented in the audio track (otherwise you will have to create an [audio description](https://www.hhs.gov/web/section-508/making-files-accessible/accessible-audio-description/index.html)). Examples of items that would require an audio description:
+  * Text-based information that is not already covered by existing in-video narration
+  * Significant actions that are critical to the message  of the video
+
+## Embed the video from Youtube!
+
+This will get you a whole bunch of accessibility benefits like:
+
+* Cross-platform video player
+* Keyboard-friendly start, stop and pause controls
+* Closed Captioning support
