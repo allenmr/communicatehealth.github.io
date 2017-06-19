@@ -3,11 +3,12 @@ layout: example
 title: Infographic - Accessibile Interactions
 permalink: examples/infographic/
 slug: infographic
-css: "/css/infographic.css"
+css: "/examples/css/infographic.css"
 ---
 
 <div class="content">
   <h1>Infographic</h1>
+  <p><a href="{{ '/examples/html/infographic.html' | prepend: site.baseurl }}">View isolated HTML</a></p>
 
   <div class="infographic-block" id="infographic-4">
     <div class="infographic-container">
@@ -16,7 +17,7 @@ css: "/css/infographic.css"
           <div class="slide-content slide-1-content">
             <p>Good stock photos are hard to find.</p>
             <p class="lead">At <strong>Picture Public Health</strong>, we’re making it easy.</p>
-            <p><img src="/img/pph-logo.png" alt=""></p>
+            <p><img src="{{ "/examples/img/infographic-pph-logo.png" | prepend: site.baseurl }}" alt=""></p>
           </div>
         </div>
 
@@ -24,7 +25,7 @@ css: "/css/infographic.css"
           <div class="slide-content slide-2-content">
             <p class="in-1">Our new marketplace of health-promoting photos opens in fall 2016</p>
             <p class="in-2 lead">with real, diverse images that people can relate to.</p>
-            <p class="in-1"><img src="/img/pph-grid.jpg" alt=""></p>
+            <p class="in-1"><img src="{{ "/examples/img/infographic-pph-grid.jpg" | prepend: site.baseurl }}" alt=""></p>
           </div>
         </div>
 

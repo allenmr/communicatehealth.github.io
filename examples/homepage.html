@@ -1,0 +1,34 @@
+---
+layout: default
+title: CommunicateHealth
+permalink: /
+slug: home
+---
+
+<div class="main-block">
+  <h2>Posts</h2>
+  {% for post in site.posts %}
+  <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+  <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+  {% endfor %}
+</div>
+
+<div class="aside-block">
+  <h2>Supported Browsers</h2>
+  <dl>
+    <dt><a href="http://browserl.ist/?q=%3E+5%25+in+US%2C+last+1+version">browserl.ist</a>
+    <dd>Default browser list for new projects unless otherwise specified</dd>
+  </dl>
+  <h2>Tools</h2>
+  <dl>
+    <dt><a href="https://communicatehealth.github.io/wordup/">Wordup</a></dt>
+    <dd>Convert Word documents to clean HTML in a snap</dd>
+    <dt><a href="https://communicatehealth.github.io/pdfcheck/">pdfCheck</a></dt>
+    <dd>Check local PDF files for tags, step one in determining PDF accessibility</dd>
+  </dl>
+  <h2>Demos</h2>
+  <dl>
+    <dt><a href="{{ '/examples/' | prepend: site.baseurl }}">Accessible interactions</a></dt>
+    <dd>Accordions, Slideshows, and other interactions done with accessibility in mind.</dd>
+  </dl>
+</div>

@@ -28,6 +28,7 @@
 
 .tab-content {
   background-color: #fff;
+  border: 5px solid #008198;
   margin: 0;
   padding: 1em;
 }

@@ -1,6 +1,6 @@
 .accordion-block {
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #7ac142;
   margin-bottom: .5em;
   transition: all .3s;
 }
@@ -11,13 +11,13 @@
 }
 
 .accordion-toggle {
-  background-image: url('/img/icon-plus.png');
-  background-position: 98% center;
+  background-image: url('../img/accordion-plus.png');
+  background-position: right 1em center;
   background-repeat: no-repeat;
   display: block;
   font-size: 1.25em;
   margin: 0;
-  padding: 1em;
+  padding: 1em 3em 1em 1em;
 }
 
 .accordion-toggle:link,
@@ -30,29 +30,29 @@
 .accordion-toggle:hover,
 .accordion-toggle:focus {
   background-color: #7ac142;
-  background-image: url('/img/icon-plus-white.png');
+  background-image: url('../img/accordion-plus-white.png');
   color: #fff;
 }
 
 .accordion-block.open .accordion-toggle {
-  background-image: url('/img/icon-minus.png');
+  background-image: url('../img/accordion-minus.png');
   font-weight: 700;
   transition: all .3s
 }
 
 .accordion-block.open .accordion-toggle:hover,
 .accordion-block.open .accordion-toggle:focus {
-  background-image: url('/img/icon-minus-white.png');
+  background-image: url('../img/accordion-minus-white.png');
 }
 
 
 .accordion-content {
   background-color: #fff;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #7ac142;
   display: block;
   height: auto;
   margin: 0;
-  padding: .5em 0 1em;
+  padding: .5em 1em 1em;
   transition: all .3s;
 }
 
@@ -78,6 +78,6 @@
 
 .accordion-content.open {
   height: auto;
-  padding: .5em 0 1em;
+  padding: .5em 1em 1em;
   transition: all .3s;
 }

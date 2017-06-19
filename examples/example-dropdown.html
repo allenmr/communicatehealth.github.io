@@ -1,0 +1,54 @@
+---
+layout: example
+title: Dropdown - Accessibile Interactions
+permalink: examples/dropdown/
+slug: dropdown
+css: "/examples/css/dropdown.css"
+---
+
+<div class="content">
+  <h1>Dropdown menu</h1>
+
+  <p>Adapted from <a href="https://staff.washington.edu/tft/tests/menus/simplyaccessible/index.html">University of Washington&rsquo;s Simply Accessible nav example</a>.</p>
+  <p><a href="{{ '/examples/html/dropdown.html' | prepend: site.baseurl }}">View isolated HTML</a></p>
+
+  <div role="navigation" class="clearfix" aria-label="Main menu">
+    <ul class="dropdown">
+      <li>
+        <a href="#">About</a>
+        <ul>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Governance</a></li>
+          <li><a href="#">Diversity</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Academics</a>
+        <ul>
+          <li><a href="#">Degree Programs</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Distance Learning</a></li>
+          <li><a href="#">Libraries</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Admissions</a>
+        <ul>
+          <li><a href="#">Undergraduate</a></li>
+          <li><a href="#">Tuition</a></li>
+          <li><a href="#">Financial Aid</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Visitors</a>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Parking</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordion</title>
+  <style type="text/css">
+    body { font-family: sans-serif; margin: 0 auto; max-width: 40em; padding: 1em; }
+    ul { padding-left: 1em; }
+  </style>
+  <link rel="stylesheet" href="../css/accordion.css">
+</head>
+<body>
+
+  <h1>Accordion</h1>
+
+  <div class="accordion">
+
+    <div class="accordion-block">
+      <a href="#colors" aria-expanded="true" aria-controls="colors-content" class="accordion-toggle" id="colors">Colors</a>
+
+      <div id="colors-content" class="accordion-content" aria-hidden="false">
+        <ul>
+          <li>Red</li>
+          <li>Orange</li>
+          <li>Yellow</li>
+          <li>Green</li>
+          <li>Blue</li>
+          <li>Indigo</li>
+          <li>Violet</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-block">
+      <a href="#seasons" aria-expanded="true" aria-controls="seasons-content" class="accordion-toggle" id="seasons">Seasons</a>
+
+      <div id="seasons-content" class="accordion-content" aria-hidden="false">
+        <ul>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li>Winter</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-block">
+      <a href="#long" aria-expanded="true" aria-controls="long-content" class="accordion-toggle" id="long">Really long accordion text to force wrapping and still make room for icon</a>
+
+      <div id="long-content" class="accordion-content" aria-hidden="false">
+        <ul>
+          <li>Maxime placeat aut ut. Quam ut qui sunt magni voluptatibus sit et rerum. Dolorem et sed quod et et. Aliquam pariatur doloribus officiis. Repudiandae delectus enim excepturi quas nobis. Sint suscipit voluptatem corrupti. Ratione praesentium odio enim voluptatem repellendus. Non et consectetur libero sed eligendi.</li>
+          <li>A voluptas vel consequatur aperiam placeat quod quia ut. Recusandae sed omnis ipsa architecto quod. Voluptatem cum architecto veniam sint voluptas. Et et rem qui illo consequatur ab. Eaque et molestiae tenetur tempore nam. Asperiores possimus officia maiores et pariatur officia. Veniam sint autem qui et. Eos tenetur illo laudantium amet aut molestiae.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/vendor/jquery.js"></script>
+  <script src="../js/vendor/throttle-debounce.js"></script>
+  <script src="../js/animated-hide.js"></script>
+  <script src="../js/accordion.js"></script>
+
+</body>
+</html>
