@@ -5,59 +5,63 @@ jQuery( document ).ready(function( $ ) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
 
-    var $currentItem = $(".content-slide.open");
-    var $previousItem = $(".content-slide.open").prev();
+    var slideParent = $(this).parents('.content-slider-block').attr("id");
+    var prevItem = $("#" + slideParent + " .content-slide.on").prev();
 
-    // clear button states
-    $(".content-slide-prev, .content-slide-next").removeClass("limit");
-    $(".content-slide-restart").addClass("limit");
+    $("#" + slideParent + " .content-slide-prev").removeClass("limit");
+    $("#" + slideParent + " .content-slide-next").removeClass("limit");
+    $("#" + slideParent + " .content-slide-restart").addClass("limit");
 
-    // if previous slide is first slide, hide previous button
-    if(!$(".content-slide.open").prev('.content-slide').prev('.content-slide').length) {
-      $(".content-slide-prev").addClass("limit");
+    if(!$("#" + slideParent + " .content-slide.on").prev('.content-slide').prev('.content-slide').length) {
+      $("#" + slideParent + " .content-slide.on").removeClass("on").attr("aria-hidden", "true");
+      $(prevItem).addClass("on").attr("aria-hidden", "false");
+      $("#" + slideParent + " .content-slide-prev").addClass("limit");
     }
-
-    // hide current slide, show previous slide
-    $.hideAnimate($currentItem);
-    $.showAnimate($previousItem);
+    else {
+      $("#" + slideParent + " .content-slide.on").removeClass("on").attr("aria-hidden", "true");
+      $(prevItem).addClass("on").attr("aria-hidden", "false");
+      $("#" + slideParent + " .content-slide-prev").removeClass("limit");
+    }
   });
 
   $(".content-slide-next").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
 
-    var $currentItem = $(".content-slide.open");
-    var $nextItem = $(".content-slide.open").next();
+    var slideParent = $(this).parents('.content-slider-block').attr("id");
+    var nextItem = $("#" + slideParent + " .content-slide.on").next();
 
-    // clear button states
-    $(".content-slide-prev, .content-slide-next").removeClass("limit");
-    $(".content-slide-restart").addClass("limit");
+    $("#" + slideParent + " .content-slide-prev").removeClass("limit");
+    $("#" + slideParent + " .content-slide-next").removeClass("limit");
+    $("#" + slideParent + " .content-slide-restart").addClass("limit");
 
-    // if next slide is last slide, hide next button, show restart button
-    if(!$(".content-slide.open").next('.content-slide').next('.content-slide').length) {
-      $(".content-slide-next").addClass("limit");
-      $(".content-slide-restart").removeClass("limit");
+    if(!$("#" + slideParent + " .content-slide.on").next('.content-slide').next('.content-slide').length) {
+      $("#" + slideParent + " .content-slide.on").removeClass("on").attr("aria-hidden", "true");
+      $(nextItem).addClass("on").attr("aria-hidden", "false");
+      $("#" + slideParent + " .content-slide-next").addClass("limit");
+      $("#" + slideParent + " .content-slide-restart").removeClass("limit");
     }
-
-    // hide current slide, show previous slide
-    $.hideComplete($currentItem);
-    $.showAnimate($nextItem);
+    else {
+      $("#" + slideParent + " .content-slide.on").removeClass("on").attr("aria-hidden", "true");
+      $(nextItem).addClass("on").attr("aria-hidden", "false");
+      $("#" + slideParent + " .content-slide-next").removeClass("limit");
+      $("#" + slideParent + " .content-slide-restart").addClass("limit");
+    }
   });
 
   $(".content-slide-restart").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
 
-    var $currentItem = $(".content-slide.open");
-    var $firstItem = $("#content-slide-1");
+    var slideParent = $(this).parents('.content-slider-block').attr("id");
 
-    // clear button states
-    $(".content-slide-prev, .content-slide-restart").addClass("limit");
-    $(".content-slide-next").removeClass("limit");
+    $("#" + slideParent + " .content-slide-prev").addClass("limit");
+    $("#" + slideParent + " .content-slide-next").removeClass("limit");
+    $("#" + slideParent + " .content-slide-restart").addClass("limit");
 
-    // hide current slide, show first slide
-    $.hideComplete($currentItem);
-    $.showAnimate($firstItem);
+    $("#" + slideParent + " .content-slide.on").removeClass("on").attr("aria-hidden", "true");
+    $("#" + slideParent + " .content-slide-first").addClass("on").attr("aria-hidden", "false");
+
   });
 
 });

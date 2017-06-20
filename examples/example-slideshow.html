@@ -10,17 +10,17 @@ css: "/examples/css/slideshow.css"
   <h1>Slideshow</h1>
   <p><a href="{{ '/examples/html/slideshow.html' | prepend: site.baseurl }}">View isolated HTML</a></p>
 
-  <div class="content-slider-block">
+  <div class="content-slider-block" id="slideshow">
     <div class="content-slides">
-      <div class="content-slide open" id="content-slide-1" aria-hidden="false">
+      <div class="content-slide content-slide-first on" id="content-slide-1" aria-hidden="false">
         <p><img src="{{ "/examples/img/slideshow-ch-1.jpg" | prepend: site.baseurl }}" alt=""></p>
         <p class="content-slider-caption">CommunicateHealth homepage</p>
       </div>
-      <div class="content-slide closed" id="content-slide-2" aria-hidden="true">
+      <div class="content-slide" id="content-slide-2" aria-hidden="true">
         <p><img src="{{ "/examples/img/slideshow-ch-2.jpg" | prepend: site.baseurl }}" alt=""></p>
         <p class="content-slider-caption">About Us</p>
       </div>
-      <div class="content-slide closed" id="content-slide-3" aria-hidden="true">
+      <div class="content-slide" id="content-slide-3" aria-hidden="true">
         <p><img src="{{ "/examples/img/slideshow-ch-3.jpg" | prepend: site.baseurl }}" alt=""></p>
         <p class="content-slider-caption">Portfolio</p>
       </div>

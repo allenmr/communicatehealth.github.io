@@ -15,17 +15,17 @@
 
   <h1>Slideshow</h1>
 
-  <div class="content-slider-block">
+  <div class="content-slider-block" id="slideshow">
     <div class="content-slides">
-      <div class="content-slide open" id="content-slide-1" aria-hidden="false">
+      <div class="content-slide content-slide-first on" id="content-slide-1" aria-hidden="false">
         <p><img src="../img/slideshow-ch-1.jpg" alt=""></p>
         <p class="content-slider-caption">CommunicateHealth homepage</p>
       </div>
-      <div class="content-slide closed" id="content-slide-2" aria-hidden="true">
+      <div class="content-slide" id="content-slide-2" aria-hidden="true">
         <p><img src="../img/slideshow-ch-2.jpg" alt=""></p>
         <p class="content-slider-caption">About Us</p>
       </div>
-      <div class="content-slide closed" id="content-slide-3" aria-hidden="true">
+      <div class="content-slide" id="content-slide-3" aria-hidden="true">
         <p><img src="../img/slideshow-ch-3.jpg" alt=""></p>
         <p class="content-slider-caption">Portfolio</p>
       </div>
@@ -40,8 +40,6 @@
   </div>
 
   <script src="../js/vendor/jquery.js"></script>
-  <script src="../js/vendor/throttle-debounce.js"></script>
-  <script src="../js/animated-hide.js"></script>
   <script src="../js/slideshow.js"></script>
 
 </body>

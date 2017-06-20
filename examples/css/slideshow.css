@@ -17,23 +17,12 @@
   transition: all .3s;
 }
 
-.content-slide.closed {
+.content-slide {
   display: none;
 }
 
-.content-slide.opening,
-.content-slide.closing {
-  height: auto;
-  opacity: 0;
-  transition: all .3s;
-}
-
-.content-slide.opening *,
-.content-slide.closing * {
-  visibility: hidden;
-}
-
-.content-slide.open {
+.content-slide.on {
+  display: block;
   opacity: 1;
   transition: all .3s;
 }
@@ -94,6 +83,11 @@
 
 .btn-dark:visited {
   color: #fff;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  color: #008198;
 }
 
 .t-center {

@@ -1,26 +1,4 @@
 $( document ).ready(function() {
-  
-  $.hideAnimate = function($element) {
-    $element.addClass("closing");
-    $element.removeClass("open opening close");
-    setTimeout($.hideComplete, 300, $element); // slower, allow for animation
-  };
-
-  $.hideComplete = function($element) {
-    $element.addClass("closed").attr("aria-hidden", "true");
-    $element.removeClass("closing");
-  };
-
-  $.showAnimate = function($element) {
-    $element.addClass("opening");
-    $element.removeClass("open closing closed");
-    setTimeout($.showComplete, 20, $element); // faster, animation happens after
-  };
-
-  $.showComplete = function($element) {
-    $element.addClass("open").attr("aria-hidden", "false");
-    $element.removeClass("opening");
-  };
 
   $(".rich-select-toggle").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
@@ -46,7 +24,7 @@ $( document ).ready(function() {
     }
   });
 
-  $('.rich-select-item').keydown(function(e){    
+  $('.rich-select-item').keydown(function(e){
     if (e.keyCode === 37 || e.keyCode === 40) {
       var nextItem = $(this).parent().next().find(".rich-select-item");
       if(nextItem.length > 0){
@@ -54,7 +32,7 @@ $( document ).ready(function() {
         return false;
       }
     }
-    if (e.keyCode === 38 || e.keyCode === 39) {      
+    if (e.keyCode === 38 || e.keyCode === 39) {
       var prevItem = $(this).parent().prev().find(".rich-select-item");
       if(prevItem.length > 0){
         prevItem.focus();
@@ -87,5 +65,5 @@ $( document ).ready(function() {
       }
     }
   });
-    
+
 });
