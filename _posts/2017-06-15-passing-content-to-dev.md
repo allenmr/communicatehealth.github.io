@@ -8,10 +8,10 @@ categories: howto
 You've just written the most beautiful content and it's ready to go to the developer! Here are some recommendations and guidelines to help shepherd your content through the development stage.
 
 ## What the developer sees in your content deliverable
-<img class="f-left" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="colored blocks denoting headers, paragraphs, lists - no actual text">
+<img class="f-right s-top-1" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="colored blocks denoting headers, paragraphs, lists - no actual text">
 ### Stuff we ignore
 * Page headers and footers
-* Most comments (use the developer's name to call out a particular comment &mdash; <mark>highlight it</mark>, if you really want to be sure)
+* Most comments (use the developer's name to call out a particular comment &mdash; <mark>highlight the dev's name</mark>, if you really want to be sure)
 
 ### Stuff we don't see
 * Small changes &mdash; a letter, punctuation, sometimes whole words.
