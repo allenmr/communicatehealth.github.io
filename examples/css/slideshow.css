@@ -1,4 +1,4 @@
-.content-slider-block {
+.ch-content-slider-block {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 1em;
@@ -6,34 +6,34 @@
   margin-bottom: 1.5em;
 }
 
-.content-slider-block .limit {
+.ch-content-slider-block .ch-limit {
   display: none;
 }
 
-.content-slide {
+.ch-content-slide {
   display: block;
   text-align: center;
   opacity: 1;
   transition: all .3s;
 }
 
-.content-slide {
+.ch-content-slide {
   display: none;
 }
 
-.content-slide.on {
+.ch-content-slide.ch-on {
   display: block;
   opacity: 1;
   transition: all .3s;
 }
 
-.content-slide img {
+.ch-content-slide img {
   background-color: #fff;
   border: 3px solid #fff;
   max-height: 25em;
 }
 
-.content-slider-caption {
+.ch-content-slider-caption {
   color: #000;
   min-height: 3.5em;
   margin-bottom: 0;
