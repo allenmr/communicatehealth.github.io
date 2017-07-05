@@ -1,18 +1,18 @@
-.dropdown,
-.dropdown ul {
+.ch-dropdown,
+.ch-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.dropdown {
+.ch-dropdown {
   background: #008198;
   color: #fff;
   float: left;
   margin: 1.25em 0;
 }
 
-.dropdown ul {
+.ch-dropdown ul {
   background: #002329;
   left: -9999px;
   min-width: 13.5em;
@@ -21,12 +21,12 @@
   top: 3.25em;
 }
 
-.dropdown li {
+.ch-dropdown li {
   float: left;
   position: relative;
 }
 
-.dropdown li > a {
+.ch-dropdown li > a {
   border-right: 1px solid #fff;
   color: #fff;
   float: left;
@@ -35,31 +35,31 @@
   text-decoration: none;
 }
 
-.dropdown li:last-child > a {
+.ch-dropdown li:last-child > a {
   border-right: 0;
 }
 
-.dropdown li > a:hover,
-.dropdown li > a:focus,
-.dropdown li:focus > a,
-.dropdown li:hover > a {
+.ch-dropdown li > a:hover,
+.ch-dropdown li > a:focus,
+.ch-dropdown li:focus > a,
+.ch-dropdown li:hover > a {
   background: #002329;
   outline: 0;
 }
 
-.dropdown li:hover ul,
-.dropdown li:focus ul,
-ul.show-menu {
+.ch-dropdown li:hover ul,
+.ch-dropdown li:focus ul,
+ul.ch-show-menu {
   left: 0;
   opacity: 0.99;
 }
 
-.dropdown ul li {
+.ch-dropdown ul li {
   float: none;
   position: static;
 }
 
-.dropdown ul a {
+.ch-dropdown ul a {
   border: 0;
   border-bottom: 1px solid #40656a;
   color: #fff;
@@ -68,8 +68,8 @@ ul.show-menu {
   font-size: 1em;
 }
 
-.dropdown ul a:hover,
-.dropdown ul a:focus {
+.ch-dropdown ul a:hover,
+.ch-dropdown ul a:focus {
   background: #008198;
   color: #fff;
 }

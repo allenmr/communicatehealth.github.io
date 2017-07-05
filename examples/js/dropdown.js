@@ -11,7 +11,7 @@ jQuery( document ).ready(function( $ ) {
   $.fn.setup_navigation = function(settings) {
 
     settings = jQuery.extend({
-      menuHoverClass: 'show-menu'
+      menuHoverClass: 'ch-show-menu'
     }, settings);
 
     // Add ARIA role to menubar and menu items
@@ -200,6 +200,6 @@ jQuery( document ).ready(function( $ ) {
     });
   };
 
-  $('.dropdown').setup_navigation();
+  $('.ch-dropdown').setup_navigation();
 
 });
