@@ -76,7 +76,7 @@ jQuery( document ).ready(function( $ ) {
 
   // Change focus between tabs with toggle-button
 
-  $('.tab-toggle').on('keydown', function(event) {
+  $('.ch-tab-toggle').on('keydown', function(event) {
 
     if (event.keyCode === 13) {
 
@@ -113,7 +113,7 @@ jQuery( document ).ready(function( $ ) {
 
   // Handle click on tab to show + focus tabpanel
 
-  $('.tab-toggle').on('click', function(event) {
+  $('.ch-tab-toggle').on('click', function(event) {
 
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
