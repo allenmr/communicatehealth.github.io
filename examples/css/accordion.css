@@ -1,16 +1,16 @@
-.accordion-block {
+.ch-accordion-block {
   background-color: #fff;
   border: 1px solid #7ac142;
   margin-bottom: .5em;
   transition: all .3s;
 }
 
-.accordion-block.open {
+.ch-accordion-block.ch-open {
   border: 1px solid #7ac142;
   transition: all .3s;
 }
 
-.accordion-toggle {
+.ch-accordion-toggle {
   background-image: url('../img/accordion-plus.png');
   background-position: right 1em center;
   background-repeat: no-repeat;
@@ -20,33 +20,33 @@
   padding: 1em 3em 1em 1em;
 }
 
-.accordion-toggle:link,
-.accordion-toggle:visited {
+.ch-accordion-toggle:link,
+.ch-accordion-toggle:visited {
   color: #222;
   text-decoration: none;
   transition: all .3s;
 }
 
-.accordion-toggle:hover,
-.accordion-toggle:focus {
+.ch-accordion-toggle:hover,
+.ch-accordion-toggle:focus {
   background-color: #7ac142;
   background-image: url('../img/accordion-plus-white.png');
   color: #fff;
 }
 
-.accordion-block.open .accordion-toggle {
+.ch-accordion-block.ch-open .ch-accordion-toggle {
   background-image: url('../img/accordion-minus.png');
   font-weight: 700;
   transition: all .3s
 }
 
-.accordion-block.open .accordion-toggle:hover,
-.accordion-block.open .accordion-toggle:focus {
+.ch-accordion-block.ch-open .ch-accordion-toggle:hover,
+.ch-accordion-block.ch-open .ch-accordion-toggle:focus {
   background-image: url('../img/accordion-minus-white.png');
 }
 
 
-.accordion-content {
+.ch-accordion-content {
   background-color: #fff;
   border-top: 1px solid #7ac142;
   display: block;
@@ -56,27 +56,27 @@
   transition: all .3s;
 }
 
-.accordion-content li {
+.ch-accordion-content li {
   margin-bottom: .5em;
 }
 
-.accordion-content.closed {
+.ch-accordion-content.ch-closed {
   display: none;
 }
 
-.accordion-content.opening,
-.accordion-content.closing {
+.ch-accordion-content.ch-opening,
+.ch-accordion-content.ch-closing {
   height: 0;
   padding: 0;
   transition: all .3s;
 }
 
-.accordion-content.opening *,
-.accordion-content.closing * {
+.ch-accordion-content.ch-opening *,
+.ch-accordion-content.ch-closing * {
   visibility: hidden;
 }
 
-.accordion-content.open {
+.ch-accordion-content.ch-open {
   height: auto;
   padding: .5em 1em 1em;
   transition: all .3s;
