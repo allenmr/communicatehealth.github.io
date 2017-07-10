@@ -23,7 +23,7 @@ jQuery( document ).ready(function( $ ) {
     if (event.preventDefault) { event.preventDefault(); }
     else { event.returnValue = false; } // IE
 
-    if ($(".sidebar").hasClass("closed")) {
+    if ($(".sidebar").hasClass("ch-closed")) {
       $(this).attr("aria-expanded", "true");
       $.showAnimate($(".sidebar"));
       $.showAnimate($(".overlay"));
