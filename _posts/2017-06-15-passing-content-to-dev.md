@@ -24,6 +24,7 @@ We often use tools like [Wordup](https://communicatehealth.github.io/wordup/) or
 * Format spacing using styles (don't use empty paragraphs between content)
 * Accept all changes and turn of tracking unless these changes are specifically for the developer (see below for more details)
 * Delete comments that are not specifically for the developer
+  * Embed any links directly into the content - links in comments are easy to miss!
 
 ## When to use track changes
 * Changes are to content that the developer has already coded (content is already on the website/prototype). These are final changes &mdash; all comments or suggestions are resolved.
