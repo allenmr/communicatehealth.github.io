@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ask a Dev: What does content look like to a developer?"
-date:   2017-06-15 12:00:00
+date:   2017-07-19 12:00:00
 categories: howto
 ---
 
