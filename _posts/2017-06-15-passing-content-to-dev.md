@@ -8,7 +8,8 @@ categories: howto
 You've just written the most beautiful content and it's ready to go to the developer! Here are some recommendations and guidelines to help shepherd your content through the development stage.
 
 ## What the developer sees in your content deliverable
-<img class="f-right s-top-1" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="colored blocks denoting headers, paragraphs, lists - no actual text">
+<img class="f-left s-top-1" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="">
+<p>Blocks denoting headers, paragraphs, lists - no actual text!</p>
 
 ### Stuff we don't see
 * Small changes &mdash; a letter, punctuation, sometimes whole words.
