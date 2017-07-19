@@ -17,6 +17,9 @@ destination: _site
 permalink: :year/:month/:title/
 timezone: America/New_York
 
+gems:
+  - jekyll-redirect-from
+
 feed:
   path: feed.xml
 

@@ -3,7 +3,8 @@ layout: post
 title:  "Ask a Dev: What does content look like to a developer?"
 date:   2017-07-19 12:00:00
 categories: howto
-redirect_from: "/2017/06/passing-content-to-dev/"
+redirect_from:
+  - /2017/06/passing-content-to-dev/
 ---
 
 You've just written the most beautiful content and it's ready to go to the developer! Here are some recommendations and guidelines to help shepherd your content through the development stage.

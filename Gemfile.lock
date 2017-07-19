@@ -217,7 +217,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   html-proofer
+  jekyll-redirect-from
   scss_lint
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
