@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ask a Dev: What does content look like to a developer?"
-date:   2017-07-19 12:00:00
+date:   2017-06-15 12:00:00
 categories: howto
 ---
 
@@ -23,7 +23,7 @@ You've just written the most beautiful content and it's ready to go to the devel
 We often use tools like [Wordup](https://communicatehealth.github.io/wordup/) or the WYSIWYG editor in a [CMS](https://en.wikipedia.org/wiki/Content_management_system) (Drupal, healthfinder admin) to convert Word Docs to HTML &mdash; but these tools are only as smart as the content that goes into them. If your content isn't correctly laid out then the tool may delete or reformat in unexpected ways! The best way to keep your content intact is to make sure your document is well formatted from the start:
 * Use headers in the correct order (H1 > H2 > H3, etc)
 * Format spacing using styles (don't use empty paragraphs between content)
-* Accept all changes and turn of tracking unless these changes are specifically for the developer (see below for more details)
+* Accept all changes and turn off tracking unless these changes are specifically for the developer (see below for more details)
 * Delete comments that are not specifically for the developer
   * Embed any links directly into the content - links in comments are easy to miss!
 
