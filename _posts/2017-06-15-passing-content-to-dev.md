@@ -9,7 +9,7 @@ You've just written the most beautiful content and it's ready to go to the devel
 
 ## What the developer sees in your content deliverable
 <img class="f-left s-top-1" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="">
-<p>Blocks denoting headers, paragraphs, lists - no actual text!</p>
+<div class="clearfix">Blocks denoting headers, paragraphs, lists - no actual text!</div>
 
 ### Stuff we don't see
 * Small changes &mdash; a letter, punctuation, sometimes whole words.
