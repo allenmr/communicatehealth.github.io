@@ -1,15 +1,5 @@
-/* Content for screen readers only: http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning */
-.visually-hidden {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
-
 /* Presentation only, not needed for accessibility */
-form {
+.ch-form {
   background-color: #ffffff;
   border: 5px solid #008198;
   padding: 2em;
@@ -17,64 +7,65 @@ form {
   max-width: 40em;
 }
 
-input,
-select,
-textarea {
+.ch-form input,
+.ch-form select,
+.ch-form textarea {
     border: 1px solid #d9d9d9;
     padding: .375em;
 }
 
-input,
-textarea {
+.ch-form input[type="text"],
+.ch-form input[type="tel"],
+.ch-form input[type="email"],
+.ch-form textarea {
   width: 100%;
 }
 
-input[type="submit"],
-input + label + input {
+.ch-form input + label + input[type="text"] {
   width: auto;
 }
 
-label {
+.ch-form label {
   font-weight: bold;
   margin-bottom: 0.25em;
 }
 
-fieldset {
+.ch-form fieldset {
   border: none;
   padding: 0;
 }
 
-legend {
+.ch-form legend {
   font-weight: bold;
   margin-bottom: 0.25em;
 }
 
-fieldset label {
+.ch-form fieldset label {
   font-weight: normal;
 }
 
-.multi-label {
+.ch-form .multi-label {
   margin-top: 0;
 }
 
-.multi-label td,
-.multi-label th {
+.ch-form .multi-label td,
+.ch-form .multi-label th {
   background-color: #ffffff;
   border: none;
-  padding: 0 0.25em 0.5em 0;
+  padding: 0 0.5em 0.5em 0;
   font-weight: normal;
 }
 
-.multi-label td {
+.ch-form .multi-label td {
   text-align: center;
 }
 
-.multi-label input[type=radio] + label {
+.ch-form .multi-label input[type=radio] + label {
   margin: 0;
   vertical-align: text-top;
 }
 
-.btn {
+.ch-form .btn {
   background-color: #008198;
   background-image: none;
   border: 1px solid #008198;
@@ -94,56 +85,56 @@ fieldset label {
   white-space: nowrap;
 }
 
-.btn:hover {
+.ch-form .btn:hover {
   background-color: #fff;
   border-color: #008198;
   color: #008198;
   transition: all .4s;
 }
 
-abbr[title] {
+.ch-form abbr[title] {
  text-decoration: none;
 }
 
-.contact-info label {
+.ch-form .contact-info label {
   display: block;
 }
 
-label + span {
+.ch-form label + span {
   display: block;
   color: #666;
   font-size: 0.875em;
   padding-bottom: 0.5rem;
 }
 
-.form-item,
-fieldset {
+.ch-form .ch-form-item,
+.ch-form fieldset {
   margin: 1em 0;
 }
 
-fieldset .form-item {
+.ch-form fieldset .ch-form-item {
   margin: 0.5em 0;
 }
 
-input[type=checkbox], input[type=radio] {
+.ch-form input[type=checkbox], input[type=radio] {
   opacity: 0;
   position: absolute;
 }
 
-input[type=checkbox] + label,
-input[type=checkbox] + label + label,
-input[type=radio] + label,
-input[type=radio] + label + label {
+.ch-form input[type=checkbox] + label,
+.ch-form input[type=checkbox] + label + label,
+.ch-form input[type=radio] + label,
+.ch-form input[type=radio] + label + label {
   padding-left: 30px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
 
-input[type=checkbox]+label+label>span,
-input[type=checkbox]+label>span,
-input[type=radio]+label+label>span,
-input[type=radio]+label>span {
+.ch-form input[type=checkbox]+label+label>span,
+.ch-form input[type=checkbox]+label>span,
+.ch-form input[type=radio]+label+label>span,
+.ch-form input[type=radio]+label>span {
   position: absolute;
   left: 0;
   top: 0;
@@ -156,23 +147,23 @@ input[type=radio]+label>span {
   vertical-align: middle;
 }
 
-input[type=radio]+label+label>span,
-input[type=radio]+label>span {
+.ch-form input[type=radio]+label+label>span,
+.ch-form input[type=radio]+label>span {
   border-radius: 14px;
 }
 
-input[type=checkbox]:checked+label+label>span,
-input[type=checkbox]:checked+label>span,
-input[type=radio]:checked+label+label>span,
-input[type=radio]:checked+label>span {
+.ch-form input[type=checkbox]:checked+label+label>span,
+.ch-form input[type=checkbox]:checked+label>span,
+.ch-form input[type=radio]:checked+label+label>span,
+.ch-form input[type=radio]:checked+label>span {
   background: #008198;
   border-color: #1a5b8f;
 }
 
-input[type=checkbox]:checked+label+label>span:after,
-input[type=checkbox]:checked+label>span:after,
-input[type=radio]:checked+label+label>span:after,
-input[type=radio]:checked+label>span:after {
+.ch-form input[type=checkbox]:checked+label+label>span:after,
+.ch-form input[type=checkbox]:checked+label>span:after,
+.ch-form input[type=radio]:checked+label+label>span:after,
+.ch-form input[type=radio]:checked+label>span:after {
   position: absolute;
   left: 2px;
   top: -2px;
@@ -180,9 +171,49 @@ input[type=radio]:checked+label>span:after {
   display: block;
 }
 
-.multi-label input[type=radio]:checked+label+label>span:after,
-.multi-label input[type=radio]:checked+label>span:after {
+.ch-form .multi-label input[type=radio]:checked+label+label>span:after,
+.ch-form .multi-label input[type=radio]:checked+label>span:after {
   top: -5px;
+}
+
+/* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/ */
+@media screen and (max-width: 24em) {
+  .responsive-form {
+    border: 0;
+    display: table;
+    max-width: 100%;
+  }
+  .responsive-form thead {
+    display: none;
+  }
+  .responsive-form tr {
+    margin-bottom: 1em;
+    display: block;
+  }
+  .responsive-form tr.hidden-small {
+    display: none;
+  }
+  .ch-form .multi-label.responsive-form th {
+    font-weight: bold;
+  }
+  .ch-form .multi-label.responsive-form td  {
+    display: block;
+    text-align: left;
+    position: relative;
+  }
+  .responsive-form td:last-child {
+    border-bottom: 0;
+  }
+  .responsive-form td:after {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+  .responsive-form label {
+    width: 100%;
+    height: 20px;
+  }
 }
 
 /* jQuery CSS */
@@ -309,10 +340,6 @@ input[type=radio]:checked+label>span:after {
   font-size: 0;
   line-height: 0;
   border-width: 1px 0 0 0;
-}
-.ui-menu .ui-state-focus,
-.ui-menu .ui-state-active {
-  margin: -1px;
 }
 
 /* icon support */

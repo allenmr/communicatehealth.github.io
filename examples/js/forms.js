@@ -6,7 +6,11 @@ jQuery( document ).ready(function( $ ) {
     'pattern': '({{999}}) {{999}}-{{9999}}',
     'persistent': true //show pattern always "(###) ###-####"
   });
-  
+
+  $('#states').parent().hide();
+
+  $('#state').parent().parent().show();
+
   // https://jqueryui.com/autocomplete/
   $( function() {
     var availableStates = [
