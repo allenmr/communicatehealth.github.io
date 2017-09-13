@@ -1,0 +1,241 @@
+---
+layout: example
+title: Forms - Accessibile Interactions
+permalink: examples/forms/
+slug: forms
+css: "/examples/css/forms.css"
+---
+
+<div class="content">
+  <h1>Forms</h1>
+  <p><a href="{{ '/examples/html/forms.html' | prepend: site.baseurl }}">View isolated HTML</a><!-- | <a href="https://codepen.io/jcozzo/pen/wqNjBy">View plain HTML and JS on Codepen</a> --></p>
+
+  <form id="ch_form" class="ch-form" method="post" action="">
+    <div class="contact-info">
+      <div class="ch-form-item">
+        <label for="first_name">First Name<abbr title="required">*</abbr>:</label>
+        <input type="text" id="first_name" name="first_name" title="Please enter your first name" required aria-required="true" value="">
+      </div> <!-- use required + aria-required="true" https://www.w3.org/WAI/tutorials/forms/validation/#validating-required-input -->
+
+      <div class="ch-form-item">
+        <label for="last_name">Last Name<abbr title="required">*</abbr>:</label>
+        <input type="text" id="last_name" name="last_name" title="Please enter your last name" required aria-required="true" value="">
+      </div>
+
+      <div class="ch-form-item">
+        <label for="address1">Address line 1<abbr title="required">*</abbr>:</label>
+        <span id="address1_ex">Street address, P.O. box, company name, c/o</span>
+        <input type="text" id="address1" name="address1" title="Please enter your address" required aria-describedby="address1_ex" aria-required="true" value="">
+      </div>
+      
+      <!-- aria-describedby http://webaim.org/techniques/forms/advanced#describedby -->
+
+      <div class="ch-form-item">
+        <label for="address2">Address line 2:</label>
+        <span id="address2_ex">Apartment, suite, unit, building, floor, etc.</span>
+        <input type="text" id="address2" name="address2" aria-describedby="address2_ex" value="">
+      </div>
+
+      <div class="ch-form-item">
+        <label for="city">City<abbr title="required">*</abbr>:</label>
+        <input type="text" id="city" name="city" title="Please enter your city" required aria-required="true" value="">
+      </div>
+
+      <!-- Fallback if no JS -->
+      <div class="ch-form-item">
+        <label for="states">State<abbr title="required">*</abbr>:</label>
+        <select id="states" name="states" title="Please enter your state" required aria-required="true" value="">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+
+      <!-- JS only: only displayed if JS, hide states drop-down div -->
+      <div class="ch-form-item" style="display: none;">
+        <div class="ui-widget">
+          <label for="state">State<abbr title="required">*</abbr>: </label>
+          <input id="state" type="text" name="state" title="Please enter your state">
+        </div>
+      </div>
+      <!-- end JS only -->
+
+      <div class="ch-form-item">
+        <label for="zip">ZIP<abbr title="required">*</abbr>:</label>
+        <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true" value="">
+      </div>
+      
+      <!-- Use type="text" for zip codes https://www.w3.org/TR/html5/forms.html#number-state-%28type=number%29 -->
+      <!-- Pattern is for American postal codes http://html5pattern.com/Postal_Codes -->
+
+      <div class="ch-form-item">
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" title="Format is (222) 333-4444)" value="">
+      </div>
+      
+      <!-- Input masks can do weird things to screen readers: https://css-tricks.com/input-masking/#article-header-id-2
+      This formatter was build with accessibility in mind: http://firstopinion.github.io/formatter.js/index.html -->
+
+      <div class="ch-form-item">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="">
+      </div>
+
+      <div class="ch-form-item">
+        <label for="dob">Date of Birth:</label>
+        <span id="dob_help">MM/DD/YYYY</span>
+        <input type="date" id="dob" aria-describedby="dob_help" name="dob" value="">
+      </div>
+      
+      <div class="ch-form-item">
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea" ></textarea>
+      </div>
+    </div>
+
+    <fieldset aria-required="true">
+      <legend>Checkboxes (check all that apply)</legend>
+      <div class="ch-form-item">
+        <input id="opt1" type="checkbox" name="checkbox" value="Option1">
+        <label for="opt1">Option1<span></span></label>
+      </div>
+      <div class="ch-form-item">
+        <input id="opt2" type="checkbox" name="checkbox" value="Option2">
+        <label for="opt2">Option2<span></span></label>
+      </div>
+      <div class="ch-form-item">
+        <input id="other" type="checkbox" name="checkbox" value="Other">
+        <label for="other">Other: <span></span></label>
+        <input type="text" id="textother" name="checkbox" data-checkbox="other" aria-labelledby="other" value="">
+      </div>
+    </fieldset>
+
+    <fieldset aria-required="true">
+      <legend>Radio</legend>
+      <div class="ch-form-item">
+        <input id="rad1" type="radio" name="radio" value="Radio1">
+        <label for="rad1">Radio1<span></span></label>
+      </div>
+      <div class="ch-form-item">
+        <input id="rad2" type="radio" name="radio" value="Radio2">
+        <label for="rad2">Radio2<span></span></label>
+      </div>
+      <div class="ch-form-item">
+        <input id="rad3" type="radio" name="radio" value="Radio3">
+        <label for="rad3">Radio2<span></span></label>
+      </div>
+    </fieldset>
+
+    <fieldset aria-required="true">
+      <legend>Radio buttons in a table (responsive)</legend>
+      <table class="multi-label responsive-form"> <!-- multiple inputs for one label http://webaim.org/techniques/forms/advanced#multiple -->
+        <tbody>
+          <tr class="hidden-small">
+            <th class="hidden-visually" scope="col">Hidden Header</th> <!-- hidden label http://webaim.org/techniques/forms/advanced#hiddenlabel -->
+            <th id="never" scope="col">Never</th>
+            <th id="some" scope="col">Sometimes</th>
+            <th id="many" scope="col">Often</th>
+          </tr>
+          <tr>
+            <th id="a_1" scope="row">Radio 1</th>
+            <td data-label="Never">
+              <input id="a1" type="radio" name="a_1" aria-labelledby="a_1 never" value="Never">
+              <label for="a1"><span></span></label>
+            </td>
+            <td data-label="Sometimes">
+              <input id="a2" type="radio" name="a_1" aria-labelledby="a_1 some" value="Sometimes">
+              <label for="a2"><span></span></label>
+            </td>
+            <td data-label="Often">
+              <input id="a3" type="radio" name="a_1" aria-labelledby="a_1 many" value="Often">
+              <label for="a3"><span></span></label>
+            </td>
+          </tr>
+          
+          <tr>
+            <th id="b_1" scope="row">Radio 2</th>
+            <td data-label="Never">
+              <input id="b1" type="radio" name="b_1" aria-labelledby="b_1 never" value="Never">
+              <label for="b1"><span></span></label>
+            </td>
+            <td data-label="Sometimes">
+              <input id="b2" type="radio" name="b_1" aria-labelledby="b_1 some" value="Sometimes">
+              <label for="b2"><span></span></label>
+            </td>
+            <td data-label="Often">
+              <input id="b3" type="radio" name="b_1" aria-labelledby="b_1 many" value="Often">
+              <label for="b3"><span></span></label>
+            </td>
+          </tr>
+          
+          <tr>
+            <th id="c_1" scope="row">Radio 3</th>
+            <td data-label="Never">
+              <input id="c1" type="radio" name="c_1" aria-labelledby="c_1 never" value="Never">
+              <label for="c1"><span></span></label>
+            </td>
+            <td data-label="Sometimes">
+              <input id="c2" type="radio" name="c_1" aria-labelledby="c_1 some" value="Sometimes">
+              <label for="c2"><span></span></label>
+            </td>
+            <td data-label="Often">
+              <input id="c3" type="radio" name="c_1" aria-labelledby="c_1 many" value="Often">
+              <label for="c3"><span></span></label>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </fieldset>
+
+    <input type="submit" name="submit" value="Submit" class="btn">
+
+  </form>
+</div>
