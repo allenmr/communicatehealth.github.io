@@ -110,6 +110,7 @@
 .ch-form .ch-form-item,
 .ch-form fieldset {
   margin: 1em 0;
+  position: relative;
 }
 
 .ch-form fieldset .ch-form-item {
@@ -174,6 +175,58 @@
 .ch-form .multi-label input[type=radio]:checked+label+label>span:after,
 .ch-form .multi-label input[type=radio]:checked+label>span:after {
   top: -5px;
+}
+
+/* Form Validation Errors */
+.ch-form input.error,
+.ch-form select.error {
+  background: #fcc;
+}
+
+.ch-form label.error {
+  position: absolute;
+  left: 45%;
+  bottom: -1.75em;
+  width: auto;
+  font-weight: normal;
+  text-align: left;
+  background: #ffffff;
+  padding: 0.25em 0.5em;
+  border: 1px solid #d9d9d9;
+  z-index: 1;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.ch-form fieldset label.error {
+  left: 24%;
+  padding: 0.5em;
+}
+
+.ch-form label.error:before,
+.ch-form label.error:after {
+  content: '';
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: 100%;
+  left: 1.5em;
+  margin-left: -10px;
+}
+
+.ch-form label.error:before {
+  border-bottom: 10px solid #d9d9d9;
+}
+
+.ch-form label.error:after {
+  border-bottom: 10px solid #fff;
+  margin-bottom: -2px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 39.8em) {
+  .ch-form label.error {
+    left: 1em;
+  }
 }
 
 /* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/ */
@@ -513,3 +566,9 @@
   left: auto;
   right: 0;
 }
+
+/*! jQuery UI - v1.12.1 - 2017-09-08
+* http://jqueryui.com
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-front{z-index:100}.ui-state-disabled{cursor:default!important;pointer-events:none}.ui-icon{display:inline-block;vertical-align:middle;margin-top:-.25em;position:relative;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-icon-block{left:50%;margin-left:-8px;display:block}.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}.ui-autocomplete{position:absolute;top:0;left:0;cursor:default}.ui-menu{list-style:none;padding:0;margin:0;display:block;outline:0}.ui-menu .ui-menu{position:absolute}.ui-menu .ui-menu-item{margin:0;cursor:pointer;list-style-image:url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")}.ui-menu .ui-menu-item-wrapper{position:relative;padding:3px 1em 3px .4em}.ui-menu .ui-menu-divider{margin:5px 0;height:0;font-size:0;line-height:0;border-width:1px 0 0 0}.ui-menu .ui-state-focus,.ui-menu .ui-state-active{margin:-1px}.ui-menu-icons{position:relative}.ui-menu-icons .ui-menu-item-wrapper{padding-left:2em}.ui-menu .ui-icon{position:absolute;top:0;bottom:0;left:.2em;margin:auto 0}.ui-menu .ui-menu-icon{left:auto;right:0}

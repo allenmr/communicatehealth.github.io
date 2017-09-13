@@ -7,9 +7,13 @@ jQuery( document ).ready(function( $ ) {
     'persistent': true //show pattern always "(###) ###-####"
   });
 
-  $('#states').parent().hide();
+  // Form validation
+  $("#ch_form").validate();
 
-  $('#state').parent().parent().show();
+  // Autocomplete states (instead of really long dropdown select)
+  $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
+
+  $('#state').attr('aria-required', 'true').parent().parent().show();
 
   // https://jqueryui.com/autocomplete/
   $( function() {
