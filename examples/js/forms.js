@@ -13,7 +13,7 @@ jQuery( document ).ready(function( $ ) {
   // Autocomplete states (instead of really long dropdown select)
   $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
 
-  $('#state').attr('aria-required', 'true').parent().parent().show();
+  $('#state').attr('required', '').attr('aria-required', 'true').parent().parent().show();
 
   // https://jqueryui.com/autocomplete/
   $( function() {
