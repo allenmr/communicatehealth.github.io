@@ -125,11 +125,11 @@ css: "/examples/css/forms.css"
         <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" title="Please enter a valid phone number" value="">
       </div>
 
-      <!-- Email pattern http://blog.gerv.net/2011/05/html5_email_address_regexp/ -->
+      <!-- Email pattern https://html.spec.whatwg.org/#e-mail-state-(type=email) -->
 
       <div class="ch-form-item">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
       </div>
 
       <div class="ch-form-item">
