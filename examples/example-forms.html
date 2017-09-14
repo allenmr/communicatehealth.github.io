@@ -118,7 +118,7 @@ css: "/examples/css/forms.css"
 
       <div class="ch-form-item">
         <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" title="Format is (222) 333-4444)" value="">
+        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" title="Please enter a valid phone number" value="">
       </div>
       
       <!-- Input masks can do weird things to screen readers: https://css-tricks.com/input-masking/#article-header-id-2
@@ -126,7 +126,7 @@ css: "/examples/css/forms.css"
 
       <div class="ch-form-item">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="">
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
       </div>
 
       <div class="ch-form-item">
