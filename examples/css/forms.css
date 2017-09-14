@@ -230,7 +230,7 @@
 }
 
 /* https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/ */
-@media screen and (max-width: 24em) {
+@media screen and (max-width: 29.75em) {
   .responsive-form {
     border: 0;
     display: table;
