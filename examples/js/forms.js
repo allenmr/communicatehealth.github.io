@@ -17,12 +17,14 @@ jQuery( document ).ready(function( $ ) {
     }
   });
 
+  $('#phone').focusout(function() {
+    if ($('#phone').val() == "(") {
+      $('#phone').val('');
+    }
+  });
+
   // Form validation
   $("#ch_form").validate();
-
-  // autotab phone number
-  $.autotab({ tabOnSelect: true });
-  $('.number').autotab('filter', 'number');
 
   // Autocomplete states (instead of really long dropdown select)
   $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
