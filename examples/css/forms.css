@@ -25,6 +25,14 @@
   width: auto;
 }
 
+.ch-form-item.phone input {
+  width: 2.875em;
+}
+
+.ch-form-item.phone input:last-of-type {
+  width: 3.5em;
+}
+
 .ch-form label {
   font-weight: bold;
   margin-bottom: 0.25em;

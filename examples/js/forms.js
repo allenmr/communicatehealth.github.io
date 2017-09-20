@@ -4,11 +4,25 @@ jQuery( document ).ready(function( $ ) {
   // Auto formats phone number (instead of using a mask)
   $('#phone').formatter({
     'pattern': '({{999}}) {{999}}-{{9999}}',
-    'persistent': true //show pattern always "(###) ###-####"
+    'persistent': false //show pattern when user starts entering data "(###) ###-####"
+  });
+
+  $('#zip').formatter({
+    'pattern': '{{99999}}',
+  });
+
+  $('#phone').focus(function() {
+    if($('#phone').val() == "") {
+      $('#phone').val('(');
+    }
   });
 
   // Form validation
   $("#ch_form").validate();
+
+  // autotab phone number
+  $.autotab({ tabOnSelect: true });
+  $('.number').autotab('filter', 'number');
 
   // Autocomplete states (instead of really long dropdown select)
   $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
