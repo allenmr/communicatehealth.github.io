@@ -12,13 +12,13 @@ jQuery( document ).ready(function( $ ) {
   });
 
   $('#phone').focus(function() {
-    if($('#phone').val() == "") {
+    if($('#phone').val() === "") {
       $('#phone').val('(');
     }
   });
 
   $('#phone').focusout(function() {
-    if ($('#phone').val() == "(") {
+    if ($('#phone').val() === "(") {
       $('#phone').val('');
     }
   });
