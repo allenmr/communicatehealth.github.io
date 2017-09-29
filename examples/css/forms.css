@@ -177,6 +177,13 @@
   top: -5px;
 }
 
+.ch-form input[type="radio"]:focus + label > span,
+.ch-form input[type="checkbox"]:focus + label > span,
+.ch-form  input[type="radio"]:focus + label + label > span,
+.ch-form  input[type="checkbox"]:focus + label + label > span {
+  box-shadow: 0 0 5px 2px rgba(39,147,199,1);
+}
+
 /* Form Validation Errors */
 .ch-form input.error,
 .ch-form select.error {
