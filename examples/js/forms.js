@@ -4,7 +4,23 @@ jQuery( document ).ready(function( $ ) {
   // Auto formats phone number (instead of using a mask)
   $('#phone').formatter({
     'pattern': '({{999}}) {{999}}-{{9999}}',
-    'persistent': true //show pattern always "(###) ###-####"
+    'persistent': false //show pattern when user starts entering data "(###) ###-####"
+  });
+
+  $('#zip').formatter({
+    'pattern': '{{99999}}',
+  });
+
+  $('#phone').focus(function() {
+    if($('#phone').val() === "") {
+      $('#phone').val('(');
+    }
+  });
+
+  $('#phone').focusout(function() {
+    if ($('#phone').val() === "(") {
+      $('#phone').val('');
+    }
   });
 
   // Form validation

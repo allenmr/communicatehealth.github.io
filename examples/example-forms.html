@@ -108,25 +108,28 @@ css: "/examples/css/forms.css"
       </div>
       <!-- end JS only -->
 
+      <!-- Use type="text" for zip codes https://www.w3.org/TR/html5/forms.html#number-state-%28type=number%29 -->
+      <!-- Pattern is for American postal codes http://html5pattern.com/Postal_Codes -->
+
       <div class="ch-form-item">
         <label for="zip">ZIP<abbr title="required">*</abbr>:</label>
         <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true" value="">
       </div>
       
-      <!-- Use type="text" for zip codes https://www.w3.org/TR/html5/forms.html#number-state-%28type=number%29 -->
-      <!-- Pattern is for American postal codes http://html5pattern.com/Postal_Codes -->
-
-      <div class="ch-form-item">
-        <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" title="Please enter a valid phone number" value="">
-      </div>
       
       <!-- Input masks can do weird things to screen readers: https://css-tricks.com/input-masking/#article-header-id-2
       This formatter was build with accessibility in mind: http://firstopinion.github.io/formatter.js/index.html -->
 
       <div class="ch-form-item">
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}" placeholder="(   ) -" title="Please enter a valid phone number" >
+      </div>
+
+      <!-- Email pattern https://html.spec.whatwg.org/#e-mail-state-(type=email) -->
+
+      <div class="ch-form-item">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
       </div>
 
       <div class="ch-form-item">
