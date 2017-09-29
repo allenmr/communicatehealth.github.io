@@ -1,6 +1,20 @@
 jQuery( document ).ready(function( $ ) {
   "use strict";
 
+  // Automate text boxes preceeded by checkboxes
+  $("input[type=text][data-checkbox]").each(function(index,el){
+    var txbox = $(this);console.log("txbox",txbox);
+    var ckbox = $("#"+txbox.data("checkbox"));console.log("ckbox",ckbox);
+    txbox.on("input",function(){
+      ckbox.prop('checked', true);
+    });
+    ckbox.on("click",function(){
+      if(ckbox.prop('checked')){
+        txbox.focus();
+      }
+    });
+  });
+
   // Auto formats phone number (instead of using a mask)
   $('#phone').formatter({
     'pattern': '({{999}}) {{999}}-{{9999}}',
