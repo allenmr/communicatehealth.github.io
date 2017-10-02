@@ -38,7 +38,14 @@ jQuery( document ).ready(function( $ ) {
   });
 
   // Form validation
-  $("#ch_form").validate();
+  $("#ch_form").validate({
+    rules: {
+      email: "required",
+      confirm_email: {
+        equalTo: "#email"
+      }
+    }
+  });
 
   // Autocomplete states (instead of really long dropdown select)
   $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
@@ -105,3 +112,13 @@ jQuery( document ).ready(function( $ ) {
   } );
 
 });
+
+
+
+function confirmEmail() {
+  var email = document.getElementById("email").value;
+  var confirm_email = document.getElementById("confirm_email").value;
+  if(email !== confirm_email) {
+    $('confirm_email').attr('class', 'error');
+  }
+}
