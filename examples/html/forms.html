@@ -16,22 +16,22 @@
   <h1>Forms</h1>
   <p><a href="/examples/html/forms.html">View isolated HTML</a><!-- | <a href="https://codepen.io/jcozzo/pen/wqNjBy">View plain HTML and JS on Codepen</a> --></p>
 
-  <form id="ch_form" class="ch-form" method="post" action="" novalidate="novalidate">
+  <form id="ch_form" class="ch-form" method="post" action="">
     <div class="contact-info">
       <div class="ch-form-item">
         <label for="first_name">First Name<abbr title="required">*</abbr>:</label>
-        <input type="text" id="first_name" name="first_name" title="Please enter your first name" required="" aria-required="true" value="">
+        <input type="text" id="first_name" name="first_name" title="Please enter your first name" required aria-required="true" value="">
       </div> <!-- use required + aria-required="true" https://www.w3.org/WAI/tutorials/forms/validation/#validating-required-input -->
 
       <div class="ch-form-item">
         <label for="last_name">Last Name<abbr title="required">*</abbr>:</label>
-        <input type="text" id="last_name" name="last_name" title="Please enter your last name" required="" aria-required="true" value="">
+        <input type="text" id="last_name" name="last_name" title="Please enter your last name" required aria-required="true" value="">
       </div>
 
       <div class="ch-form-item">
         <label for="address1">Address line 1<abbr title="required">*</abbr>:</label>
         <span id="address1_ex">Street address, P.O. box, company name, c/o</span>
-        <input type="text" id="address1" name="address1" title="Please enter your address" required="" aria-describedby="address1_ex" aria-required="true" value="">
+        <input type="text" id="address1" name="address1" title="Please enter your address" required aria-describedby="address1_ex" aria-required="true" value="">
       </div>
       
       <!-- aria-describedby http://webaim.org/techniques/forms/advanced#describedby -->
@@ -44,13 +44,13 @@
 
       <div class="ch-form-item">
         <label for="city">City<abbr title="required">*</abbr>:</label>
-        <input type="text" id="city" name="city" title="Please enter your city" required="" aria-required="true" value="">
+        <input type="text" id="city" name="city" title="Please enter your city" required aria-required="true" value="">
       </div>
 
       <!-- Fallback if no JS -->
-      <div class="ch-form-item" style="display: none;">
+      <div class="ch-form-item">
         <label for="states">State<abbr title="required">*</abbr>:</label>
-        <select id="states" name="states" title="Please enter your state" value="">
+        <select id="states" name="states" title="Please enter your state" required aria-required="true" value="">
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -106,10 +106,10 @@
       </div>
 
       <!-- JS only: only displayed if JS, hide states drop-down div -->
-      <div class="ch-form-item" style="">
+      <div class="ch-form-item" style="display: none;">
         <div class="ui-widget">
           <label for="state">State<abbr title="required">*</abbr>: </label>
-          <input id="state" type="text" name="state" title="Please enter your state" required="required" aria-required="true" class="ui-autocomplete-input" autocomplete="off">
+          <input id="state" type="text" name="state" title="Please enter your state">
         </div>
       </div>
       <!-- end JS only -->
@@ -119,7 +119,7 @@
 
       <div class="ch-form-item">
         <label for="zip">ZIP<abbr title="required">*</abbr>:</label>
-        <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" required="" aria-required="true" value="">
+        <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true" value="">
       </div>
       
       
@@ -128,14 +128,19 @@
 
       <div class="ch-form-item">
         <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern=".*\d{3}.*\d{3}.*\d{4}" placeholder="(   ) -" title="Please enter a valid phone number">
+        <input type="tel" id="phone" name="phone" pattern=".*\d{3}.*\d{3}.*\d{4}" placeholder="(   ) -" title="Please enter a valid phone number" >
       </div>
 
       <!-- Email pattern https://html.spec.whatwg.org/#e-mail-state-(type=email) -->
 
       <div class="ch-form-item">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address" value="">
+      </div>
+
+      <div class="ch-form-item">
+        <label for="confirm_email">Confirm Email:</label>
+        <input type="email" id="confirm_email" name="confirm_email" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please confirm your email address" value="" onfocusout="confirmEmail()">
       </div>
 
       <div class="ch-form-item">
@@ -146,7 +151,7 @@
       
       <div class="ch-form-item">
         <label for="textarea">Textarea:</label>
-        <textarea id="textarea" name="textarea"></textarea>
+        <textarea id="textarea" name="textarea" ></textarea>
       </div>
     </div>
 
@@ -185,27 +190,27 @@
 
     <fieldset aria-required="true">
       <legend>Radio buttons in a table (responsive)</legend>
-      <table class="multi-label responsive-form"> <!-- multiple inputs for one label http://webaim.org/techniques/forms/advanced#multiple -->
+      <table class="multi-label responsive-form"> <!-- multiple inputs for one label http://webaim.org/techniques/forms/advanced#multiple / modified to use span input trick -->
         <tbody>
           <tr class="hidden-small">
             <th class="hidden-visually" scope="col">Hidden Header</th> <!-- hidden label http://webaim.org/techniques/forms/advanced#hiddenlabel -->
             <th id="never" scope="col">Never</th>
             <th id="some" scope="col">Sometimes</th>
-            <th id="many" scope="col">Often</th>
+            <th id="often" scope="col">Often</th>
           </tr>
           <tr>
             <th id="a_1" scope="row">Radio label 1</th>
             <td data-label="Never">
               <input id="a1" type="radio" name="a_1" aria-labelledby="a_1 never" value="Never">
-              <label for="a1"><span></span></label>
+              <label for="a1"><span class="hidden-visually">Never</span><span></span></label>
             </td>
             <td data-label="Sometimes">
               <input id="a2" type="radio" name="a_1" aria-labelledby="a_1 some" value="Sometimes">
-              <label for="a2"><span></span></label>
+              <label for="a2"><span class="hidden-visually">Sometimes</span><span></span></label>
             </td>
             <td data-label="Often">
-              <input id="a3" type="radio" name="a_1" aria-labelledby="a_1 many" value="Often">
-              <label for="a3"><span></span></label>
+              <input id="a3" type="radio" name="a_1" aria-labelledby="a_1 often"  value="Often">
+              <label for="a3"><span class="hidden-visually">Often</span><span></span></label>
             </td>
           </tr>
           
@@ -213,15 +218,15 @@
             <th id="b_1" scope="row">Radio label 2</th>
             <td data-label="Never">
               <input id="b1" type="radio" name="b_1" aria-labelledby="b_1 never" value="Never">
-              <label for="b1"><span></span></label>
+              <label for="b1"><span class="hidden-visually">Never</span><span></span></label>
             </td>
             <td data-label="Sometimes">
               <input id="b2" type="radio" name="b_1" aria-labelledby="b_1 some" value="Sometimes">
-              <label for="b2"><span></span></label>
+              <label for="b2"><span class="hidden-visually">Sometimes</span><span></span></label>
             </td>
             <td data-label="Often">
-              <input id="b3" type="radio" name="b_1" aria-labelledby="b_1 many" value="Often">
-              <label for="b3"><span></span></label>
+              <input id="b3" type="radio" name="b_1" aria-labelledby="b_1 often"  value="Often">
+              <label for="b3"><span class="hidden-visually">Often</span><span></span></label>
             </td>
           </tr>
           
@@ -229,15 +234,15 @@
             <th id="c_1" scope="row">Radio label 3</th>
             <td data-label="Never">
               <input id="c1" type="radio" name="c_1" aria-labelledby="c_1 never" value="Never">
-              <label for="c1"><span></span></label>
+              <label for="c1"><span class="hidden-visually">Never</span><span></span></label>
             </td>
             <td data-label="Sometimes">
               <input id="c2" type="radio" name="c_1" aria-labelledby="c_1 some" value="Sometimes">
-              <label for="c2"><span></span></label>
+              <label for="c2"><span class="hidden-visually">Sometimes</span><span></span></label>
             </td>
             <td data-label="Often">
-              <input id="c3" type="radio" name="c_1" aria-labelledby="c_1 many" value="Often">
-              <label for="c3"><span></span></label>
+              <input id="c3" type="radio" name="c_1" aria-labelledby="b_1 often"  value="Often">
+              <label for="c3"><span class="hidden-visually">Often</span><span></span></label>
             </td>
           </tr>
       </tbody>
