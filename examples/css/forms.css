@@ -28,11 +28,18 @@
 .ch-form label {
   font-weight: bold;
   margin-bottom: 0.25em;
+  display: block;
 }
 
 .ch-form fieldset {
   border: none;
   padding: 0;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.ch-form fieldset fieldset {
+  margin-bottom: 1em;
 }
 
 .ch-form legend {
@@ -40,7 +47,7 @@
   margin-bottom: 0.25em;
 }
 
-.ch-form fieldset label {
+.ch-form fieldset input + label {
   font-weight: normal;
 }
 
@@ -96,10 +103,6 @@
  text-decoration: none;
 }
 
-.ch-form .contact-info label {
-  display: block;
-}
-
 .ch-form label + span {
   display: block;
   color: #666;
@@ -107,13 +110,12 @@
   padding-bottom: 0.5rem;
 }
 
-.ch-form .ch-form-item,
-.ch-form fieldset {
+.ch-form fieldset .ch-form-item {
   margin: 1em 0;
   position: relative;
 }
 
-.ch-form fieldset .ch-form-item {
+.ch-form fieldset fieldset .ch-form-item {
   margin: 0.5em 0;
 }
 
@@ -191,6 +193,9 @@
   background-position: center right 0.5em;
   padding-right: 1.75em;
 }
+.ch-form input.empty {
+  background-image: none;
+}
 
 /* Form Validation Errors */
 .ch-form input.error,
@@ -210,11 +215,6 @@
   border: 1px solid #d9d9d9;
   z-index: 1;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-.ch-form fieldset label.error {
-  left: 24%;
-  padding: 0.5em;
 }
 
 .ch-form label.error:before,

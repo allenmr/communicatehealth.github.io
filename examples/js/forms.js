@@ -40,9 +40,11 @@ jQuery( document ).ready(function( $ ) {
   // Form validation
   $("#ch_form").validate({
     rules: {
-      email: "required",
       confirm_email: {
         equalTo: "#email"
+      },
+      confirm_password: {
+        equalTo: "#password"
       }
     }
   });
@@ -113,12 +115,3 @@ jQuery( document ).ready(function( $ ) {
 
 });
 
-
-
-function confirmEmail() {
-  var email = document.getElementById("email").value;
-  var confirm_email = document.getElementById("confirm_email").value;
-  if(email !== confirm_email) {
-    $('confirm_email').attr('class', 'error');
-  }
-}
