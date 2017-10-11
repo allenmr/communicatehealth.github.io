@@ -11,8 +11,9 @@ css: "/examples/css/forms.css"
   <p><a href="{{ '/examples/html/forms.html' | prepend: site.baseurl }}">View isolated HTML</a><!-- | <a href="https://codepen.io/jcozzo/pen/wqNjBy">View plain HTML and JS on Codepen</a> --></p>
 
   <form id="ch_form" class="ch-form" method="post" action="">
+    <h2>Example Form Title</h2>
     <fieldset>
-      <legend class="h2">Personal Information</legend>
+      <legend class="h3">Personal Information</legend>
 
       <div class="ch-form-item">
         <label for="first_name">First Name<abbr title="required">*</abbr>:</label>
@@ -32,7 +33,7 @@ css: "/examples/css/forms.css"
     </fieldset>
       
     <fieldset>
-      <legend class="h2">Contact Information</legend>
+      <legend class="h3">Contact Information</legend>
 
       <div class="ch-form-item">
         <label for="address1">Address line 1<abbr title="required">*</abbr>:</label>
@@ -129,17 +130,24 @@ css: "/examples/css/forms.css"
       </div>
       
       
-      <!-- Input masks can do weird things to screen readers: https://css-tricks.com/input-masking/#article-header-id-2
-      This formatter was build with accessibility in mind: http://firstopinion.github.io/formatter.js/index.html -->
+      <!-- Removed all frontend formatting, using a permissive pattern instead. Matches all of:
+        2345678900
+        234-567-8900
+        234.567.8900
+        234 567 8900
+        (234) 567-8900
+        (234)567.8900
+        and all of the above with a 1 in front (followed by a space, -, ., or nothing)
+      -->
 
       <div class="ch-form-item">
         <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern=".*\d{3}.*\d{3}.*\d{4}" title="Please enter a valid phone number">
+        <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid phone number">
       </div>
     </fieldset>
     
     <fieldset>
-      <legend class="h2">Create an account (optional)</legend>
+      <legend class="h3">Create an account (optional)</legend>
 
       <!-- Email pattern https://html.spec.whatwg.org/#e-mail-state-(type=email) -->
 
@@ -168,7 +176,7 @@ css: "/examples/css/forms.css"
     </fieldset>
       
     <fieldset>
-      <legend class="h2">Form Elements</legend>
+      <legend class="h3">Form Elements</legend>
       
       <div class="ch-form-item">
         <label for="textarea">Textarea:</label>

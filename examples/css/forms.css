@@ -7,6 +7,11 @@
   max-width: 40em;
 }
 
+.ch-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
 .ch-form input,
 .ch-form select,
 .ch-form textarea {
@@ -34,7 +39,8 @@
 .ch-form fieldset {
   border: none;
   padding: 0;
-  margin-bottom: 2em;
+  margin: 0;
+  margin-bottom: 1.5em;
   position: relative;
 }
 
@@ -44,7 +50,14 @@
 
 .ch-form legend {
   font-weight: bold;
-  margin-bottom: 0.25em;
+  margin: 1rem 0 0.25rem;
+}
+
+.ch-form legend.h3 {
+  margin: 0;
+  padding: 2rem 0 0.25rem;
+  border-top: 1px dotted #d9d9d9;
+  width: 100%;
 }
 
 .ch-form fieldset input + label {
@@ -288,6 +301,14 @@
   .ch-form {
     padding: 1em;
   }
+}
+
+/* jQuery datepicker */
+.ui-datepicker {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  padding: 0.5em;
+  
 }
 
 /* jQuery CSS */
