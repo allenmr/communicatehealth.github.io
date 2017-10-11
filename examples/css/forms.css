@@ -200,7 +200,7 @@
 }
 
 /* Form Validation Success */
-.ch-form input.valid {
+.ch-form input.valid.show-valid {
   background-image: url('/examples/img/checkmark.png');
   background-repeat: no-repeat;
   background-position: center right 0.5em;
@@ -213,7 +213,10 @@
 /* Form Validation Errors */
 .ch-form input.error,
 .ch-form select.error {
-  background: #fcc;
+  background-image: url('/examples/img/error.png');
+  background-repeat: no-repeat;
+  background-position: center right 0.5em;
+  background-color: #fcc;
 }
 
 .ch-form label.error {
