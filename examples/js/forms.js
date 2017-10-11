@@ -3,8 +3,8 @@ jQuery( document ).ready(function( $ ) {
 
   // Automate text boxes preceeded by checkboxes
   $("input[type=text][data-checkbox]").each(function(index,el){
-    var txbox = $(this);console.log("txbox",txbox);
-    var ckbox = $("#"+txbox.data("checkbox"));console.log("ckbox",ckbox);
+    var txbox = $(this);
+    var ckbox = $("#"+txbox.data("checkbox"));
     txbox.on("input",function(){
       ckbox.prop('checked', true);
     });
