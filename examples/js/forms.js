@@ -3,8 +3,8 @@ jQuery( document ).ready(function( $ ) {
 
   // Automate text boxes preceeded by checkboxes
   $("input[type=text][data-checkbox]").each(function(index,el){
-    var txbox = $(this);console.log("txbox",txbox);
-    var ckbox = $("#"+txbox.data("checkbox"));console.log("ckbox",ckbox);
+    var txbox = $(this);
+    var ckbox = $("#"+txbox.data("checkbox"));
     txbox.on("input",function(){
       ckbox.prop('checked', true);
     });
@@ -15,34 +15,14 @@ jQuery( document ).ready(function( $ ) {
     });
   });
 
-  // Auto formats phone number (instead of using a mask)
-  $('#phone').formatter({
-    'pattern': '({{999}}) {{999}}-{{9999}}',
-    'persistent': false //show pattern when user starts entering data "(###) ###-####"
-  });
-
-  $('#zip').formatter({
-    'pattern': '{{99999}}',
-  });
-
-  $('#phone').focus(function() {
-    if($('#phone').val() === "") {
-      $('#phone').val('(');
-    }
-  });
-
-  $('#phone').focusout(function() {
-    if ($('#phone').val() === "(") {
-      $('#phone').val('');
-    }
-  });
-
   // Form validation
   $("#ch_form").validate({
     rules: {
-      email: "required",
       confirm_email: {
         equalTo: "#email"
+      },
+      confirm_password: {
+        equalTo: "#password"
       }
     }
   });
@@ -113,12 +93,3 @@ jQuery( document ).ready(function( $ ) {
 
 });
 
-
-
-function confirmEmail() {
-  var email = document.getElementById("email").value;
-  var confirm_email = document.getElementById("confirm_email").value;
-  if(email !== confirm_email) {
-    $('confirm_email').attr('class', 'error');
-  }
-}
