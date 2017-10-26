@@ -28,6 +28,10 @@ header {
   }
 }
 
+.post {
+  margin-bottom: 2em;
+}
+
 .post-meta {
   color: $gray;
 }
@@ -46,19 +50,13 @@ header {
   @extend %clearfix;
 
   .next {
-    background-color: $accent;
-    border-radius: .5em;
     float: right;
     max-width: 45%;
-    padding: 1em;
   }
 
   .prev {
-    background-color: $accent;
-    border-radius: .5em;
     float: left;
     max-width: 45%;
-    padding: 1em;
   }
 }
 
@@ -378,6 +376,10 @@ section,
   &:active {
     background-color: $accent;
     color: $black;
+  }
+
+  &.bookmarklet {
+    border: 1px solid $gray;
   }
 }
 // scss-lint:enable PropertyCount
