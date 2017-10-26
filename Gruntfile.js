@@ -180,7 +180,7 @@ module.exports = function(grunt) {
       },
       // Build Jekyll site using GitHub Pages gem, using localized config.yml
       jekyllBuildDev: {
-        command: 'bundle exec jekyll build --config _config.yml,_local-config.yml'
+        command: 'bundle exec jekyll build --drafts --config _config.yml,_local-config.yml'
       }
     },
 
