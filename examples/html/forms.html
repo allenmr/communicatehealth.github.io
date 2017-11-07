@@ -37,7 +37,7 @@
       <div class="ch-form-item">
         <label for="dob">Date of Birth:</label>
         <span id="dob_help">MM/DD/YYYY</span>
-        <input type="text" id="dob" class="datepicker" aria-describedby="dob_help" name="dob">
+        <input type="text" id="dob" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help" name="dob">
       </div>
     </fieldset>
       
@@ -151,7 +151,7 @@
 
       <div class="ch-form-item">
         <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid phone number">
+        <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid 10-digit phone number">
       </div>
     </fieldset>
     
