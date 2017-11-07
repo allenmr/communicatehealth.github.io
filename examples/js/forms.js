@@ -93,3 +93,11 @@ jQuery( document ).ready(function( $ ) {
 
 });
 
+$( function() {
+  $( "#dob" ).datepicker({
+    changeMonth: true,
+    changeYear: true,
+    defaultDate: -7300
+  });
+} );
+
