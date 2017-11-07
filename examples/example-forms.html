@@ -49,13 +49,13 @@ css: "/examples/css/forms.css"
         <input type="text" id="address2" name="address2" aria-describedby="address2_ex">
       </div>
 
-      <div class="ch-form-item">
+      <div class="ch-form-item inline">
         <label for="city">City<abbr title="required">*</abbr>:</label>
         <input type="text" id="city" name="city" title="Please enter your city" required aria-required="true">
       </div>
 
       <!-- Fallback if no JS -->
-      <div class="ch-form-item">
+      <div class="ch-form-item inline">
         <label for="states">State<abbr title="required">*</abbr>:</label>
         <select id="states" name="states" title="Please enter your state" required aria-required="true">
           <option value="AL">Alabama</option>
@@ -113,7 +113,7 @@ css: "/examples/css/forms.css"
       </div>
 
       <!-- JS only: only displayed if JS, hide states drop-down div -->
-      <div class="ch-form-item" style="display: none;">
+      <div class="ch-form-item inline" style="display: none;">
         <div class="ui-widget">
           <label for="state">State<abbr title="required">*</abbr>: </label>
           <input id="state" type="text" name="state" title="Please enter your state">
@@ -124,7 +124,7 @@ css: "/examples/css/forms.css"
       <!-- Use type="text" for zip codes https://www.w3.org/TR/html5/forms.html#number-state-%28type=number%29 -->
       <!-- Pattern is for American postal codes http://html5pattern.com/Postal_Codes -->
 
-      <div class="ch-form-item">
+      <div class="ch-form-item inline zip">
         <label for="zip">ZIP<abbr title="required">*</abbr>:</label>
         <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true">
       </div>
