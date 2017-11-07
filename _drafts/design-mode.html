@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Quick content edits in the browser"
+categories: howto
+---
+
+<p>Past Developer Tips and Creative Time sessions have covered the use of in-browser DevTools to preview small edits to existing pages. Tracking down the right place to make the change is always a challenge, even for developers.</p>
+
+<p><strong>Here&rsquo;s an easier option: a bookmarklet that turns all text on the page into editable content.</strong></p>
+
+<p>To use the bookmarklet, drag and drop the button below to your bookmarks bar:</p>
+
+<p><a class="btn bookmarklet" href="javascript:console.log(document.designMode='on');" onclick="javascript:return false;">Edit page text</a></p>
+
+<p>It works in every browser (even some mobile browsers) and uses a javascript snippet that turns on "design mode" <code>document.designmode = 'on'</code></p>
+
+<p>Using in Google Chrome:</p>
+
+<p><img src="{{ '/files/bookmarklet-chrome.gif' | prepend: site.baseurl }}" alt="bookmarklet screencast using chrome"></p>
+
+<p>Even using on an iPhone:</p>
+<p><img src="{{ '/files/bookmarklet-ios.gif' | prepend: site.baseurl }}" alt="bookmarklet screencast using ios"></p>
