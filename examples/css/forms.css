@@ -109,7 +109,8 @@
   vertical-align: text-top;
 }
 
-.ch-form .btn {
+.ch-form .btn,
+.alert button {
   background-color: #008198;
   background-image: none;
   border: 1px solid #008198;
@@ -129,12 +130,16 @@
   white-space: nowrap;
 }
 
-.ch-form .btn-secondary {
+.ch-form .btn-secondary,
+.alert button:last-of-type {
   background-color: #fff;
   color: #008198;
 }
 
-.ch-form .btn:hover {
+.ch-form .btn:hover,
+.ch-form .btn:focus,
+.alert button:hover,
+.alert button:focus {
   background-color: #004e65;
   border-color: #004e65;
   color: #fff;
