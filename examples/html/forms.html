@@ -7,7 +7,7 @@
   <title>Forms</title>
   <link rel="stylesheet" href="/css/style.css">
   <style type="text/css">
-    body { font-family: sans-serif; margin: 0 auto; max-width: 44em; padding: 1em; }
+    body { font-family: sans-serif; margin: 0 auto; max-width: 44em; }
     ul { padding-left: 1em; }
     .hidden-visually { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
     *, :after, :before { box-sizing: border-box; }
@@ -26,18 +26,24 @@
 
       <div class="ch-form-item">
         <label for="first_name">First Name<abbr title="required">*</abbr>:</label>
-        <input type="text" id="first_name" name="first_name" title="Please enter your first name" required aria-required="true">
+        <div class="alert-wrapper">
+          <input type="text" id="first_name" name="first_name" title="Please enter your first name" required aria-required="true">
+        </div>
       </div> <!-- use required + aria-required="true" https://www.w3.org/WAI/tutorials/forms/validation/#validating-required-input -->
 
       <div class="ch-form-item">
         <label for="last_name">Last Name<abbr title="required">*</abbr>:</label>
-        <input type="text" id="last_name" name="last_name" title="Please enter your last name" required aria-required="true">
+        <div class="alert-wrapper">
+          <input type="text" id="last_name" name="last_name" title="Please enter your last name" required aria-required="true">
+        </div>
       </div>
 
       <div class="ch-form-item">
         <label for="dob">Date of Birth:</label>
         <span id="dob_help">MM/DD/YYYY</span>
-        <input type="text" id="dob" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help" name="dob">
+        <div class="alert-wrapper">
+          <input type="text" id="dob" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help" name="dob">
+        </div>
       </div>
     </fieldset>
       
@@ -47,7 +53,9 @@
       <div class="ch-form-item">
         <label for="address1">Address line 1<abbr title="required">*</abbr>:</label>
         <span id="address1_ex">Street address, P.O. box, company name, c/o</span>
-        <input type="text" id="address1" name="address1" title="Please enter your address" required aria-describedby="address1_ex" aria-required="true">
+        <div class="alert-wrapper">
+          <input type="text" id="address1" name="address1" title="Please enter your address" required aria-describedby="address1_ex" aria-required="true">
+        </div>
       </div>
       
       <!-- aria-describedby http://webaim.org/techniques/forms/advanced#describedby -->
@@ -60,72 +68,78 @@
 
       <div class="ch-form-item inline">
         <label for="city">City<abbr title="required">*</abbr>:</label>
-        <input type="text" id="city" name="city" title="Please enter your city" required aria-required="true">
+        <div class="alert-wrapper">
+          <input type="text" id="city" name="city" title="Please enter your city" required aria-required="true">
+        </div>
       </div>
 
       <!-- Fallback if no JS -->
-      <div class="ch-form-item inline">
+      <div class="ch-form-item inline state">
         <label for="states">State<abbr title="required">*</abbr>:</label>
-        <select id="states" name="states" title="Please enter your state" required aria-required="true">
-          <option value="AL">Alabama</option>
-          <option value="AK">Alaska</option>
-          <option value="AZ">Arizona</option>
-          <option value="AR">Arkansas</option>
-          <option value="CA">California</option>
-          <option value="CO">Colorado</option>
-          <option value="CT">Connecticut</option>
-          <option value="DE">Delaware</option>
-          <option value="DC">District Of Columbia</option>
-          <option value="FL">Florida</option>
-          <option value="GA">Georgia</option>
-          <option value="HI">Hawaii</option>
-          <option value="ID">Idaho</option>
-          <option value="IL">Illinois</option>
-          <option value="IN">Indiana</option>
-          <option value="IA">Iowa</option>
-          <option value="KS">Kansas</option>
-          <option value="KY">Kentucky</option>
-          <option value="LA">Louisiana</option>
-          <option value="ME">Maine</option>
-          <option value="MD">Maryland</option>
-          <option value="MA">Massachusetts</option>
-          <option value="MI">Michigan</option>
-          <option value="MN">Minnesota</option>
-          <option value="MS">Mississippi</option>
-          <option value="MO">Missouri</option>
-          <option value="MT">Montana</option>
-          <option value="NE">Nebraska</option>
-          <option value="NV">Nevada</option>
-          <option value="NH">New Hampshire</option>
-          <option value="NJ">New Jersey</option>
-          <option value="NM">New Mexico</option>
-          <option value="NY">New York</option>
-          <option value="NC">North Carolina</option>
-          <option value="ND">North Dakota</option>
-          <option value="OH">Ohio</option>
-          <option value="OK">Oklahoma</option>
-          <option value="OR">Oregon</option>
-          <option value="PA">Pennsylvania</option>
-          <option value="RI">Rhode Island</option>
-          <option value="SC">South Carolina</option>
-          <option value="SD">South Dakota</option>
-          <option value="TN">Tennessee</option>
-          <option value="TX">Texas</option>
-          <option value="UT">Utah</option>
-          <option value="VT">Vermont</option>
-          <option value="VA">Virginia</option>
-          <option value="WA">Washington</option>
-          <option value="WV">West Virginia</option>
-          <option value="WI">Wisconsin</option>
-          <option value="WY">Wyoming</option>
-        </select>
+        <div class="alert-wrapper">
+          <select id="states" name="states" title="Please enter your state" required aria-required="true">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </div>
       </div>
 
       <!-- JS only: only displayed if JS, hide states drop-down div -->
-      <div class="ch-form-item inline" style="display: none;">
+      <div class="ch-form-item inline state" style="display: none;">
         <div class="ui-widget">
           <label for="state">State<abbr title="required">*</abbr>: </label>
-          <input id="state" type="text" name="state" title="Please enter your state">
+          <div class="alert-wrapper">
+            <input id="state" type="text" name="state" title="Please enter your state">
+          </div>
         </div>
       </div>
       <!-- end JS only -->
@@ -135,7 +149,9 @@
 
       <div class="ch-form-item inline zip">
         <label for="zip">ZIP<abbr title="required">*</abbr>:</label>
-        <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true">
+        <div class="alert-wrapper">
+          <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true">
+        </div>
       </div>
       
       
@@ -151,7 +167,9 @@
 
       <div class="ch-form-item">
         <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid 10-digit phone number">
+        <div class="alert-wrapper">
+          <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid 10-digit phone number">
+        </div>
       </div>
     </fieldset>
     
@@ -163,23 +181,31 @@
       <div class="ch-form-item">
         <label for="email">Email:</label>
         <span id="email_help">Your email address will be your username</span>
-        <input type="email" id="email" name="email" aria-describedby="email_help"  pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address">
+        <div class="alert-wrapper">
+          <input type="email" id="email" name="email" aria-describedby="email_help"  pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Please enter your email address">
+        </div>
       </div>
 
       <div class="ch-form-item">
         <label for="confirm_email">Confirm Email:</label>
-        <input type="email" id="confirm_email" class="show-valid" name="confirm_email" title="Please confirm your email address">
+        <div class="alert-wrapper">
+          <input type="email" id="confirm_email" class="show-valid" name="confirm_email" title="Please confirm your email address">
+        </div>
       </div>
 
       <div class="ch-form-item">
         <label for="password">Password:</label>
         <span id="password_help">Must contain at least 1 number and 1 uppercase letter, and at least 8 or more characters</span>
-        <input type="text" id="password" name="password" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" aria-describedby="password_help"  title="Please enter a valid password">
+        <div class="alert-wrapper">
+          <input type="text" id="password" name="password" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" aria-describedby="password_help"  title="Please enter a valid password">
+        </div>
       </div>
 
       <div class="ch-form-item">
         <label for="confirm_email">Confirm Password:</label>
-        <input type="text" id="confirm_password" class="show-valid" name="confirm_password" title="Please confirm your password">
+        <div class="alert-wrapper">
+          <input type="text" id="confirm_password" class="show-valid" name="confirm_password" title="Please confirm your password">
+        </div>
       </div>
       
     </fieldset>
@@ -287,7 +313,8 @@
       </fieldset>
     </fieldset>
 
-    <input type="submit" name="submit" value="Submit" class="btn">
+    <input type="submit" name="submit" value="Sign me up" class="btn">
+    <a href="/examples" id="cancel-btn" class="btn btn-secondary">Cancel</a>
 
   </form>
 </div>

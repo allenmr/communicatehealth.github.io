@@ -28,9 +28,9 @@ jQuery( document ).ready(function( $ ) {
   });
 
   // Autocomplete states (instead of really long dropdown select)
-  $('#states').removeAttr('required').removeAttr('aria-required').parent().hide();
+  $('#states').removeAttr('required').removeAttr('aria-required').parent().parent().hide();
 
-  $('#state').attr('required', '').attr('aria-required', 'true').parent().parent().show();
+  $('#state').attr('required', '').attr('aria-required', 'true').parent().parent().parent().show();
 
   // https://jqueryui.com/autocomplete/
   $( function() {
@@ -101,3 +101,7 @@ $( function() {
   });
 } );
 
+$( "#cancel-btn" ).click(function( event ) {
+  event.preventDefault();
+  alert("Are you sure you want to go? [Stay on the page] [Take me back home]");
+});
