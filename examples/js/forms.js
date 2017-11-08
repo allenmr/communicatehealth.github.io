@@ -97,7 +97,10 @@ $( function() {
   $( "#dob" ).datepicker({
     changeMonth: true,
     changeYear: true,
-    defaultDate: -7300
+    defaultDate: -7300,
+    onSelect: function(dateText, inst) {
+      $(this).focus();
+    }
   });
 } );
 
