@@ -51,7 +51,7 @@
 
 .ch-form input[type="text"].datepicker,
 .ch-form-item.zip input[type="text"] {
-  width: 6.5em;
+  width: 7em;
 }
 
 .ch-form label {
@@ -283,6 +283,18 @@
   z-index: 2;
 }
 
+/* jQuery Datepicker */
+@media screen and (max-width: 60em) {
+  .ui-datepicker {
+    margin-top: -5em;
+  }
+}
+
+.ui-widget-header .ui-icon {
+  background-image: url('vendor/images/ui-icons_555555_256x240.png');
+}
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 35.5em) {
   .ch-form fieldset .ch-form-item.inline {
     display: block;
