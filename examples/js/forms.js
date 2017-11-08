@@ -103,5 +103,29 @@ $( function() {
 
 $( "#cancel-btn" ).click(function( event ) {
   event.preventDefault();
-  alert("Are you sure you want to go? [Stay on the page] [Take me back home]");
+  confirm_abandon();
 });
+
+function confirm_abandon() {
+  var dialog = $("dialog");
+  if(dialog.length===0){
+    dialog = $("<div id='dialog'/>").appendTo($("body"));
+  }
+  dialog.html("All progress on this form will be lost. Are you sure you want to go?");
+  dialog.dialog({
+    dialogClass: "alert",
+    resizable: false,
+    modal: true,
+    title: "Leave this form?",
+    height: 250,
+    width: 450,
+    buttons: {
+      "Finish the form": function() {
+        $(this).dialog('close');
+      },
+      "Leave this page": function() {
+        window.location = "/examples";
+      },
+    }
+  });
+}

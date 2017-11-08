@@ -1,4 +1,9 @@
-  {% if page.css %}<link rel="stylesheet" href="{{ page.css }}">{% endif %}
+  {% if page.css %}
+    {% assign stylesheets = page.css | split: ',' %}
+    {% for stylesheet in stylesheets %}
+      <link rel="stylesheet" href="{{ stylesheet }}">
+    {% endfor %}
+  {% endif %}
 </head>
 <body class="off-canvas">
   <div class="wrapper">
