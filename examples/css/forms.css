@@ -138,6 +138,7 @@
 
 .ch-form .btn-small {
   padding: 0.25em 0.75em;
+  margin-top: -1px;
 }
 
 .ch-form .btn:hover,
@@ -296,6 +297,98 @@
 
 .ui-widget-header .ui-icon {
   background-image: url('vendor/images/ui-icons_555555_256x240.png');
+}
+
+/* Accessible datePicker http://haltersweb.github.io/Accessibility/date-picker.html */
+
+#datePicker {
+  width: 250px;
+  border: 2px solid #999;
+  padding: 0.5em;
+  padding-bottom: 1.5em;
+  font-size: 0.875rem;
+  z-index: 200;
+}
+
+#datePicker caption {
+  font-weight: normal;
+  padding-bottom: 0;
+}
+
+#datePicker h2 {
+  margin-bottom: 0.25rem;
+}
+
+#datePicker abbr[title] {
+  font-weight: normal;
+  margin: 0 0.125em;
+}
+#datePicker .svg {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+}
+#closeDatePicker,
+#forwardOneMonth,
+#forwardOneYear {
+  float: right;
+}
+#backOneMonth,
+#backOneYear {
+  float: left;
+}
+#datePicker table {
+  margin-top: 0;
+  overflow-x: inherit;
+}
+#datePickerCalendar td,
+#datePickerCalendar th {
+  text-align: center;
+  padding: 0;
+  border: 1px solid #fff;
+}
+#datePickerCalendar tbody tr:last-child {
+  border: none;
+}
+#datePickerCalendar tbody tr:last-child td,
+#datePickerCalendar th {
+  padding-bottom: 0;
+}
+#datePickerCalendar col {
+  width: 14%;
+}
+#datePickerCalendar col:first,
+#datePickerCalendar col:last {
+  width: 15%;
+}
+#datePickerCalendar th {
+  background: #fff;
+}
+#datePickerCalendar td {
+  background: #eee;
+}
+#datePickerCalendar [data-date=""] {
+  padding: 0;
+}
+#keyboardShortcuts {
+  margin: 1ex 0;
+}
+#keyboardShortcuts h2 {
+  text-align: left;
+}
+#keyboardShortcuts tr {
+  border: none;
+}
+#keyboardShortcuts td {
+  border: 1px solid #b5b5a8;
+  padding: .5ex .5em;
+}
+#keyboardShortcuts th {
+  padding: .5ex .5em;
 }
 
 /* MEDIA QUERIES */
