@@ -91,18 +91,12 @@ jQuery( document ).ready(function( $ ) {
     });
   } );
 
-});
+  // Accessible datepicker
+  $('#dob-nojs').hide();
 
-$( function() {
-  $( "#dob" ).datepicker({
-    changeMonth: true,
-    changeYear: true,
-    defaultDate: -7300,
-    onSelect: function(dateText, inst) {
-      $(this).focus();
-    }
-  });
-} );
+  $('#datepicker-js').show();
+
+});
 
 $( "#cancel-btn" ).click(function( event ) {
   event.preventDefault();
