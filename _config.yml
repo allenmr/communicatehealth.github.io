@@ -17,7 +17,7 @@ destination: _site
 permalink: :year/:month/:title/
 timezone: America/New_York
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:
