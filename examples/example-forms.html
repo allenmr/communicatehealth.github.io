@@ -30,12 +30,12 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
       </div>
 
       <div class="ch-form-item">
-        <label id="dob_label" for="dob">Date of Birth:</label>
+        <label id="dob_label" for="date">Date of Birth:</label>
         <span id="dob_help">MM/DD/YYYY</span>
         <div class="alert-wrapper">
           <input type="date" id="dob-nojs" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-labelledby="dob_label" aria-describedby="dob_help">
           <div id="datepicker-js" class="datepicker" style="display: none;">
-            <input type="text" id="dob" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help">
+            <input type="text" id="date" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help">
             <button class="btn btn-small" type="button" id="launchDatePicker" aria-describedby="launchDatePickerDesc">Choose Date <span class="hidden-visually">using the date picker</span></button>
 
             <p id="launchDatePickerDesc" style="display: none;">If using date picker left and right arrows advance by day. Up and down arrows advance by week. Shift left and right advance by month. Shift up and down advance by year.</p>
@@ -195,7 +195,7 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
         </div>
       </div>
     </fieldset>
-      
+
     <fieldset>
       <legend class="h3">Contact Information</legend>
 
@@ -206,7 +206,7 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
           <input type="text" id="address1" name="address1" title="Please enter your address" required aria-describedby="address1_ex" aria-required="true">
         </div>
       </div>
-      
+
       <!-- aria-describedby http://webaim.org/techniques/forms/advanced#describedby -->
 
       <div class="ch-form-item">
@@ -302,8 +302,8 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
           <input type="text" id="zip" name="zip" title="Please enter a valid 5-digit zip code" pattern="(\d{5}([\-]\d{4})?)" title="Format is 12345 or 12345-1234" required aria-required="true">
         </div>
       </div>
-      
-      
+
+
       <!-- Removed all frontend formatting, using a permissive pattern instead. Matches all of:
         2345678900
         234-567-8900
@@ -321,7 +321,7 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
         </div>
       </div>
     </fieldset>
-    
+
     <fieldset>
       <legend class="h3">Create an account (optional)</legend>
 
@@ -356,12 +356,12 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
           <input type="text" id="confirm_password" class="show-valid" name="confirm_password" title="Please confirm your password">
         </div>
       </div>
-      
+
     </fieldset>
-      
+
     <fieldset>
       <legend class="h3">Form Elements</legend>
-      
+
       <div class="ch-form-item">
         <label for="textarea">Textarea:</label>
         <textarea id="textarea" name="textarea" ></textarea>
@@ -425,7 +425,7 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
                 <label for="a3"><span class="hidden-visually">Often</span><span></span></label>
               </td>
             </tr>
-            
+
             <tr>
               <th id="b_1" scope="row">Radio label 2</th>
               <td data-label="Never">
@@ -441,7 +441,7 @@ css: "/examples/css/vendor/jquery-ui.min.css, /examples/css/vendor/jquery-ui.str
                 <label for="b3"><span class="hidden-visually">Often</span><span></span></label>
               </td>
             </tr>
-            
+
             <tr>
               <th id="c_1" scope="row">Radio label 3</th>
               <td data-label="Never">

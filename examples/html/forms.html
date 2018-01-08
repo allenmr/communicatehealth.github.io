@@ -13,11 +13,11 @@
       margin: 0 auto;
       max-width: 44em;
     }
-    
+
     ul {
       padding-left: 1em;
     }
-    
+
     .hidden-visually {
       border: 0;
       clip: rect(0 0 0 0);
@@ -29,7 +29,7 @@
       white-space: nowrap;
       width: 1px;
     }
-    
+
     *,
      :after,
      :before {
@@ -68,12 +68,12 @@
         </div>
 
         <div class="ch-form-item">
-          <label id="dob_label" for="dob">Date of Birth:</label>
+          <label id="dob_label" for="date">Date of Birth:</label>
           <span id="dob_help">MM/DD/YYYY</span>
           <div class="alert-wrapper">
             <input type="date" id="dob-nojs" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-labelledby="dob_label" aria-describedby="dob_help">
             <div id="datepicker-js" class="datepicker" style="display: none;">
-              <input type="text" id="dob" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help">
+              <input type="text" id="date" class="datepicker" pattern="\d{1,2}/\d{2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-describedby="dob_help">
               <button class="btn btn-small" type="button" id="launchDatePicker" aria-describedby="launchDatePickerDesc">Choose Date <span class="hidden-visually">using the date picker</span></button>
 
               <p id="launchDatePickerDesc" style="display: none;">If using date picker left and right arrows advance by day. Up and down arrows advance by week. Shift left and right advance by month. Shift up and down advance by year.</p>
