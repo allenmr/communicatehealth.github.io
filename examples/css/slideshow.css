@@ -63,7 +63,8 @@
   color: #fff;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #fff;
   border-color: #008198;
   color: #008198;
