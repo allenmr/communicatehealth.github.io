@@ -79,6 +79,12 @@ You can just type in the message box, but if you want any basic formatting you c
 * `>>>` to blockquote multiple paragraphs
 * :emoji-name: for emojis (i.e - :grinning:)
 
+## Custom emojis
+
+You can add custom emoji here: [https://communicatehealth.slack.com/admin/emoji](https://communicatehealth.slack.com/admin/emoji)
+
+Square images work best. Image can't be larger than 128px in width or height, and must be smaller than 64KB in file size.
+
 ## Keyboard shortcuts
 
 [Full list on Slack](https://get.slack.help/hc/en-us/articles/201374536-Slack-keyboard-shortcuts)
