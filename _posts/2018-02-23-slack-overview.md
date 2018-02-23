@@ -97,6 +97,7 @@ Square images work best. Image can't be larger than 128px in width or height, an
 * Mute channels that you don't want constant notifications on
 * set a reminder using slackbot `/remind [me / @someone / #channel][what][when]`
 * Star important messages
+* Use [Search modifiers](https://get.slack.help/hc/en-us/articles/202528808-Search-in-Slack-#use-search-modifiers) (i.e. `in:[#channel]` or `from:[@name]`)
 * `/msg` to send a direct message from wherever you are (in a channel, another direct message, etc)
 * `command` + `,` to edit your notification preferences
 
