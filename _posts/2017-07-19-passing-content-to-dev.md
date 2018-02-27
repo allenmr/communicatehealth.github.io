@@ -23,11 +23,12 @@ You've just written the most beautiful content and it's ready to go to the devel
 
 ## Why good formatting matters
 We often use tools like [Wordup](https://communicatehealth.github.io/wordup/) or the WYSIWYG editor in a [CMS](https://en.wikipedia.org/wiki/Content_management_system) (Drupal, healthfinder admin) to convert Word Docs to HTML &mdash; but these tools are only as smart as the content that goes into them. If your content isn't correctly laid out then the tool may delete or reformat in unexpected ways! The best way to keep your content intact is to make sure your document is well formatted from the start:
-* Use headers in the correct order (H1 > H2 > H3, etc)
+* Use headers in the correct order (Heading 1 > Heading 2 > Heading 3, etc)
 * Format spacing using styles (don't use empty paragraphs between content)
+* Use the default styles that are built into Word where possible &mdash; You can modify them to look how you want via the "Styles Pane"
 * Accept all changes and turn off tracking unless these changes are specifically for the developer (see below for more details)
 * Delete comments that are not specifically for the developer
-  * Embed any links directly into the content - links in comments are easy to miss!
+  * Embed any links directly into the content &mdash; links in comments are easy to miss!
 
 ## When to use track changes
 * Changes are to content that the developer has already coded (content is already on the website/prototype). These are final changes &mdash; all comments or suggestions are resolved.
