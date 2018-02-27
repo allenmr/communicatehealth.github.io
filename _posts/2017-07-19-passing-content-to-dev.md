@@ -25,7 +25,7 @@ You've just written the most beautiful content and it's ready to go to the devel
 We often use tools like [Wordup](https://communicatehealth.github.io/wordup/) or the WYSIWYG editor in a [CMS](https://en.wikipedia.org/wiki/Content_management_system) (Drupal, healthfinder admin) to convert Word Docs to HTML &mdash; but these tools are only as smart as the content that goes into them. If your content isn't correctly laid out then the tool may delete or reformat in unexpected ways! The best way to keep your content intact is to make sure your document is well formatted from the start:
 * Use headers in the correct order (Heading 1 > Heading 2 > Heading 3, etc)
 * Format spacing using styles (don't use empty paragraphs between content)
-* Use the default styles that are built into Word where possible &mdash; You can modify them to look how you want via the "Styles Pane"
+* Use the default styles that are built into Word where possible &mdash; you can modify them to look how you want via the "Styles Pane"
 * Accept all changes and turn off tracking unless these changes are specifically for the developer (see below for more details)
 * Delete comments that are not specifically for the developer
   * Embed any links directly into the content &mdash; links in comments are easy to miss!
