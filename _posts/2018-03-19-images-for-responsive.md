@@ -83,8 +83,7 @@ Vector-based graphics are those images that look more like illustrations. Icons,
 
 <strong>If your image is a digital illustration, always send the developers an SVG whenever possible!</strong>
 
-See this article about how to create SVGs for websites:
-[https://communicatehealth.github.io/2017/04/svg-output/](Exporting SVGs)
+See <a href="https://communicatehealth.github.io/2017/04/svg-output/" target="_blank">this article</a> about how to create SVGs for websites.
 
 ## Raster-Based Graphics (photos)
 
