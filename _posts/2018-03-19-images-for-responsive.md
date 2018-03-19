@@ -101,7 +101,7 @@ Raster-based graphics (typically seen as photographs) are pixel-based. They do n
     <li>Why do we need images so large? Because we use CSS and HTML to scale them down appropriately for each screen size and ensure that they won't look blurry on higher-resolution screens.</li>
   </ul>
   <li>Always <strong>ask the developer what proportions they need</strong> the image in. Don't assume that the height of the image will always be the same on each screen size.</li>
-  <li>If your're able to, <strong>optimize your image so it's a smaller file size</strong> to help with load time.</li>
+  <li>If you're able to, <strong>optimize your image so it's a smaller file size</strong> to help with load time.</li>
 </ul>
 
 ## But, how do I optimize my raster images for web?
