@@ -131,5 +131,9 @@ If you're fluent in Photoshop, you can also <strong>"Save for Web"</strong> or <
 
 The easiest way to reduce the file size is to also reduce the image quality slightly. Reducing it down to 60-80% will not make a noticeable visual difference to the user, but it can cut the file size way down.
 
+## What about images for social media?
+
+We've got you covered there too! Check out this handy <a href="https://communicatehealth.github.io/social-media-images/" target="_blank">Social Media Image Sizer</a> on our blog to help you figure out what size to make images for Facebook, Twitter, YouTube, LinkedIn, and Pinterest.
+
 
 
