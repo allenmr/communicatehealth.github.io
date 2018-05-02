@@ -40,7 +40,7 @@
   z-index: 1; }
   .rich-select-list.ch-closed {
     display: none; }
-  .rich-select-list.closing, .rich-select-list.ch-opening {
+  .rich-select-list.ch-closing, .rich-select-list.ch-opening {
     opacity: 0;
     transition: all .3s; }
   .rich-select-list.ch-open {
