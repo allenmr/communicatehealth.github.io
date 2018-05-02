@@ -39,12 +39,12 @@
   transition: all .3s;
   width: 100%;
   z-index: 1; }
-  .rich-select-list.closed {
+  .rich-select-list.ch-closed {
     display: none; }
-  .rich-select-list.closing, .rich-select-list.opening {
+  .rich-select-list.closing, .rich-select-list.ch-opening {
     opacity: 0;
     transition: all .3s; }
-  .rich-select-list.open {
+  .rich-select-list.ch-open {
     border: 1px solid #073148;
     border-top: 0;
     opacity: 1;
@@ -63,4 +63,3 @@
 .rich-select-list-compact .rich-select-item {
   padding-bottom: .15em;
   padding-top: .15em; }
-
