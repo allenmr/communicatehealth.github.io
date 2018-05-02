@@ -16,7 +16,7 @@ $( document ).ready(function() {
     // Show accordion content
     else {
       $(".rich-select-toggle").attr("aria-expanded", "false");
-      $.hideAnimate($(".rich-select-list.open"));
+      $.hideAnimate($(".rich-select-list.ch-open"));
       $(this).addClass("expanded").attr("aria-expanded", "true");
       $(this).find(".rich-select-toggle-arrow").html("&#9650;");
       $.showAnimate($next);
