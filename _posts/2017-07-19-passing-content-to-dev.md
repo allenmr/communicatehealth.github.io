@@ -9,6 +9,14 @@ redirect_from:
 
 You've just written the most beautiful content and it's ready to go to the developer! Here are some recommendations and guidelines to help shepherd your content through the development stage.
 
+___
+## TL;DR
+* **New content** (the developer will be creating a new page/pages from this content): resolve track changes and comments - unless the changes or comments are specifically meant for the developer
+* **Existing content** (already on a website): highlight tiny changes when editing existing content - we'll never see that new comma unless you call our attention to it!
+* **Format Word docs using the styles pane. Always.**
+
+___
+
 ## What the developer sees in your content deliverable
 <img class="f-left" src="{{ "/img/content-to-a-dev.png" | prepend: site.baseurl }}" alt="">
 <div class="clearfix">Blocks denoting headers, paragraphs, lists - no actual text!</div>
