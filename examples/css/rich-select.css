@@ -9,9 +9,10 @@
   background-repeat: repeat-x;
   border: 1px solid #ccc;
   display: block;
+  width: 100%;
+  text-align: left;
   font-size: 1.25em;
   padding: .75em 1em;
-  text-decoration: none;
   transition: .3s all; }
   .rich-select-toggle:link, .rich-select-toggle:visited {
     color: #222; }
