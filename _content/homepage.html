@@ -8,8 +8,7 @@ slug: home
 <div class="main-block">
   <h2>Posts</h2>
   {% for post in site.posts %}
-  <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-  <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
   {% endfor %}
 </div>
 
@@ -21,7 +20,7 @@ slug: home
   </dl>
   <h2>Tools</h2>
   <dl>
-    <dt><a href="/2018/02/slack-overview/">Slack Overview</a></dt>
+    <dt><a href="/slack-overview/">Slack Overview</a></dt>
     <dd>Tips for getting started using Slack</dd>
     <dt><a href="https://communicatehealth.github.io/wordup/">Wordup</a></dt>
     <dd>Convert Word documents to clean HTML in a snap</dd>
