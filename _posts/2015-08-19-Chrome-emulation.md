@@ -3,6 +3,8 @@ layout: post
 title:  "Chrome Dev Tools Device Emulation"
 date:   2015-08-19 12:00:00
 categories: testing
+redirect_from:
+  - /2015/08/Chrome-emulation/
 ---
 
 Turning on Device Emulation

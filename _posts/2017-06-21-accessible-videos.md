@@ -3,6 +3,8 @@ layout: post
 title:  "Making Videos Accessible"
 date:   2017-06-20 12:00:00
 categories: howto
+redirect_from:
+  - /2017/06/accessible-videos/
 ---
 
 Video files that we create for our clients need to be accessible and meet the 508 compliance requirements. The specific requirements are linked at the bottom of this post, but the basic items that we need to do are listed below.

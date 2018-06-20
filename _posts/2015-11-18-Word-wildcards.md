@@ -3,6 +3,8 @@ layout: post
 title:  "Wildcards"
 date:   2015-11-18 12:00:00
 categories: editing
+redirect_from:
+  - /2015/11/Word-wildcards/
 ---
 
 What Are Wildcards?

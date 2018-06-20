@@ -3,6 +3,8 @@ layout: post
 title:  "Slack Overview"
 date: 2018-02-23 12:00:00
 categories: howto
+redirect_from:
+  - /2018/02/slack-overview/
 ---
 
 If you haven't already downloaded the app: [Download Slack](https://slack.com/downloads/osx)

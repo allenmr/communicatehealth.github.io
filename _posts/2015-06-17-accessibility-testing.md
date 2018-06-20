@@ -3,6 +3,8 @@ layout: post
 title:  "Accessibility Testing with Tota11y"
 date:   2015-06-17 12:00:00
 categories: accessibility testing
+redirect_from:
+  - /2015/06/accessibility-testing/
 ---
 
 [http://khan.github.io/tota11y/](http://khan.github.io/tota11y/)

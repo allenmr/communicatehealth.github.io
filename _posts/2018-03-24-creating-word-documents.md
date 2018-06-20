@@ -3,6 +3,8 @@ layout: post
 title:  "Creating Word Documents"
 date: 2018-05-24 12:00:00
 categories: howto
+redirect_from:
+  - /2018/05/creating-word-documents/
 ---
 
 Often our clients ask for 508 compliant Word Documents, so we take the steps listed below, but many of these steps are a good practice to use in every Word Doc that you create. These changes will make it easier for you to create a consistent Word Doc and make it easier to complete making it 508 compliant. It's a win-win!

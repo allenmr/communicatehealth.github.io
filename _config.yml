@@ -14,7 +14,7 @@ lsi: false
 markdown: kramdown
 source: .
 destination: _site
-permalink: :year/:month/:title/
+permalink: :title/
 timezone: America/New_York
 
 plugins:

@@ -3,6 +3,8 @@ layout: post
 title:  "PDF link list"
 date:   2017-09-27 12:00:00
 categories: accessibility
+redirect_from:
+  - /2017/09/pdf-resources/
 ---
 
 PDF-related links worth a look:

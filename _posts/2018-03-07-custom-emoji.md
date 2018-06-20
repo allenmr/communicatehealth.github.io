@@ -3,6 +3,8 @@ layout: post
 title:  "Custom Emoji"
 date: 2018-03-07 12:00:00
 categories: howto
+redirect_from:
+  - /2018/03/custom-emoji/
 ---
 
 You can add custom emoji here: [https://communicatehealth.slack.com/admin/emoji](https://communicatehealth.slack.com/admin/emoji)

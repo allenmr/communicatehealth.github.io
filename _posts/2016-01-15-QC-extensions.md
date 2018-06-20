@@ -3,6 +3,8 @@ layout: post
 title:  "Useful Chrome Extensions for QC"
 date:   2016-01-15 12:00:00
 categories: qc
+redirect_from:
+  - /2016/01/QC-extensions/
 ---
 
 [**Link Checkr**](https://chrome.google.com/webstore/detail/link-checker/olcpkmmoifipcklgnphbhdhbpfniijmb) &mdash; Scan current page for broken links

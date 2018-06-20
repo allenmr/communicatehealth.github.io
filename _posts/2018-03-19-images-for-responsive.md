@@ -3,6 +3,8 @@ layout: post
 title:  "Images for Responsive Web Design"
 date: 2018-03-19 12:00:00
 categories: howto
+redirect_from:
+  - /2018/03/images-for-responsive/
 ---
 
 Traditionally, images for web were sized at 72dpi, or 72 dots per inch. This was the number of pixels per inch in a standard monitor. With the advent of mobile devices, tablets, and computers with retina screens, this has changed. Now, we treat images for web more like they are treated for print. Start larger, and resize.
@@ -134,6 +136,3 @@ The easiest way to reduce the file size is to also reduce the image quality slig
 ## What about images for social media?
 
 We've got you covered there too! Check out this handy <a href="https://communicatehealth.github.io/social-media-images/" target="_blank">Social Media Image Sizer</a> on our blog to help you figure out what size to make images for Facebook, Twitter, YouTube, LinkedIn, and Pinterest.
-
-
-

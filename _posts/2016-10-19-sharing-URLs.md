@@ -3,6 +3,8 @@ layout: post
 title:  "Links to Share (and who to share them with)"
 date:   2016-10-19 12:00:00
 categories: clients
+redirect_from:
+  - /2016/10/sharing-URLs/
 ---
 
 ## What link should I send?
