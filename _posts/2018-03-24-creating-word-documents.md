@@ -45,4 +45,25 @@ In order for Images to be read by a screen reader they need to be Formatted as `
 
 You can add alt text to your images in Word by right-clicking on the image and selecting `Format picture` or through the `Format Pane` in the **Picture Format** ribbon. Alt text is under the **Layout & Properties** tab and you only need to fill out **Description** (Title isn't used)
 
+**Note**: limit alt text to 125 characters or less
+
 ![Image Alt Text field]({{ "/img/word-alt-text-pane.png" | prepend: site.baseurl }})
+
+### 6. Tables
+In order for tables to make sense when read by a screen reader, each table needs to have a header row, which is repeated if the table goes across multiple pages, and alt text that briefly summarizes what's in the table.
+
+#### Every table needs a header row
+To set the table header row, select `Header Row` in the  **Table Design** ribbon
+
+![Table header row]({{ "/img/word-Table_header_rows.png" | prepend: site.baseurl }})
+
+For tables that span multiple pages, put your cursor in the the header row select `Repeat Header Rows` from the  **Layout** ribbon (you can do this for every table, just in case it grows to more than one page!)
+
+![Table header row repeat]({{ "/img/word-Layout_repeat_header_rows.png" | prepend: site.baseurl }})
+
+#### All tables need alt Text
+To add alt text to a table, right click in the table and select **Table properties**, then go to the **Alt text** tab and fill in the **Description**
+
+**Note**: as with images, limit alt text to 125 characters or less
+
+![Table Alt Text field]({{ "/img/word-table_alt_text.gif" | prepend: site.baseurl }})
