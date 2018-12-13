@@ -68,7 +68,7 @@
         </div>
 
         <div class="ch-form-item">
-          <label id="dob_label" for="date">Date of Birth:</label>
+          <label id="dob_label" for="date">Date of Birth<abbr title="required">*</abbr>:</label>
           <span id="dob_help">MM/DD/YYYY</span>
           <div class="alert-wrapper">
             <input type="date" id="dob-nojs" class="datepicker" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Please enter your date of birth as mm/dd/yyyy" aria-labelledby="dob_label" aria-describedby="dob_help">
@@ -248,7 +248,7 @@
         <!-- aria-describedby http://webaim.org/techniques/forms/advanced#describedby -->
 
         <div class="ch-form-item">
-          <label for="address2">Address line 2:</label>
+          <label for="address2">Address line 2 <span>(optional)</span>:</label>
           <span id="address2_ex">Apartment, suite, unit, building, floor, etc.</span>
           <input type="text" id="address2" name="address2" aria-describedby="address2_ex">
         </div>
@@ -353,7 +353,7 @@
       -->
 
         <div class="ch-form-item">
-          <label for="phone">Phone number:</label>
+          <label for="phone">Phone number<abbr title="required">*</abbr>:</label>
           <div class="alert-wrapper">
             <input type="tel" id="phone" name="phone" pattern="1?\s?[\(\s\-.]?\s?[2-9]\d{2}[\s\-.\)]?\s?\d{3}.?\d{4}" title="Please enter a valid 10-digit phone number">
           </div>
