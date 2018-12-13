@@ -9,9 +9,10 @@
   background-repeat: repeat-x;
   border: 1px solid #ccc;
   display: block;
+  width: 100%;
+  text-align: left;
   font-size: 1.25em;
   padding: .75em 1em;
-  text-decoration: none;
   transition: .3s all; }
   .rich-select-toggle:link, .rich-select-toggle:visited {
     color: #222; }
@@ -35,17 +36,20 @@
   max-height: 11em;
   overflow-y: auto;
   padding: .5em 0;
-  position: absolute;
+  border: 1px solid #ccc;
+  border-top: 0;
   transition: all .3s;
-  width: 100%;
   z-index: 1; }
-  .rich-select-list.closed {
+  .rich-select-list.ch-closed {
+    position: absolute;
     display: none; }
-  .rich-select-list.closing, .rich-select-list.opening {
+  .rich-select-list.ch-closing, .rich-select-list.ch-opening {
+    position: absolute;
     opacity: 0;
     transition: all .3s; }
-  .rich-select-list.open {
-    border: 1px solid #073148;
+  .rich-select-list.ch-open {
+    position: absolute;
+    border-color: #073148;
     border-top: 0;
     opacity: 1;
     transition: all .3s; }
@@ -63,4 +67,3 @@
 .rich-select-list-compact .rich-select-item {
   padding-bottom: .15em;
   padding-top: .15em; }
-

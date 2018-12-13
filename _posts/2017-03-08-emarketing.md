@@ -3,11 +3,13 @@ layout: post
 title:  "Ask a Dev: Bulletins"
 date:   2017-03-08 12:00:00
 categories: howto
+redirect_from:
+  - /2017/03/emarketing/
 ---
 
 A brief explanation for all those questions we ask you once you hand a bulletin off to dev.
 
-## Types of Email 
+## Types of Email
 
 ### ODPHP
 We send out 2 types of ODPHP emails using GovDelivery:
@@ -55,7 +57,7 @@ New email templates aren't created very often, but if you need one, the followin
   * Email clients really *really* don't always show the same thing. If the client says layout looks off, be prepared to troubleshoot &mdash; ask for screenshots and get their email client and OS
 
 ## Tips to make your email coder happy:
-  * Include all known URLs 
+  * Include all known URLs
     * Existing pages: even if you are waiting for drafts to be published before sending the bulletin, the URL won't change
     * New pages: if you know what the URL will be, we can include it
   * Include the bill code in the task description or as a TW tag

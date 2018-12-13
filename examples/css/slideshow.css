@@ -59,14 +59,13 @@
   white-space: nowrap;
 }
 
-.btn:visited {
+.btn:hover,
+.btn:focus,
+.btn-secondary:link:hover,
+.btn-secondary:link:focus {
+  background-color: #004e65;
+  border-color: #004e65;
   color: #fff;
-}
-
-.btn:hover {
-  background-color: #fff;
-  border-color: #008198;
-  color: #008198;
   transition: all .4s;
 }
 
@@ -77,16 +76,8 @@
   transition: all .4s;
 }
 
-.btn-dark {
-  color: #fff;
-}
-
-.btn-dark:visited {
-  color: #fff;
-}
-
-.btn-dark:hover,
-.btn-dark:focus {
+.btn-secondary:link {
+  background-color: #fff;
   color: #008198;
 }
 

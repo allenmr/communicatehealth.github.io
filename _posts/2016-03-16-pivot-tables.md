@@ -3,6 +3,8 @@ layout: post
 title:  "Pivot Tables"
 date:   2016-03-16 12:00:00
 categories: performance
+redirect_from:
+  - /2016/03/pivot-tables/
 ---
 
 What are Pivot Tables?

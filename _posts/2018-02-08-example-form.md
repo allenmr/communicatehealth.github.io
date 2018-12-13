@@ -3,13 +3,15 @@ layout: post
 title:  "Example Sign-up Form"
 date:   2018-02-13 12:00:00
 categories: accessibility
+redirect_from:
+  - /2018/02/example-form/
 ---
 Considerations for coding accessible forms, with a focus on [sign-up forms](https://communicatehealth.github.io/examples/forms/).
 
 ## Accessibility
 ARIA labels and more!
 
-- **[Wrap related fields in a fieldset](https://www.w3.org/WAI/tutorials/forms/grouping/):** 
+- **[Wrap related fields in a fieldset](https://www.w3.org/WAI/tutorials/forms/grouping/):**
 <blockquote>Grouping related form controls makes forms more understandable for all users, as related controls are easier to identify. It also makes it easier for people to focus on smaller and more manageable groups rather than try to grasp the entire form at once.</blockquote>
 - **Required fields:** use both [required AND aria-required="true"](https://www.w3.org/WAI/tutorials/forms/validation/#validating-required-input):
 <blockquote>The <code>aria-required</code> attribute informs assistive technologies about required controls so that they are appropriately announced to the users (as opposed to validating the input). Most current web browsers automatically set its value to <code>true</code> when the HTML5 <code>required</code> attribute is present. In this example, it is provided redundantly to support web browsers that don’t communicate the <code>required</code> attribute to assistive technology.</blockquote>
@@ -27,7 +29,7 @@ The full form is validated on submit, based on `required` and `pattern` attribut
 - Field-by-field validation is not run on fields where a user has not yet entered content (or has erased all content).
 
 ### Zip codes
-- Use `type="text"` for zip codes. [From the spec](https://www.w3.org/TR/html5/sec-forms.html#number-state-typenumber), `type="number"` is reserved: 
+- Use `type="text"` for zip codes. [From the spec](https://www.w3.org/TR/html5/sec-forms.html#number-state-typenumber), `type="number"` is reserved:
 <blockquote>The <code>type=number</code> state is not appropriate for input that happens to only consist of numbers but isn’t strictly speaking a number. For example, it would be inappropriate for credit card numbers or US postal codes. A simple way of determining whether to use <code>type=number</code> is to consider whether it would make sense for the input control to have a spinbox interface (e.g., with "up" and "down" arrows).</blockquote>
 
 - The [zip code pattern](http://html5pattern.com/Postal_Codes) is set for USA postal codes

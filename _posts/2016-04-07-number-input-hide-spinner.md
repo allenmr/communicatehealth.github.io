@@ -3,6 +3,8 @@ layout: post
 title:  "Hide Spinners when using the HTML5 Number Input"
 date:   2016-04-07 12:00:00
 categories: code
+redirect_from:
+  - /2016/04/number-input-hide-spinner/
 ---
 
 What are we trying to solve?

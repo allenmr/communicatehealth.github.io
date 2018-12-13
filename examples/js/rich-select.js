@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+  // Start by hiding all accordion content
+  $('.rich-select-list').addClass("ch-closed").attr("aria-hidden", "true");
+  $('.rich-select-toggle').attr("aria-expanded", "false");
+  $(".rich-select-toggle-arrow").html("&#9660;");
 
   $(".rich-select-toggle").click(function (event) {
     if (event.preventDefault) { event.preventDefault(); }
@@ -16,7 +20,7 @@ $( document ).ready(function() {
     // Show accordion content
     else {
       $(".rich-select-toggle").attr("aria-expanded", "false");
-      $.hideAnimate($(".rich-select-list.open"));
+      $.hideAnimate($(".rich-select-list.ch-open"));
       $(this).addClass("expanded").attr("aria-expanded", "true");
       $(this).find(".rich-select-toggle-arrow").html("&#9650;");
       $.showAnimate($next);

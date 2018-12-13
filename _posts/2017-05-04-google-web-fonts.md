@@ -3,9 +3,11 @@ layout: post
 title:  "Self-hosting Google Web Fonts"
 date:   2017-05-04 12:00:00
 categories: howto
+redirect_from:
+  - /2017/05/google-web-fonts/
 ---
 
-With our [new preference to self-host](https://communicatehealth.github.io/2017/03/web-fonts/) Google Web Fonts with each project, we have another front-end step for the Dev Team to work through. The following process is the quickest we've found to download and reference [Google Web Fonts](https://fonts.google.com/) in each project.
+With our [new preference to self-host](https://communicatehealth.github.io/web-fonts/) Google Web Fonts with each project, we have another front-end step for the Dev Team to work through. The following process is the quickest we've found to download and reference [Google Web Fonts](https://fonts.google.com/) in each project.
 
 ### Download CSS and Font Files
 

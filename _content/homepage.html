@@ -8,8 +8,7 @@ slug: home
 <div class="main-block">
   <h2>Posts</h2>
   {% for post in site.posts %}
-  <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-  <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
   {% endfor %}
 </div>
 
@@ -21,12 +20,19 @@ slug: home
   </dl>
   <h2>Tools</h2>
   <dl>
+    <dt><a href="/slack-overview/">Slack Overview</a></dt>
+    <dd>Tips for getting started using Slack</dd>
     <dt><a href="https://communicatehealth.github.io/wordup/">Wordup</a></dt>
     <dd>Convert Word documents to clean HTML in a snap</dd>
     <dt><a href="https://communicatehealth.github.io/pdfcheck/">pdfCheck</a></dt>
     <dd>Check local PDF files for tags, step one in determining PDF accessibility</dd>
     <dt><a href="https://docs.google.com/spreadsheets/d/1VBdQEB1AHVX1WyGQzuE8-AWTzZfVcKkC9vSniK4gzWY/edit">Master QC spreadsheet</a></dt>
     <dd>Full list of QC checkpoints to consider on a new project</dd>
+  </dl>
+  <h2>Uptime Status</h2>
+  <dl>
+    <dt><a href="https://stats.uptimerobot.com/3lQPNtBn">ODPHP</a></dt>
+    <dt><a href="https://stats.uptimerobot.com/7612RtvA">CH Sites</a></dt>
   </dl>
   <h2>Demos</h2>
   <dl>

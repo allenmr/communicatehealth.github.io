@@ -3,6 +3,8 @@ layout: post
 title:  "QC: Supported Operating Systems and Browsers"
 date:   2017-03-08 12:00:00
 categories: qc
+redirect_from:
+  - /2017/03/browser-support/
 ---
 
 Use this post as a reference when setting up your [QC checklist](https://docs.google.com/spreadsheets/d/1VBdQEB1AHVX1WyGQzuE8-AWTzZfVcKkC9vSniK4gzWY/edit#gid=0). This post was last updated on **03/08/2017**.<!--Update whenever browser list is updates --> If that was a while ago, check the [latest versions on browserlist](http://browserl.ist/?q=%3E+5%25+in+US%2C+last+1+version).

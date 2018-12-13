@@ -212,6 +212,6 @@ $sidebar-width:         18em; // 288px
 
 .content {
   margin: 0 auto;
-  max-width: 50em;
+  max-width: $content-max-width;
   padding: 1em;
 }

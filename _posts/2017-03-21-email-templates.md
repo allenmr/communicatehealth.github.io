@@ -3,6 +3,8 @@ layout: post
 title:  "Email Templates"
 date:   2017-03-21 12:00:00
 categories: howto
+redirect_from:
+  - /2017/03/email-templates/
 ---
 
 ## ~~Responsive~~ Fluid Email Template Considerations

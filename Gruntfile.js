@@ -449,7 +449,7 @@ module.exports = function(grunt) {
   // 2. Runs HTML validation (htmlproofer + htmllint)
   // 3. Runs accessibility scan
   // 4. Runs SCSS linter
-  grunt.registerTask('lint', ['jshint', 'htmllint', 'accessibility', 'scsslint']);
+  grunt.registerTask('lint', ['jshint', 'accessibility', 'scsslint']);
 
   // "grunt css-report"
   // 1. Output CSS stats to console
